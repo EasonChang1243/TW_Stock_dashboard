@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>股市籌碼儀表板 | 外資連 5 日買超監測</title>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- ECharts -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <div class="header-content">
+                <h1>股市籌碼儀表板</h1>
+                <p class="subtitle">追蹤外資連續 5 日買超趨勢 (家數比例版)</p>
+            </div>
+            <div class="update-info">
+                <span>更新時間：<span id="update-time">--</span></span>
+            </div>
+        </header>
+
+        <main>
+            <!-- Module Two: Industry Pie Chart (Placed first for visual impact) -->
+            <section class="chart-section">
+                <div class="card">
+                    <h2>產業組成分佈 (前 50 檔個股家數佔比)</h2>
+                    <div id="industry-pie-chart" style="width: 100%; height: 400px;"></div>
+                </div>
+            </section>
+
+            <!-- Module One: Data Table -->
+            <section class="table-section">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>外資連續 5 日買超排行榜 (Top 50)</h2>
+                    </div>
+                    <div class="table-wrapper">
+                        <table id="stock-table">
+                            <thead>
+                                <tr>
+                                    <th>排名</th>
+                                    <th>代號 / 名稱</th>
+                                    <th>最新收盤</th>
+                                    <th>漲跌幅</th>
+                                    <th>5日累積買超 (張)</th>
+                                    <th>類股分類</th>
+                                </tr>
+                            </thead>
+                            <tbody id="table-body">
+                                <!-- Data will be injected here -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="table-footer">
+                        <button id="show-more-btn">顯示更多 (餘 40 檔)</button>
+                        <p class="source-link">資料來源：<a href="https://www.esunsec.com.tw/tw-rank/b2brwd/page/rank/chip/0003" target="_blank">玉山證券外資買超排行榜</a></p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Stock Dashboard. 數據僅供參考，不構成投資建議。</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
