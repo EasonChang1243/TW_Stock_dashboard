@@ -6,6 +6,8 @@ from datetime import datetime, timedelta
 from dotenv import load_dotenv
 import time
 
+import sys
+
 # Load environment variables from .env file
 load_dotenv()
 
@@ -44,7 +46,7 @@ def fetch_stock_data():
     if sample.empty:
         print("\n[!] 錯誤：無法從 API 獲取資料。原因可能是 API 金鑰次數已達上限。")
         print("[!] 提示：FinMind 免費版每小時有限制次數。請稍後再試，或是直接部署到 GitHub，GitHub Action 有獨立的配額。")
-        return
+        sys.exit(1)
         
     trading_dates = sorted(sample['date'].unique())[-5:]
     print(f"Target trading dates: {trading_dates}")
