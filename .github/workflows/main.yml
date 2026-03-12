@@ -2,8 +2,8 @@ name: Stock Dashboard Auto-Update
 
 on:
   schedule:
-    # 16:30 Taiwan Time is 08:30 UTC
-    - cron: '30 08 * * 1-5'
+    # 02:00 Taiwan Time is 18:00 UTC
+    - cron: '0 18 * * *'
   workflow_dispatch: # Enable manual trigger
 
 permissions:
