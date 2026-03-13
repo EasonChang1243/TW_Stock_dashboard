@@ -125,10 +125,19 @@ def fetch_latest_quotes(date_str):
             for row in table.get("data", []):
                 sid = row[0].strip()
                 try:
-                    close = float(row[2].replace(",", "")) if row[2].strip() != "--" else 0
-                    sign = -1 if "down" in row[3] or "-" in row[3] else 1
-                    spread_val = row[3].replace("+", "").replace("-", "").replace(",", "").strip()
-                    spread = float(spread_val) if spread_val and spread_val != "--" else 0
+                    close_val = row[2].replace(",", "").strip()
+                    close = float(close_val) if close_val and close_val != "--" else 0
+                    
+                    # Handle non-numeric change like "除息", "除權"
+                    change_str = row[3].strip()
+                    sign = -1 if "down" in change_str or "-" in change_str else 1
+                    
+                    # Try to extract numeric part, or default to 0
+                    try:
+                        spread_val = change_str.replace("+", "").replace("-", "").replace(",", "").strip()
+                        spread = float(spread_val) if spread_val and spread_val != "--" else 0
+                    except:
+                        spread = 0
                     
                     # Industry detection
                     industry = "上櫃股"
