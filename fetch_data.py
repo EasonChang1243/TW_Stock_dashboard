@@ -117,25 +117,34 @@ def fetch_stock_data():
     for item in top_50:
         sid = item['id']
         try:
+            # Get stock info, ensuring we get scalars even if there are duplicates
             info = info_map.loc[sid]
+            name = info['stock_name']
+            industry = info['industry_category']
+            
+            # If multiple entries exist, pandas returns a Series; take the first value
+            if isinstance(name, pd.Series): name = name.iloc[0]
+            if isinstance(industry, pd.Series): industry = industry.iloc[0]
+
             # Use TaiwanStockPrice for latest price
             price_df = fetch_finmind_raw("TaiwanStockPrice", stock_id=sid, start_date=last_date, end_date=last_date)
             
             close = 0
             spread = 0
             if not price_df.empty:
+                # Use float() to ensure it's not a numpy type
                 close = float(price_df.iloc[0]['close'])
                 spread = float(price_df.iloc[0]['spread'])
 
             final_output.append({
-                "id": sid,
-                "name": info['stock_name'],
+                "id": str(sid),
+                "name": str(name),
                 "close": close,
                 "change": spread,
                 "change_percent": round(spread / (close - spread) * 100, 2) if (close - spread) != 0 else 0,
-                "volume": item['total_volume'],
-                "industry": info['industry_category'],
-                "update_time": last_date
+                "volume": int(item['total_volume']),
+                "industry": str(industry),
+                "update_time": str(last_date)
             })
         except:
             continue
