@@ -90,13 +90,14 @@ def fetch_json(url, method='GET', payload=None):
     return None
 
 def get_trading_days(count=5):
-    """Backtrack from today to find the last N trading days."""
+    """Backtrack from today to find the last N trading days that have institutional data."""
     dates = []
     current = datetime.now()
     # To be safe, scan back 20 days to find 5 trading days
     while len(dates) < count:
         d_str = current.strftime("%Compacted" if False else "%Y%m%d")
-        url = f"https://www.twse.com.tw/rwd/zh/afterTrading/MI_INDEX?date={d_str}&type=MS&response=json"
+        # Check if T86 (Institutional Data) is available for this day
+        url = f"https://www.twse.com.tw/rwd/zh/fund/T86?date={d_str}&selectType=ALL&response=json"
         data = fetch_json(url)
         if data and data.get("stat") == "OK":
             dates.append(current.strftime("%Y-%m-%d"))
@@ -110,34 +111,45 @@ def fetch_institutional_all(date_str):
     d_compact = date_str.replace("-", "")
     d_slash = get_roc_date(date_str)
     
-    daily_map = {} # stock_id -> foreign_net_buy
+    # stock_id -> {"foreign": val, "trust": val}
+    daily_map = {}
     
     # 1. TWSE (Stocks & ETFs)
+    # T86 URL: selectType=ALL includes everything
     twse_url = f"https://www.twse.com.tw/rwd/zh/fund/T86?date={d_compact}&selectType=ALL&response=json"
     twse_data = fetch_json(twse_url)
     if twse_data and twse_data.get("stat") == "OK":
-        # Index 0: ID, Index 4: Foreign Net Buy
+        # Index 0: ID
+        # Index 4: Foreign Net Buy
+        # Index 10: Investment Trust Net Buy
         for row in twse_data.get("data", []):
             sid = row[0].strip()
             try:
-                net_buy = int(row[4].replace(",", ""))
-                daily_map[sid] = net_buy
+                foreign = int(row[4].replace(",", ""))
+                trust = int(row[10].replace(",", ""))
+                daily_map[sid] = {"foreign": foreign, "trust": trust}
             except: continue
             
     # 2. TPEx (Comprehensive: Stocks + All ETFs including Bond ETFs)
     tpex_url = f"https://www.tpex.org.tw/www/zh-tw/insti/dailyTrade?type=Daily&sect=AL&date={d_slash}&response=json"
     tpex_data = fetch_json(tpex_url)
     if tpex_data and tpex_data.get("stat") == "ok":
-        # TPEx new API structure: data['tables'][0]['data']
         tables = tpex_data.get("tables", [])
         if tables:
             data_rows = tables[0].get("data", [])
-            # Index 0: ID, Index 10: Total Foreign Net Buy
+            # Index 0: ID
+            # Index 10: Foreign Net Buy (Total)
+            # Index 11: Investment Trust Net Buy
             for row in data_rows:
                 sid = row[0].strip()
                 try:
-                    net_buy = int(row[10].replace(",", ""))
-                    daily_map[sid] = net_buy
+                    foreign = int(row[10].replace(",", ""))
+                    trust = int(row[11].replace(",", ""))
+                    if sid in daily_map:
+                        daily_map[sid]["foreign"] += foreign
+                        daily_map[sid]["trust"] += trust
+                    else:
+                        daily_map[sid] = {"foreign": foreign, "trust": trust}
                 except: continue
             
     return daily_map
@@ -244,16 +256,18 @@ def main():
     print("Fetching industry mapping...")
     industry_mapping = fetch_industry_mapping()
 
-    # 3. Accumulate foreign buying
-    buying_history = {} # sid -> [day1_net, day2_net, ...]
+    # 3. Accumulate buying history
+    # sid -> {"foreign": [day1, ...], "trust": [day1, ...]}
+    buying_history = {}
     
     for d in trading_dates:
         print(f"Fetching institutional data for {d}...")
         daily = fetch_institutional_all(d)
-        for sid, vol in daily.items():
+        for sid, data in daily.items():
             if sid not in buying_history:
-                buying_history[sid] = []
-            buying_history[sid].append(vol)
+                buying_history[sid] = {"foreign": [], "trust": []}
+            buying_history[sid]["foreign"].append(data["foreign"])
+            buying_history[sid]["trust"].append(data["trust"])
         time.sleep(1)
 
     # 4. Map Metadata
@@ -261,60 +275,66 @@ def main():
     latest_quotes = fetch_latest_quotes(last_date, industry_mapping)
 
     # 5. Filter for Multi-Day Rankings (1, 3, 5 Day)
-    rankings = {}
-    intervals = [1, 3, 5]
+    all_rankings = {
+        "foreign": {},
+        "trust": {}
+    }
     
-    for days in intervals:
-        candidates = []
-        for sid, history in buying_history.items():
-            # Get the most recent 'days' entries
-            recent_history = history[-days:]
-            total_vol = sum(recent_history)
-            if total_vol > 0:
-                candidates.append({
+    intervals = [1, 3, 5]
+    investor_types = ["foreign", "trust"]
+    
+    for inv_type in investor_types:
+        for days in intervals:
+            candidates = []
+            for sid, history in buying_history.items():
+                recent_history = history[inv_type][-days:]
+                total_vol = sum(recent_history)
+                if total_vol > 0:
+                    candidates.append({
+                        "id": sid,
+                        "total_volume_shares": total_vol
+                    })
+            
+            # Sort and take Top 50
+            candidates.sort(key=lambda x: x["total_volume_shares"], reverse=True)
+            top_50 = candidates[:50]
+            
+            # Map Metadata
+            final_list = []
+            for entry in top_50:
+                sid = entry["id"]
+                q = latest_quotes.get(sid, {"name": f"Unknown({sid})", "close": 0, "change": 0, "industry": "其他"})
+                
+                volume_lots = round(entry["total_volume_shares"] / 1000)
+                close = q["close"]
+                change = q["change"]
+                
+                prev_close = close - change
+                change_pct = round(change / prev_close * 100, 2) if prev_close != 0 else 0
+                
+                final_list.append({
                     "id": sid,
-                    "total_volume_shares": total_vol
+                    "name": q["name"],
+                    "close": close,
+                    "change": change,
+                    "change_percent": change_pct,
+                    "volume": volume_lots,
+                    "industry": q["industry"],
+                    "update_time": last_date
                 })
-        
-        # Sort and take Top 50
-        candidates.sort(key=lambda x: x["total_volume_shares"], reverse=True)
-        top_50 = candidates[:50]
-        
-        # Map Metadata
-        final_list = []
-        for entry in top_50:
-            sid = entry["id"]
-            q = latest_quotes.get(sid, {"name": f"Unknown({sid})", "close": 0, "change": 0, "industry": "其他"})
             
-            volume_lots = round(entry["total_volume_shares"] / 1000)
-            close = q["close"]
-            change = q["change"]
-            
-            prev_close = close - change
-            change_pct = round(change / prev_close * 100, 2) if prev_close != 0 else 0
-            
-            final_list.append({
-                "id": sid,
-                "name": q["name"],
-                "close": close,
-                "change": change,
-                "change_percent": change_pct,
-                "volume": volume_lots,
-                "industry": q["industry"],
-                "update_time": last_date
-            })
-        
-        rankings[str(days)] = final_list
-        print(f"Processed Top 50 for {days}-day interval.")
+            all_rankings[inv_type][str(days)] = final_list
+            print(f"Processed Top 50 for {inv_type} in {days}-day interval.")
 
     # 6. Save Output
     output = {
         "metadata": {
             "update_date": last_date,
             "data_source": "TWSE/TPEx Official (Enhanced)",
-            "available_intervals": intervals
+            "available_intervals": intervals,
+            "investor_types": investor_types
         },
-        "rankings": rankings
+        "rankings": all_rankings
     }
     
     os.makedirs('data', exist_ok=True)

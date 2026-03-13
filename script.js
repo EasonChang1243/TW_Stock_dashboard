@@ -1,5 +1,6 @@
 let allRankings = {};
 let currentInterval = "5";
+let currentInvestorType = "foreign";
 
 document.addEventListener('DOMContentLoaded', async () => {
     // Check if the page is opened via file:// protocol
@@ -32,7 +33,16 @@ document.addEventListener('DOMContentLoaded', async () => {
         const updateTimeEl = document.getElementById('update-time');
         if (updateTimeEl) updateTimeEl.textContent = metadata.update_date;
 
-        // Setup Dropdown
+        // Investor Selector
+        const investorSelector = document.getElementById('investor-selector');
+        if (investorSelector) {
+            investorSelector.addEventListener('change', (e) => {
+                currentInvestorType = e.target.value;
+                updateDashboard();
+            });
+        }
+
+        // Day Selector
         const daySelector = document.getElementById('day-selector');
         if (daySelector) {
             daySelector.addEventListener('change', (e) => {
@@ -52,15 +62,22 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 function updateDashboard() {
-    const stocks = allRankings[currentInterval];
+    const stocks = allRankings[currentInvestorType] ? allRankings[currentInvestorType][currentInterval] : null;
     if (!stocks) return;
+
+    const investorName = currentInvestorType === "foreign" ? "\u5916\u8cc7" : "\u6295\u4fe1";
 
     // Update subtitles
     const subtitleDays = document.getElementById('subtitle-days');
-    if (subtitleDays) subtitleDays.textContent = currentInterval;
+    if (subtitleDays) {
+        const headerP = document.querySelector('.header-content p');
+        if (headerP) {
+            headerP.innerHTML = `\u8ffd\u8e64${investorName} <span id="subtitle-days">${currentInterval}</span> \u65e5\u7d2f\u7a4d\u8cb7\u8d85\u6392\u884c (\u5b98\u65b9\u6578\u64da\u7248)`;
+        }
+    }
     
     const tableTitle = document.querySelector('.card-title');
-    if (tableTitle) tableTitle.textContent = `\u5916\u8cc7\u8fd1 ${currentInterval} \u65e5\u7d2f\u7a4d\u8cb7\u8d85\u6392\u884c\u699c (Top 50)`;
+    if (tableTitle) tableTitle.textContent = `${investorName}\u8fd1 ${currentInterval} \u65e5\u7d2f\u7a4d\u8cb7\u8d85\u6392\u884c\u699c (Top 50)`;
 
     // Update table header if needed
     const volumeHeader = document.querySelector('th:nth-child(5)');
@@ -168,19 +185,42 @@ function renderTable(stocks) {
     });
 
     const btn = document.getElementById('show-more-btn');
-    if (btn) btn.style.display = stocks.length > 10 ? 'block' : 'none';
+    if (btn) {
+        btn.style.display = stocks.length > 10 ? 'block' : 'none';
+        btn.textContent = `\u986f\u793a\u66f4\u591a (\u9918 ${stocks.length - 10} \u6a94)`;
+    }
 }
 
 function setupShowMore(total) {
     const btn = document.getElementById('show-more-btn');
     if (!btn) return;
 
+    // Remove old listeners to avoid multiple binds
     const newBtn = btn.cloneNode(true);
     btn.parentNode.replaceChild(newBtn, btn);
 
+    let isExpanded = false;
+
     newBtn.addEventListener('click', () => {
-        const hiddenRows = document.querySelectorAll('.hidden-row');
-        hiddenRows.forEach(row => row.classList.remove('hidden-row'));
-        newBtn.style.display = 'none';
+        const hiddenRows = document.querySelectorAll('#table-body tr');
+        isExpanded = !isExpanded;
+
+        hiddenRows.forEach((row, index) => {
+            if (index >= 10) {
+                if (isExpanded) {
+                    row.classList.remove('hidden-row');
+                } else {
+                    row.classList.add('hidden-row');
+                }
+            }
+        });
+
+        if (isExpanded) {
+            newBtn.textContent = `\u6536\u5408\u5167\u5bb9`;
+        } else {
+            newBtn.textContent = `\u986f\u793a\u66f4\u591a (\u9918 ${total - 10} \u6a94)`;
+            // Optional: scroll back to table start
+            document.querySelector('.table-wrapper').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
     });
 }
