@@ -1,6 +1,10 @@
+let allRankings = {};
+let currentInterval = "5";
+
 document.addEventListener('DOMContentLoaded', async () => {
     // Check if the page is opened via file:// protocol
     if (window.location.protocol === 'file:') {
+        // ... (CORS error handling remains same)
         console.error('CORS Error: Fetch API does not support local files (file://).');
         document.getElementById('table-body').innerHTML = `
             <tr>
@@ -19,23 +23,44 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (!response.ok) throw new Error('Network response was not ok');
         const jsonData = await response.json();
         
-        const stocks = jsonData.data;
+        allRankings = jsonData.rankings;
         const metadata = jsonData.metadata;
 
         // Update display time
         document.getElementById('update-time').textContent = metadata.update_date;
 
-        initPieChart(stocks);
-        renderTable(stocks);
-        setupShowMore(stocks.length);
+        // Setup Dropdown
+        const daySelector = document.getElementById('day-selector');
+        daySelector.addEventListener('change', (e) => {
+            currentInterval = e.target.value;
+            updateDashboard();
+        });
+
+        updateDashboard();
     } catch (error) {
         console.error('Error loading data:', error);
         document.getElementById('table-body').innerHTML = '<tr><td colspan="6" style="text-align:center">無法載入資料，請確認 data.json 是否存在。</td></tr>';
     }
 });
 
+function updateDashboard() {
+    const stocks = allRankings[currentInterval];
+    if (!stocks) return;
+
+    // Update subtitles
+    document.getElementById('subtitle-days').textContent = currentInterval;
+    const tableTitle = document.querySelector('.card-title');
+    if (tableTitle) tableTitle.textContent = `外資近 ${currentInterval} 日累積買超排行榜 (Top 50)`;
+
+    initPieChart(stocks);
+    renderTable(stocks);
+    setupShowMore(stocks.length);
+}
+
 function initPieChart(stocks) {
     const chartDom = document.getElementById('industry-pie-chart');
+    // Clear previous instance
+    echarts.dispose(chartDom);
     const myChart = echarts.init(chartDom, 'dark');
     
     // Count occurrences of each industry
@@ -53,7 +78,8 @@ function initPieChart(stocks) {
     // Sort and group small categories into "Other"
     data.sort((a, b) => b.value - a.value);
     
-    const threshold = 2; // Categories with <= 2 stocks grouped as 'Other'
+    // Group categories with only 1-2 stocks into "Other" for visual balance
+    const threshold = 2; 
     let finalData = data.filter(item => item.value > threshold);
     let otherValue = data.filter(item => item.value <= threshold).reduce((sum, item) => sum + item.value, 0);
     
@@ -80,7 +106,7 @@ function initPieChart(stocks) {
                 avoidLabelOverlap: true,
                 itemStyle: {
                     borderRadius: 10,
-                    borderColor: '#1e293b',
+                    borderColor: '#111827',
                     borderWidth: 2
                 },
                 label: {
@@ -90,15 +116,15 @@ function initPieChart(stocks) {
                 emphasis: {
                     label: {
                         show: true,
-                        fontSize: 20,
+                        fontSize: 18,
                         fontWeight: 'bold'
                     }
                 },
                 data: finalData
             }
         ],
-        // Quality assurance colors (Reds/Oranges for buying bias)
-        color: ['#ef4444', '#f97316', '#fbbf24', '#f87171', '#fb923c', '#ca8a04', '#7f1d1d', '#991b1b']
+        // Elegant brand colors (Reds, Oranges, Yellows)
+        color: ['#ef4444', '#f97316', '#fbbf24', '#f87171', '#fb923c', '#eab308', '#991b1b', '#7c2d12']
     };
 
     myChart.setOption(option);
@@ -128,18 +154,23 @@ function renderTable(stocks) {
         `;
         tbody.appendChild(tr);
     });
+
+    // Reset "Show More" button visibility
+    const btn = document.getElementById('show-more-btn');
+    if (btn) btn.style.display = stocks.length > 10 ? 'block' : 'none';
 }
 
 function setupShowMore(total) {
     const btn = document.getElementById('show-more-btn');
-    if (total <= 10) {
-        btn.style.display = 'none';
-        return;
-    }
+    if (!btn) return;
 
-    btn.addEventListener('click', () => {
+    // Remove old listeners to avoid multiple binds
+    const newBtn = btn.cloneNode(true);
+    btn.parentNode.replaceChild(newBtn, btn);
+
+    newBtn.addEventListener('click', () => {
         const hiddenRows = document.querySelectorAll('.hidden-row');
         hiddenRows.forEach(row => row.classList.remove('hidden-row'));
-        btn.style.display = 'none';
+        newBtn.style.display = 'none';
     });
 }

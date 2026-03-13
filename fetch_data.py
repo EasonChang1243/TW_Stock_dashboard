@@ -243,66 +243,72 @@ def main():
             buying_history[sid].append(vol)
         time.sleep(1)
 
-    # 4. Filter for 5-day Net Buy (Accumulated)
-    candidates = []
-    for sid, history in buying_history.items():
-        if len(history) == 5:
-            total_vol = sum(history)
+    # 4. Map Metadata
+    print("Fetching latest quotes...")
+    latest_quotes = fetch_latest_quotes(last_date, industry_mapping)
+
+    # 5. Filter for Multi-Day Rankings (1, 3, 5 Day)
+    rankings = {}
+    intervals = [1, 3, 5]
+    
+    for days in intervals:
+        candidates = []
+        for sid, history in buying_history.items():
+            # Get the most recent 'days' entries
+            recent_history = history[-days:]
+            total_vol = sum(recent_history)
             if total_vol > 0:
                 candidates.append({
                     "id": sid,
                     "total_volume_shares": total_vol
                 })
+        
+        # Sort and take Top 50
+        candidates.sort(key=lambda x: x["total_volume_shares"], reverse=True)
+        top_50 = candidates[:50]
+        
+        # Map Metadata
+        final_list = []
+        for entry in top_50:
+            sid = entry["id"]
+            q = latest_quotes.get(sid, {"name": f"Unknown({sid})", "close": 0, "change": 0, "industry": "其他"})
             
-    # Sort by volume (total shares)
-    candidates.sort(key=lambda x: x["total_volume_shares"], reverse=True)
-    top_50 = candidates[:50]
-    print(f"Scanned market. Processing Top 50 Accumulated Buyers...")
-
-    # 5. Map Metadata
-    latest_quotes = fetch_latest_quotes(last_date, industry_mapping)
-    final_list = []
-    
-    for entry in top_50:
-        sid = entry["id"]
-        q = latest_quotes.get(sid, {"name": f"Unknown({sid})", "close": 0, "change": 0, "industry": "其他"})
+            volume_lots = round(entry["total_volume_shares"] / 1000)
+            close = q["close"]
+            change = q["change"]
+            
+            prev_close = close - change
+            change_pct = round(change / prev_close * 100, 2) if prev_close != 0 else 0
+            
+            final_list.append({
+                "id": sid,
+                "name": q["name"],
+                "close": close,
+                "change": change,
+                "change_percent": change_pct,
+                "volume": volume_lots,
+                "industry": q["industry"],
+                "update_time": last_date
+            })
         
-        # Convert shares to lots (張)
-        volume_lots = round(entry["total_volume_shares"] / 1000)
-        
-        close = q["close"]
-        change = q["change"]
-        
-        # Calculate change percent safely
-        prev_close = close - change
-        change_pct = round(change / prev_close * 100, 2) if prev_close != 0 else 0
-        
-        final_list.append({
-            "id": sid,
-            "name": q["name"],
-            "close": close,
-            "change": change,
-            "change_percent": change_pct,
-            "volume": volume_lots,
-            "industry": q["industry"],
-            "update_time": last_date
-        })
+        rankings[str(days)] = final_list
+        print(f"Processed Top 50 for {days}-day interval.")
 
     # 6. Save Output
     output = {
         "metadata": {
             "update_date": last_date,
             "data_source": "TWSE/TPEx Official (Enhanced)",
-            "total_count": len(final_list)
+            "available_intervals": intervals
         },
-        "data": final_list
+        "rankings": rankings
     }
     
     os.makedirs('data', exist_ok=True)
     with open('data/data.json', 'w', encoding='utf-8') as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
         
-    print(f"Successfully generated data/data.json with {len(final_list)} items.")
+    print(f"Successfully generated data/data.json with multi-day rankings.")
 
 if __name__ == "__main__":
     main()

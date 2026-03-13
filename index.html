@@ -17,11 +17,21 @@
         <header>
             <div class="header-content">
                 <h1>股市籌碼儀表板</h1>
-                <p class="subtitle">追蹤外資近 5 日累積買超排行 (官方數據版)</p>
+                <p class="subtitle">追蹤外資 <span id="subtitle-days">5</span> 日累積買超排行 (官方數據版)</p>
             </div>
             <div class="update-info">
-                <span class="version-tag">v1.2.1</span>
-                <span>更新時間：<span id="update-time">--</span></span>
+                <div class="selector-group">
+                    <label for="day-selector">時間周期：</label>
+                    <select id="day-selector">
+                        <option value="1">1 日</option>
+                        <option value="3">3 日</option>
+                        <option value="5" selected>5 日</option>
+                    </select>
+                </div>
+                <div class="version-info">
+                    <span class="version-tag">v1.3.0</span>
+                    <span>更新時間：<span id="update-time">--</span></span>
+                </div>
             </div>
         </header>
 

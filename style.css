@@ -57,7 +57,44 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    gap: 4px;
+    gap: 12px;
+}
+
+.selector-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 6px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.selector-group label {
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+#day-selector {
+    background-color: transparent;
+    color: var(--text-primary);
+    border: none;
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+}
+
+#day-selector option {
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+}
+
+.version-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .version-tag {
