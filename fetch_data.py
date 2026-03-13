@@ -168,15 +168,16 @@ def main():
             buying_history[sid].append(vol)
         time.sleep(1) # Be nice to gov servers
 
-    # 3. Filter for 5-day consecutive buy
+    # 3. Filter for 5-day Net Buy (Accumulated)
     candidates = []
     for sid, history in buying_history.items():
-        if len(history) == 5 and all(v > 0 for v in history):
+        if len(history) == 5:
             total_vol = sum(history)
-            candidates.append({
-                "id": sid,
-                "total_volume_shares": total_vol
-            })
+            if total_vol > 0: # We want Net Buyers
+                candidates.append({
+                    "id": sid,
+                    "total_volume_shares": total_vol
+                })
             
     # Sort by volume (total shares)
     candidates.sort(key=lambda x: x["total_volume_shares"], reverse=True)
