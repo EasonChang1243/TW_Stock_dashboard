@@ -164,9 +164,16 @@ def fetch_latest_quotes(date_str, industry_mapping):
                     spread = float(row[10].replace(",", "")) if row[10].strip() != "--" else 0
                     
                     # Industry lookup
-                    industry = industry_mapping.get(sid, "上市股")
+                    sid_clean = sid.strip()
+                    industry = industry_mapping.get(sid_clean, "上市股")
                     
-                    quotes[sid] = {
+                    # Enhanced Detection
+                    if sid_clean.endswith("B"):
+                        industry = "債券 ETF"
+                    elif sid_clean.startswith("00") and industry == "上市股":
+                        industry = "成分股 ETF"
+                    
+                    quotes[sid_clean] = {
                         "name": row[1].strip(),
                         "close": close,
                         "change": sign * spread,
@@ -200,12 +207,18 @@ def fetch_latest_quotes(date_str, industry_mapping):
                         spread = 0
                     
                     # Industry detection
-                    industry = industry_mapping.get(sid, "上櫃股")
-                    if sid.endswith("B"): industry = "債券 ETF"
+                    sid_clean = sid.strip()
+                    industry = industry_mapping.get(sid_clean, "上櫃股")
+                    
+                    # Enhanced Detection
+                    if sid_clean.endswith("B"):
+                        industry = "債券 ETF"
+                    elif sid_clean.startswith("00") and industry == "上櫃股":
+                        industry = "成分股 ETF"
                     
                     # Store if not already exists (prioritize first found name)
-                    if sid not in quotes or quotes[sid]['name'].startswith("Unknown"):
-                        quotes[sid] = {
+                    if sid_clean not in quotes or quotes[sid_clean]['name'].startswith("Unknown"):
+                        quotes[sid_clean] = {
                             "name": row[1].strip(),
                             "close": close,
                             "change": sign * spread,

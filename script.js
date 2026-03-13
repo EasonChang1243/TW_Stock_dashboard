@@ -4,17 +4,19 @@ let currentInterval = "5";
 document.addEventListener('DOMContentLoaded', async () => {
     // Check if the page is opened via file:// protocol
     if (window.location.protocol === 'file:') {
-        // ... (CORS error handling remains same)
         console.error('CORS Error: Fetch API does not support local files (file://).');
-        document.getElementById('table-body').innerHTML = `
-            <tr>
-                <td colspan="6" style="text-align:center; padding: 40px; color: #f97316;">
-                    <strong>由於瀏覽器安全限制 (CORS)，無法直接開啟本地檔案進行資料抓取。</strong><br><br>
-                    請在終端機執行以下指令啟動本地伺服器：<br>
-                    <code>python3 -m http.server</code><br><br>
-                    然後在瀏覽器開啟：<a href="http://localhost:8000" style="color: #60a5fa;">http://localhost:8000</a>
-                </td>
-            </tr>`;
+        const tbody = document.getElementById('table-body');
+        if (tbody) {
+            tbody.innerHTML = `
+                <tr>
+                    <td colspan="6" style="text-align:center; padding: 40px; color: #f97316;">
+                        <strong>\u7531\u65bc\u700f\u89bd\u5668\u5b89\u5168\u9650\u5236 (CORS)\uff0c\u7121\u6cd5\u76f4\u63a5\u958b\u555f\u672c\u5730\u6a94\u6848\u9032\u884c\u8cc7\u6599\u6293\u53d6\u3002</strong><br><br>
+                        \u8acb\u5728\u7d42\u7aef\u6a5f\u57f7\u884c\u4ee5\u4e0b\u6307\u4ee4\u5554\u52d5\u672c\u5730\u4f3a\u670d\u5668\uff1a<br>
+                        <code>python3 -m http.server</code><br><br>
+                        \u7136\u5f8c\u5728\u700f\u89bd\u5668\u958b\u555f\uff1a<a href="http://localhost:8000" style="color: #60a5fa;">http://localhost:8000</a>
+                    </td>
+                </tr>`;
+        }
         return;
     }
 
@@ -27,19 +29,25 @@ document.addEventListener('DOMContentLoaded', async () => {
         const metadata = jsonData.metadata;
 
         // Update display time
-        document.getElementById('update-time').textContent = metadata.update_date;
+        const updateTimeEl = document.getElementById('update-time');
+        if (updateTimeEl) updateTimeEl.textContent = metadata.update_date;
 
         // Setup Dropdown
         const daySelector = document.getElementById('day-selector');
-        daySelector.addEventListener('change', (e) => {
-            currentInterval = e.target.value;
-            updateDashboard();
-        });
+        if (daySelector) {
+            daySelector.addEventListener('change', (e) => {
+                currentInterval = e.target.value;
+                updateDashboard();
+            });
+        }
 
         updateDashboard();
     } catch (error) {
         console.error('Error loading data:', error);
-        document.getElementById('table-body').innerHTML = '<tr><td colspan="6" style="text-align:center">無法載入資料，請確認 data.json 是否存在。</td></tr>';
+        const tbody = document.getElementById('table-body');
+        if (tbody) {
+            tbody.innerHTML = '<tr><td colspan="6" style="text-align:center">\u7121\u6cd5\u8f09\u5165\u8cc7\u6599\uff0c\u8acb\u78ba\u8a8d data.json \u662f\u5426\u5b58\u5728\u3002</td></tr>';
+        }
     }
 });
 
@@ -48,9 +56,15 @@ function updateDashboard() {
     if (!stocks) return;
 
     // Update subtitles
-    document.getElementById('subtitle-days').textContent = currentInterval;
+    const subtitleDays = document.getElementById('subtitle-days');
+    if (subtitleDays) subtitleDays.textContent = currentInterval;
+    
     const tableTitle = document.querySelector('.card-title');
-    if (tableTitle) tableTitle.textContent = `外資近 ${currentInterval} 日累積買超排行榜 (Top 50)`;
+    if (tableTitle) tableTitle.textContent = `\u5916\u8cc7\u8fd1 ${currentInterval} \u65e5\u7d2f\u7a4d\u8cb7\u8d85\u6392\u884c\u699c (Top 50)`;
+
+    // Update table header if needed
+    const volumeHeader = document.querySelector('th:nth-child(5)');
+    if (volumeHeader) volumeHeader.textContent = `${currentInterval}\u65e5\u7d2f\u7a4d\u8cb7\u8d85 (\u5bc5)`;
 
     initPieChart(stocks);
     renderTable(stocks);
@@ -59,39 +73,37 @@ function updateDashboard() {
 
 function initPieChart(stocks) {
     const chartDom = document.getElementById('industry-pie-chart');
+    if (!chartDom || typeof echarts === 'undefined') return;
+
     // Clear previous instance
     echarts.dispose(chartDom);
     const myChart = echarts.init(chartDom, 'dark');
     
-    // Count occurrences of each industry
     const counts = {};
     stocks.forEach(s => {
         counts[s.industry] = (counts[s.industry] || 0) + 1;
     });
 
-    // Convert to ECharts format
     let data = Object.keys(counts).map(name => ({
         name: name,
         value: counts[name]
     }));
 
-    // Sort and group small categories into "Other"
     data.sort((a, b) => b.value - a.value);
     
-    // Group categories with only 1-2 stocks into "Other" for visual balance
     const threshold = 2; 
     let finalData = data.filter(item => item.value > threshold);
     let otherValue = data.filter(item => item.value <= threshold).reduce((sum, item) => sum + item.value, 0);
     
     if (otherValue > 0) {
-        finalData.push({ name: '其他', value: otherValue });
+        finalData.push({ name: '\u5176\u4ed6', value: otherValue });
     }
 
     const option = {
         backgroundColor: 'transparent',
         tooltip: {
             trigger: 'item',
-            formatter: '{b}: {c} 家 ({d}%)'
+            formatter: '{b}: {c} \u5bb6 ({d}%)'
         },
         legend: {
             orient: 'vertical',
@@ -100,7 +112,7 @@ function initPieChart(stocks) {
         },
         series: [
             {
-                name: '產業佔比',
+                name: '\u7522\u696d\u4f54\u6bd4',
                 type: 'pie',
                 radius: ['40%', '70%'],
                 avoidLabelOverlap: true,
@@ -123,16 +135,16 @@ function initPieChart(stocks) {
                 data: finalData
             }
         ],
-        // Elegant brand colors (Reds, Oranges, Yellows)
         color: ['#ef4444', '#f97316', '#fbbf24', '#f87171', '#fb923c', '#eab308', '#991b1b', '#7c2d12']
     };
 
     myChart.setOption(option);
-    window.addEventListener('resize', myChart.resize);
+    window.addEventListener('resize', () => myChart.resize());
 }
 
 function renderTable(stocks) {
     const tbody = document.getElementById('table-body');
+    if (!tbody) return;
     tbody.innerHTML = '';
 
     stocks.forEach((stock, index) => {
@@ -155,7 +167,6 @@ function renderTable(stocks) {
         tbody.appendChild(tr);
     });
 
-    // Reset "Show More" button visibility
     const btn = document.getElementById('show-more-btn');
     if (btn) btn.style.display = stocks.length > 10 ? 'block' : 'none';
 }
@@ -164,7 +175,6 @@ function setupShowMore(total) {
     const btn = document.getElementById('show-more-btn');
     if (!btn) return;
 
-    // Remove old listeners to avoid multiple binds
     const newBtn = btn.cloneNode(true);
     btn.parentNode.replaceChild(newBtn, btn);
 
