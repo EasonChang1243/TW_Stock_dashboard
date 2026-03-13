@@ -9,6 +9,62 @@ import sys
 # Constants
 USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
 
+# Industry Mapping (Official Codes to Names)
+TWSE_INDUSTRY_MAP = {
+    "01": "水泥工業", "02": "食品工業", "03": "塑膠工業", "04": "紡織纖維", "05": "電機機械",
+    "06": "電器電纜", "07": "化學工業", "21": "化學工業", "08": "生技醫療業", "22": "生技醫療業",
+    "09": "玻璃陶瓷", "10": "造紙工業", "11": "鋼鐵工業", "12": "橡膠工業", "13": "汽車工業",
+    "24": "半導體業", "25": "電腦及週邊設備業", "26": "光電業", "27": "通信網路業",
+    "28": "電子零組件業", "29": "電子通路業", "30": "資訊服務業", "31": "其他電子業",
+    "32": "建材營造", "33": "航運業", "34": "觀光事業", "37": "觀光餐旅", "35": "金融保險",
+    "36": "貿易百貨", "38": "其他", "39": "數位雲端", "40": "運動休閒", "41": "居家生活",
+    "42": "綠能環保", "80": "創新板"
+}
+
+TPEX_INDUSTRY_MAP = {
+    "01": "食品工業", "02": "塑膠工業", "03": "紡織纖維", "04": "電機機械", "05": "電器電纜",
+    "06": "化學工業", "07": "玻璃陶瓷", "08": "鋼鐵工業", "09": "橡膠工業", "10": "建材營造",
+    "11": "航運業", "13": "金融業", "14": "貿易百貨", "15": "其他", "21": "生技醫療",
+    "22": "電腦及週邊設備業", "23": "網路通信業", "24": "電子零組件業", "25": "電子通路業",
+    "26": "資訊服務業", "27": "其他電子業", "28": "光電業", "29": "半導體業",
+    "30": "文化創意業", "31": "其他電子業", "32": "電子商務", "33": "居家生活",
+    "34": "觀光餐旅", "35": "綠能環保", "36": "數位雲端", "37": "運動休閒", "38": "其他"
+}
+
+def fetch_industry_mapping():
+    """Fetch StockID to IndustryCode mapping from TWSE/TPEx OpenAPI."""
+    mapping = {}
+    
+    # 1. TWSE (Listed)
+    twse_url = "https://openapi.twse.com.tw/v1/opendata/t187ap03_L"
+    data = fetch_json(twse_url)
+    if data:
+        for item in data:
+            sid = item.get("公司代號", "").strip()
+            code = item.get("產業別", "").strip()
+            if sid and code:
+                mapping[sid] = TWSE_INDUSTRY_MAP.get(code, "上市其他")
+                
+    # 2. TPEx (OTC) - Fallback to MOPS CSV for reliability
+    import csv
+    import io
+    tpex_csv_url = "https://mopsfin.twse.com.tw/opendata/t187ap03_O.csv"
+    try:
+        res = requests.get(tpex_csv_url, timeout=10)
+        if res.status_code == 200:
+            # Handle UTF-8 with BOM
+            content = res.content.decode('utf-8-sig')
+            f = io.StringIO(content)
+            reader = csv.DictReader(f)
+            for row in reader:
+                sid = row.get("公司代號", "").strip()
+                code = row.get("產業別", "").strip()
+                if sid and code:
+                    mapping[sid] = TPEX_INDUSTRY_MAP.get(code, "上櫃其他")
+    except: pass
+    
+    return mapping
+
 def get_roc_date(date_str):
     """Convert YYYY-MM-DD to ROC string (e.g., 113/03/12)."""
     y, m, d = date_str.split('-')
@@ -86,7 +142,7 @@ def fetch_institutional_all(date_str):
             
     return daily_map
 
-def fetch_latest_quotes(date_str):
+def fetch_latest_quotes(date_str, industry_mapping):
     """Fetch metadata and price for industry mapping."""
     d_compact = date_str.replace("-", "")
     d_slash = get_roc_date(date_str)
@@ -106,11 +162,15 @@ def fetch_latest_quotes(date_str):
                     close = float(row[8].replace(",", "")) if row[8].strip() != "--" else 0
                     sign = -1 if "down" in row[9] or "-" in row[9] else 1
                     spread = float(row[10].replace(",", "")) if row[10].strip() != "--" else 0
+                    
+                    # Industry lookup
+                    industry = industry_mapping.get(sid, "上市股")
+                    
                     quotes[sid] = {
                         "name": row[1].strip(),
                         "close": close,
                         "change": sign * spread,
-                        "industry": "上市股"
+                        "industry": industry
                     }
                 except: continue
 
@@ -140,8 +200,8 @@ def fetch_latest_quotes(date_str):
                         spread = 0
                     
                     # Industry detection
-                    industry = "上櫃股"
-                    if sid.endswith("B"): industry = "上櫃債券"
+                    industry = industry_mapping.get(sid, "上櫃股")
+                    if sid.endswith("B"): industry = "債券 ETF"
                     
                     # Store if not already exists (prioritize first found name)
                     if sid not in quotes or quotes[sid]['name'].startswith("Unknown"):
@@ -167,7 +227,11 @@ def main():
     last_date = trading_dates[-1]
     print(f"Target trading dates: {trading_dates}")
 
-    # 2. Accumulate foreign buying
+    # 2. Get industry mapping
+    print("Fetching industry mapping...")
+    industry_mapping = fetch_industry_mapping()
+
+    # 3. Accumulate foreign buying
     buying_history = {} # sid -> [day1_net, day2_net, ...]
     
     for d in trading_dates:
@@ -179,7 +243,7 @@ def main():
             buying_history[sid].append(vol)
         time.sleep(1)
 
-    # 3. Filter for 5-day Net Buy (Accumulated)
+    # 4. Filter for 5-day Net Buy (Accumulated)
     candidates = []
     for sid, history in buying_history.items():
         if len(history) == 5:
@@ -195,8 +259,8 @@ def main():
     top_50 = candidates[:50]
     print(f"Scanned market. Processing Top 50 Accumulated Buyers...")
 
-    # 4. Map Metadata
-    latest_quotes = fetch_latest_quotes(last_date)
+    # 5. Map Metadata
+    latest_quotes = fetch_latest_quotes(last_date, industry_mapping)
     final_list = []
     
     for entry in top_50:
@@ -209,18 +273,22 @@ def main():
         close = q["close"]
         change = q["change"]
         
+        # Calculate change percent safely
+        prev_close = close - change
+        change_pct = round(change / prev_close * 100, 2) if prev_close != 0 else 0
+        
         final_list.append({
             "id": sid,
             "name": q["name"],
             "close": close,
             "change": change,
-            "change_percent": round(change / (close - change) * 100, 2) if (close - change) != 0 else 0,
+            "change_percent": change_pct,
             "volume": volume_lots,
             "industry": q["industry"],
             "update_time": last_date
         })
 
-    # 5. Save Output
+    # 6. Save Output
     output = {
         "metadata": {
             "update_date": last_date,
@@ -234,7 +302,7 @@ def main():
     with open('data/data.json', 'w', encoding='utf-8') as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
         
-    print(f"Successfully generated data/data.json with {len(final_list)} items. 00948B coverage verified.")
+    print(f"Successfully generated data/data.json with {len(final_list)} items.")
 
 if __name__ == "__main__":
     main()
