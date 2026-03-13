@@ -17,35 +17,21 @@
 *   **Visualization**: Apache ECharts
 *   **Automation**: GitHub Actions & GitHub Pages
 
-## 📦 安裝與設定
+## 快速開始
 
-### 本地開發
-1.  **安裝依賴**：
-    ```bash
-    pip install -r requirements.txt
-    ```
-2.  **設定環境變數**：
-    在根目錄建立 `.env` 檔案並填入您的 FinMind API Key：
-    ```env
-    FIND_MY_API=您的_API_KEY
-    ```
-3.  **執行抓取**：
-    ```bash
-    python3 fetch_data.py
-    ```
-4.  **開啟網頁**：
-    ```bash
-    python3 -m http.server
-    # 開啟 http://localhost:8000
-    ```
+本專案無需任何 API Key 或複雜設定，直接拉取程式碼即可執行。
 
-### GitHub 自動化設定
-1.  **Repository Secret**：前往 GitHub 設定，新增一個名為 `FIND_MY_API` 的 Secret，內容填入您的 API Key。
-2.  **GitHub Pages**：在 Settings -> Pages 中，將 Source 設定為 `GitHub Actions`。
-3.  **權限設定**：在 Settings -> Actions -> General 中，確認 `Workflow permissions` 已選取 `Read and write permissions`。
+### 本地執行
+1. 安裝環境：`pip install pandas requests tqdm`
+2. 執行抓取：`python fetch_data.py`
+3. 開啟網頁：使用 Live Server 或 `python -m http.server` 開啟 `index.html`。
+
+### GitHub 自動化
+專案已內建 GitHub Actions，每天下午 2:00（台灣時間）會自動更新資料並部署至 GitHub Pages。
 
 ## 📊 資料來源
-*   [FinMind 數據服務](https://finmindtrade.com/)
+*   [證交所 (TWSE) 官方數據](https://www.twse.com.tw/)
+*   [上櫃中心 (TPEx) 官方數據](https://www.tpex.org.tw/)
 *   [玉山證券外資連 5 買超排行](https://www.esunsec.com.tw/tw-rank/b2brwd/page/rank/chip/0003)
 
 ---
