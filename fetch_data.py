@@ -277,7 +277,7 @@ def fetch_latest_quotes(date_str, industry_mapping):
 def fetch_us_market():
     """Fetch latest quotes for specific US indices and stocks via Stooq."""
     symbols = {
-        "^SPX": "標普500指數",
+        "^GSPC": "標普500指數",
         "^NDX": "納斯達克100指數",
         "^SOX": "費城半導體指數",
         "NVDA.US": "英偉達",
