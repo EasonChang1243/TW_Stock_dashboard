@@ -70,23 +70,47 @@ def get_roc_date(date_str):
     y, m, d = date_str.split('-')
     return f"{int(y)-1911}/{m}/{d}"
 
-def fetch_json(url, method='GET', payload=None):
+def fetch_json(url, method='GET', payload=None, referer=None):
     """Helper to fetch JSON with retries for official endpoints."""
-    headers = {
-        "User-Agent": USER_AGENT,
-        "Content-Type": "application/x-www-form-urlencoded" if method == 'POST' else "application/json"
+    # Robust headers to avoid blocks
+    base_headers = {
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+        "Accept": "application/json, text/javascript, */*; q=0.01",
+        "Accept-Language": "en-US,en;q=0.9,zh-TW;q=0.8,zh;q=0.7",
+        "X-Requested-With": "XMLHttpRequest"
     }
-    for _ in range(3):
+    
+    headers = base_headers.copy()
+    if referer:
+        headers["Referer"] = referer
+    elif "twse.com.tw" in url:
+        headers["Referer"] = "https://www.twse.com.tw/zh/fund/T86"
+    elif "tpex.org.tw" in url:
+        headers["Referer"] = "https://www.tpex.org.tw/zh-tw/mainboard/trading/major-institutional/detail/day.html"
+
+    if method == 'POST':
+        headers["Content-Type"] = "application/x-www-form-urlencoded"
+
+    for attempt in range(4):
         try:
+            delay = (attempt + 1) * 2
+            time.sleep(delay)
+            
             if method == 'POST':
-                res = requests.post(url, headers=headers, data=payload, timeout=20)
+                res = requests.post(url, headers=headers, data=payload, timeout=25)
             else:
-                res = requests.get(url, headers=headers, timeout=20)
+                res = requests.get(url, headers=headers, timeout=25)
+            
+            # Check for redirect/block
+            if res.status_code == 307 or (res.status_code == 200 and "<html" in res.text.lower()):
+                print(f"Warning: Blocked/Redirected on {url} (Attempt {attempt+1})")
+                continue
                 
             if res.status_code == 200:
                 return res.json()
         except Exception as e:
-            time.sleep(1)
+            print(f"Fetch Error ({url}): {e}")
+            time.sleep(2)
     return None
 
 def get_trading_days(count=5):
@@ -96,10 +120,11 @@ def get_trading_days(count=5):
     # To be safe, scan back 20 days to find 5 trading days
     while len(dates) < count:
         d_str = current.strftime("%Compacted" if False else "%Y%m%d")
-        # Check if T86 (Institutional Data) is available for this day
+        # Check if T86 (Institutional Data) is available and has data
         url = f"https://www.twse.com.tw/rwd/zh/fund/T86?date={d_str}&selectType=ALL&response=json"
         data = fetch_json(url)
-        if data and data.get("stat") == "OK":
+        # stat must be OK AND data must be non-empty
+        if data and data.get("stat") == "OK" and data.get("data"):
             dates.append(current.strftime("%Y-%m-%d"))
         current -= timedelta(days=1)
         if (datetime.now() - current).days > 25: break
@@ -137,14 +162,13 @@ def fetch_institutional_all(date_str):
         tables = tpex_data.get("tables", [])
         if tables:
             data_rows = tables[0].get("data", [])
-            # Index 0: ID
-            # Index 10: Foreign Net Buy (Total)
-            # Index 11: Investment Trust Net Buy
+            # Index 13: Investment Trust Net Buy (TPEx Indexing Corrected)
             for row in data_rows:
                 sid = row[0].strip()
                 try:
+                    # Column 10: Foreign, Column 13: Trust
                     foreign = int(row[10].replace(",", ""))
-                    trust = int(row[11].replace(",", ""))
+                    trust = int(row[13].replace(",", ""))
                     if sid in daily_map:
                         daily_map[sid]["foreign"] += foreign
                         daily_map[sid]["trust"] += trust
