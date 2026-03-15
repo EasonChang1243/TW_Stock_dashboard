@@ -339,9 +339,9 @@ def calculate_streaks(trading_dates, investor_type):
                     break
             streaks[sid] = count
             
-    # Sort and take Top 20
+    # Sort and take Top 50
     sorted_streaks = sorted(streaks.items(), key=lambda x: x[1], reverse=True)
-    return [{"id": k, "days": v} for k, v in sorted_streaks[:20]]
+    return [{"id": k, "days": v} for k, v in sorted_streaks[:50]]
 
 def main():
     print("Starting All-Market stock data fetch (Official Source)...")

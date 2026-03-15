@@ -88,7 +88,8 @@ function updateDashboard(data) {
     renderUSMarkets(data.us_markets);
 
     // Module 2: Industry Pie & Consecutive
-    initPieChart(stocks);
+    initPieChart('industry-pie-chart', stocks);
+    initPieChart('consecutive-industry-pie-chart', data.consecutive_buys[currentInvestorType], stocks);
     renderConsecutiveBuys(data.consecutive_buys[currentInvestorType], stocks);
 
     // Module 1: Main Table
@@ -119,7 +120,7 @@ function renderConsecutiveBuys(streaks, allStocks) {
     if (!tbody || !streaks) return;
 
     const investorName = currentInvestorType === "foreign" ? "\u5916\u8cc7" : "\u6295\u4fe1";
-    if (title) title.textContent = `${investorName}\u9023\u7e8c\u8cb7\u8d85\u6392\u884c\u699c (Top 10)`;
+    if (title) title.textContent = `${investorName}\u9023\u7e8c\u8cb7\u8d85\u6392\u884c\u699c (Top 50)`;
 
     tbody.innerHTML = '';
     streaks.forEach((item, index) => {
@@ -127,6 +128,10 @@ function renderConsecutiveBuys(streaks, allStocks) {
         const meta = allStocks.find(s => s.id === item.id) || { name: `\u4ee3\u865f ${item.id}`, close: '--', industry: '--' };
         
         const tr = document.createElement('tr');
+        if (index >= 10) {
+            tr.classList.add('hidden-row');
+            tr.style.display = 'none';
+        }
         tr.innerHTML = `
             <td>${index + 1}</td>
             <td><span class="stock-id">${item.id}</span> <strong>${meta.name}</strong></td>
@@ -136,10 +141,12 @@ function renderConsecutiveBuys(streaks, allStocks) {
         `;
         tbody.appendChild(tr);
     });
+
+    setupConsecutiveShowMore(streaks.length);
 }
 
-function initPieChart(stocks) {
-    const chartDom = document.getElementById('industry-pie-chart');
+function initPieChart(chartId, stocks, metadataSource = null) {
+    const chartDom = document.getElementById(chartId);
     if (!chartDom || typeof echarts === 'undefined') return;
 
     // Clear previous instance
@@ -150,7 +157,15 @@ function initPieChart(stocks) {
     
     const counts = {};
     stocks.forEach(s => {
-        counts[s.industry] = (counts[s.industry] || 0) + 1;
+        // If s only has ID (like in streaks), look up industry from metadataSource
+        let industry = s.industry;
+        if (!industry && metadataSource) {
+            const meta = metadataSource.find(m => m.id === s.id);
+            industry = meta ? meta.industry : "\u5176\u4ed6";
+        }
+        if (!industry) industry = "\u5176\u4ed6";
+        
+        counts[industry] = (counts[industry] || 0) + 1;
     });
 
     let data = Object.keys(counts).map(name => ({
@@ -160,7 +175,8 @@ function initPieChart(stocks) {
 
     data.sort((a, b) => b.value - a.value);
     
-    const threshold = 2; 
+    // Adjust threshold based on item count
+    const threshold = stocks.length > 20 ? 2 : 0; 
     let finalData = data.filter(item => item.value > threshold);
     let otherValue = data.filter(item => item.value <= threshold).reduce((sum, item) => sum + item.value, 0);
     
@@ -178,7 +194,8 @@ function initPieChart(stocks) {
             orient: 'vertical',
             left: 'left',
             textStyle: { color: '#94a3b8' },
-            type: 'scroll'
+            type: 'scroll',
+            show: stocks.length > 5
         },
         series: [
             {
@@ -212,6 +229,7 @@ function renderTable(stocks) {
         const tr = document.createElement('tr');
         if (index >= 10) {
             tr.classList.add('hidden-row');
+            tr.style.display = 'none';
         }
 
         const changeClass = stock.change > 0 ? 'change-up' : (stock.change < 0 ? 'change-down' : '');
@@ -246,24 +264,44 @@ function setupShowMore(total) {
     let isExpanded = false;
 
     newBtn.addEventListener('click', () => {
-        const hiddenRows = document.querySelectorAll('#table-body tr.hidden-row, #table-body tr:not(.hidden-row)');
+        const hiddenRows = document.querySelectorAll('#table-body tr.hidden-row');
         isExpanded = !isExpanded;
 
-        hiddenRows.forEach((row, index) => {
-            if (index >= 10) {
-                if (isExpanded) {
-                    row.style.display = 'table-row';
-                } else {
-                    row.style.display = 'none';
-                }
-            }
+        hiddenRows.forEach((row) => {
+            row.style.display = isExpanded ? 'table-row' : 'none';
         });
 
         if (isExpanded) {
             newBtn.textContent = `\u6536\u5408\u5167\u5bb9`;
         } else {
             newBtn.textContent = `\u986f\u793a\u66f4\u591a (\u9918 ${total - 10} \u6a94)`;
-            document.querySelector('.table-wrapper').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            document.querySelector('#stock-table').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    });
+}
+
+function setupConsecutiveShowMore(total) {
+    const btn = document.getElementById('consecutive-show-more-btn');
+    if (!btn) return;
+
+    const newBtn = btn.cloneNode(true);
+    btn.parentNode.replaceChild(newBtn, btn);
+
+    let isExpanded = false;
+
+    newBtn.addEventListener('click', () => {
+        const hiddenRows = document.querySelectorAll('#consecutive-body tr.hidden-row');
+        isExpanded = !isExpanded;
+
+        hiddenRows.forEach((row) => {
+            row.style.display = isExpanded ? 'table-row' : 'none';
+        });
+
+        if (isExpanded) {
+            newBtn.textContent = `\u6536\u5408\u5167\u5bb9`;
+        } else {
+            newBtn.textContent = `\u986f\u793a\u66f4\u591a (\u9918 ${total - 10} \u6a94)`;
+            document.querySelector('#consecutive-table').scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     });
 }
