@@ -3033,186 +3033,544 @@
   "consecutive_buys": {
     "foreign": [
       {
-        "id": "3023",
-        "days": 16
-      },
-      {
-        "id": "4737",
-        "days": 16
-      },
-      {
-        "id": "2412",
-        "days": 15
-      },
-      {
-        "id": "6552",
-        "days": 11
-      },
-      {
-        "id": "00763U",
-        "days": 11
-      },
-      {
-        "id": "2548",
-        "days": 10
-      },
-      {
-        "id": "9911",
-        "days": 10
-      },
-      {
-        "id": "2723",
-        "days": 10
-      },
-      {
         "id": "8489",
-        "days": 10
-      },
-      {
-        "id": "910322",
-        "days": 9
-      },
-      {
-        "id": "009801",
-        "days": 9
-      },
-      {
-        "id": "2451",
-        "days": 8
+        "days": 10,
+        "industry": "上櫃其他"
       },
       {
         "id": "4109",
-        "days": 8
+        "days": 8,
+        "industry": "電腦及週邊設備業"
       },
       {
         "id": "4510",
-        "days": 8
+        "days": 8,
+        "industry": "電器電纜"
       },
       {
         "id": "6234",
-        "days": 8
+        "days": 8,
+        "industry": "資訊服務業"
       },
       {
         "id": "6432",
-        "days": 8
+        "days": 8,
+        "industry": "光電業"
       },
       {
         "id": "6494",
-        "days": 8
+        "days": 8,
+        "industry": "電子零組件業"
       },
       {
         "id": "6720",
-        "days": 8
+        "days": 8,
+        "industry": "電子零組件業"
+      },
+      {
+        "id": "2596",
+        "days": 7,
+        "industry": "貿易百貨"
+      },
+      {
+        "id": "3537",
+        "days": 7,
+        "industry": "光電業"
+      },
+      {
+        "id": "8234",
+        "days": 7,
+        "industry": "電子通路業"
       },
       {
         "id": "6213",
-        "days": 7
+        "days": 6,
+        "industry": "電子零組件業"
       },
       {
         "id": "6191",
-        "days": 7
+        "days": 6,
+        "industry": "電子零組件業"
+      },
+      {
+        "id": "2412",
+        "days": 6,
+        "industry": "通信網路業"
+      },
+      {
+        "id": "2393",
+        "days": 6,
+        "industry": "光電業"
+      },
+      {
+        "id": "2451",
+        "days": 6,
+        "industry": "半導體業"
+      },
+      {
+        "id": "1210",
+        "days": 6,
+        "industry": "食品工業"
+      },
+      {
+        "id": "1218",
+        "days": 6,
+        "industry": "食品工業"
+      },
+      {
+        "id": "00717",
+        "days": 6,
+        "industry": "其他"
+      },
+      {
+        "id": "3034",
+        "days": 6,
+        "industry": "半導體業"
+      },
+      {
+        "id": "2548",
+        "days": 6,
+        "industry": "上市其他"
+      },
+      {
+        "id": "3023",
+        "days": 6,
+        "industry": "電子零組件業"
+      },
+      {
+        "id": "6112",
+        "days": 6,
+        "industry": "資訊服務業"
+      },
+      {
+        "id": "6214",
+        "days": 6,
+        "industry": "資訊服務業"
+      },
+      {
+        "id": "9911",
+        "days": 6,
+        "industry": "其他"
+      },
+      {
+        "id": "3622",
+        "days": 6,
+        "industry": "光電業"
+      },
+      {
+        "id": "8033",
+        "days": 6,
+        "industry": "上市其他"
+      },
+      {
+        "id": "2723",
+        "days": 6,
+        "industry": "上市其他"
+      },
+      {
+        "id": "1338",
+        "days": 6,
+        "industry": "橡膠工業"
+      },
+      {
+        "id": "6552",
+        "days": 6,
+        "industry": "半導體業"
+      },
+      {
+        "id": "4737",
+        "days": 6,
+        "industry": "生技醫療業"
+      },
+      {
+        "id": "910322",
+        "days": 6,
+        "industry": "上市其他"
+      },
+      {
+        "id": "2520",
+        "days": 6,
+        "industry": "上市其他"
+      },
+      {
+        "id": "009801",
+        "days": 6,
+        "industry": "其他"
+      },
+      {
+        "id": "00763U",
+        "days": 6,
+        "industry": "其他"
+      },
+      {
+        "id": "3221",
+        "days": 6,
+        "industry": "其他電子業"
+      },
+      {
+        "id": "6716",
+        "days": 6,
+        "industry": "電子零組件業"
+      },
+      {
+        "id": "8048",
+        "days": 6,
+        "industry": "其他電子業"
+      },
+      {
+        "id": "8289",
+        "days": 6,
+        "industry": "光電業"
+      },
+      {
+        "id": "6531",
+        "days": 5,
+        "industry": "半導體業"
+      },
+      {
+        "id": "2464",
+        "days": 5,
+        "industry": "其他電子業"
+      },
+      {
+        "id": "4960",
+        "days": 5,
+        "industry": "光電業"
+      },
+      {
+        "id": "00639",
+        "days": 5,
+        "industry": "其他"
+      },
+      {
+        "id": "6024",
+        "days": 5,
+        "industry": "上市其他"
+      },
+      {
+        "id": "3010",
+        "days": 5,
+        "industry": "電子通路業"
+      },
+      {
+        "id": "2484",
+        "days": 5,
+        "industry": "電子零組件業"
+      },
+      {
+        "id": "6768",
+        "days": 5,
+        "industry": "觀光餐旅"
+      },
+      {
+        "id": "3305",
+        "days": 5,
+        "industry": "其他電子業"
+      },
+      {
+        "id": "6141",
+        "days": 5,
+        "industry": "電子零組件業"
+      },
+      {
+        "id": "3447",
+        "days": 5,
+        "industry": "通信網路業"
+      },
+      {
+        "id": "7722",
+        "days": 5,
+        "industry": "貿易百貨"
       }
     ],
     "trust": [
       {
-        "id": "2880",
-        "days": 15
-      },
-      {
-        "id": "2395",
-        "days": 15
-      },
-      {
-        "id": "3017",
-        "days": 12
-      },
-      {
-        "id": "6438",
-        "days": 11
-      },
-      {
-        "id": "2357",
-        "days": 11
-      },
-      {
-        "id": "2882",
-        "days": 11
-      },
-      {
         "id": "6223",
-        "days": 11
-      },
-      {
-        "id": "2892",
-        "days": 10
-      },
-      {
-        "id": "6526",
-        "days": 10
-      },
-      {
-        "id": "2383",
-        "days": 10
-      },
-      {
-        "id": "0050",
-        "days": 10
-      },
-      {
-        "id": "1609",
-        "days": 9
-      },
-      {
-        "id": "2371",
-        "days": 9
-      },
-      {
-        "id": "2027",
-        "days": 9
-      },
-      {
-        "id": "2881",
-        "days": 9
-      },
-      {
-        "id": "1101",
-        "days": 9
+        "days": 11,
+        "industry": "電子零組件業"
       },
       {
         "id": "3211",
-        "days": 9
-      },
-      {
-        "id": "6005",
-        "days": 8
+        "days": 9,
+        "industry": "電子通路業"
       },
       {
         "id": "6510",
-        "days": 8
+        "days": 8,
+        "industry": "電子零組件業"
+      },
+      {
+        "id": "2892",
+        "days": 6,
+        "industry": "上市其他"
       },
       {
         "id": "3036",
-        "days": 7
+        "days": 6,
+        "industry": "電子通路業"
+      },
+      {
+        "id": "2880",
+        "days": 6,
+        "industry": "上市其他"
+      },
+      {
+        "id": "2395",
+        "days": 6,
+        "industry": "電腦及週邊設備業"
+      },
+      {
+        "id": "2368",
+        "days": 6,
+        "industry": "電子零組件業"
+      },
+      {
+        "id": "6438",
+        "days": 6,
+        "industry": "其他電子業"
+      },
+      {
+        "id": "6526",
+        "days": 6,
+        "industry": "半導體業"
+      },
+      {
+        "id": "3017",
+        "days": 6,
+        "industry": "電腦及週邊設備業"
+      },
+      {
+        "id": "1609",
+        "days": 6,
+        "industry": "電器電纜"
+      },
+      {
+        "id": "2385",
+        "days": 6,
+        "industry": "電子零組件業"
+      },
+      {
+        "id": "2383",
+        "days": 6,
+        "industry": "電子零組件業"
+      },
+      {
+        "id": "6005",
+        "days": 6,
+        "industry": "上市其他"
+      },
+      {
+        "id": "2357",
+        "days": 6,
+        "industry": "電腦及週邊設備業"
+      },
+      {
+        "id": "2371",
+        "days": 6,
+        "industry": "電機機械"
+      },
+      {
+        "id": "2027",
+        "days": 6,
+        "industry": "造紙工業"
+      },
+      {
+        "id": "2882",
+        "days": 6,
+        "industry": "上市其他"
+      },
+      {
+        "id": "2881",
+        "days": 6,
+        "industry": "上市其他"
+      },
+      {
+        "id": "1101",
+        "days": 6,
+        "industry": "水泥工業"
+      },
+      {
+        "id": "0050",
+        "days": 6,
+        "industry": "其他"
+      },
+      {
+        "id": "5274",
+        "days": 6,
+        "industry": "電子零組件業"
+      },
+      {
+        "id": "2376",
+        "days": 5,
+        "industry": "電腦及週邊設備業"
+      },
+      {
+        "id": "2301",
+        "days": 5,
+        "industry": "電腦及週邊設備業"
+      },
+      {
+        "id": "5234",
+        "days": 5,
+        "industry": "光電業"
+      },
+      {
+        "id": "2404",
+        "days": 5,
+        "industry": "其他電子業"
+      },
+      {
+        "id": "2377",
+        "days": 5,
+        "industry": "電腦及週邊設備業"
+      },
+      {
+        "id": "2313",
+        "days": 4,
+        "industry": "電子零組件業"
+      },
+      {
+        "id": "3533",
+        "days": 4,
+        "industry": "電子零組件業"
+      },
+      {
+        "id": "6415",
+        "days": 3,
+        "industry": "半導體業"
+      },
+      {
+        "id": "6197",
+        "days": 3,
+        "industry": "電子零組件業"
+      },
+      {
+        "id": "3450",
+        "days": 3,
+        "industry": "半導體業"
+      },
+      {
+        "id": "2458",
+        "days": 3,
+        "industry": "半導體業"
+      },
+      {
+        "id": "6937",
+        "days": 3,
+        "industry": "半導體業"
+      },
+      {
+        "id": "3702",
+        "days": 3,
+        "industry": "電子通路業"
+      },
+      {
+        "id": "2492",
+        "days": 3,
+        "industry": "電子零組件業"
+      },
+      {
+        "id": "6196",
+        "days": 3,
+        "industry": "其他電子業"
+      },
+      {
+        "id": "1215",
+        "days": 3,
+        "industry": "食品工業"
+      },
+      {
+        "id": "2049",
+        "days": 3,
+        "industry": "電機機械"
+      },
+      {
+        "id": "8996",
+        "days": 3,
+        "industry": "電機機械"
+      },
+      {
+        "id": "2618",
+        "days": 3,
+        "industry": "上市其他"
+      },
+      {
+        "id": "3675",
+        "days": 3,
+        "industry": "電子零組件業"
+      },
+      {
+        "id": "5371",
+        "days": 3,
+        "industry": "資訊服務業"
+      },
+      {
+        "id": "2887",
+        "days": 2,
+        "industry": "上市其他"
+      },
+      {
+        "id": "6531",
+        "days": 2,
+        "industry": "半導體業"
+      },
+      {
+        "id": "7795",
+        "days": 2,
+        "industry": "電子零組件業"
+      },
+      {
+        "id": "3026",
+        "days": 2,
+        "industry": "電子零組件業"
+      },
+      {
+        "id": "2059",
+        "days": 2,
+        "industry": "電子零組件業"
+      },
+      {
+        "id": "2421",
+        "days": 2,
+        "industry": "電子零組件業"
       }
     ]
   },
   "us_markets": [
     {
       "id": "^NDX",
-      "name": "Nasdaq 100",
+      "name": "納斯達克100指數",
       "close": 24380.73,
       "update_time": "2026-03-13"
     },
     {
       "id": "NVDA.US",
-      "name": "NVIDIA",
+      "name": "英偉達",
       "close": 180.25,
       "update_time": "2026-03-13"
     },
     {
+      "id": "MU.US",
+      "name": "美光科技",
+      "close": 426.13,
+      "update_time": "2026-03-13"
+    },
+    {
+      "id": "SNDK.US",
+      "name": "閃迪",
+      "close": 661.62,
+      "update_time": "2026-03-13"
+    },
+    {
       "id": "TSM.US",
-      "name": "TSMC",
+      "name": "台積電",
       "close": 338.31,
+      "update_time": "2026-03-13"
+    },
+    {
+      "id": "AAPL.US",
+      "name": "蘋果",
+      "close": 250.12,
       "update_time": "2026-03-13"
     }
   ]
