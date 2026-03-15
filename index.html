@@ -43,11 +43,41 @@
         </header>
 
         <main>
-            <!-- Module Two: Industry Pie Chart (Placed first for visual impact) -->
+            <!-- Module Three: US Market Index Tracking -->
+            <section class="market-summary-section">
+                <div class="market-grid" id="us-market-grid">
+                    <!-- US Market Cards will be injected here -->
+                </div>
+            </section>
+
+            <!-- Module Two: Industry Pie Chart -->
             <section class="chart-section">
                 <div class="card">
                     <h2>產業組成分佈 (前 50 檔個股家數佔比)</h2>
                     <div id="industry-pie-chart" style="width: 100%; height: 400px;"></div>
+                </div>
+            </section>
+
+            <!-- Module Two: Consecutive Buys Ranking -->
+            <section class="consecutive-section">
+                <div class="card">
+                    <h2 id="consecutive-title">外資連續買超排行榜 (Top 10)</h2>
+                    <div class="table-wrapper">
+                        <table id="consecutive-table">
+                            <thead>
+                                <tr>
+                                    <th>排名</th>
+                                    <th>代號 / 名稱</th>
+                                    <th>連續買超天數</th>
+                                    <th>最新收盤</th>
+                                    <th>產業</th>
+                                </tr>
+                            </thead>
+                            <tbody id="consecutive-body">
+                                <!-- Data will be injected here -->
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </section>
 
@@ -76,7 +106,7 @@
                     </div>
                     <div class="table-footer">
                         <button id="show-more-btn">顯示更多 (餘 40 檔)</button>
-                        <p class="source-link">資料來源：<a href="https://www.esunsec.com.tw/tw-rank/b2brwd/page/rank/chip/0003" target="_blank">玉山證券外資買超排行榜</a></p>
+                        <p class="source-link">資料來源：<a href="https://www.esunsec.com.tw/tw-rank/b2brwd/page/rank/chip/0003" target="_blank">官方數據彙整</a></p>
                     </div>
                 </div>
             </section>

@@ -91,9 +91,9 @@ def fetch_json(url, method='GET', payload=None, referer=None):
     if method == 'POST':
         headers["Content-Type"] = "application/x-www-form-urlencoded"
 
-    for attempt in range(4):
+    for attempt in range(5):
         try:
-            delay = (attempt + 1) * 2
+            delay = (attempt + 1) * 3  # Increase initial delay
             time.sleep(delay)
             
             if method == 'POST':
@@ -110,29 +110,41 @@ def fetch_json(url, method='GET', payload=None, referer=None):
                 return res.json()
         except Exception as e:
             print(f"Fetch Error ({url}): {e}")
-            time.sleep(2)
+            time.sleep(3)
     return None
 
 def get_trading_days(count=5):
     """Backtrack from today to find the last N trading days that have institutional data."""
     dates = []
     current = datetime.now()
-    # To be safe, scan back 20 days to find 5 trading days
+    # To be safe, scan back 35 days to find enough trading days
     while len(dates) < count:
-        d_str = current.strftime("%Compacted" if False else "%Y%m%d")
+        d_str = current.strftime("%Y%m%d")
+        d_dash = current.strftime("%Y-%m-%d")
+        
         # Check if T86 (Institutional Data) is available and has data
         url = f"https://www.twse.com.tw/rwd/zh/fund/T86?date={d_str}&selectType=ALL&response=json"
         data = fetch_json(url)
+        
         # stat must be OK AND data must be non-empty
         if data and data.get("stat") == "OK" and data.get("data"):
-            dates.append(current.strftime("%Y-%m-%d"))
+            dates.append(d_dash)
+            # Re-fetch both markets to populate cache (this is efficient as it replaces later fetches)
+            fetch_institutional_all(d_dash)
+            
         current -= timedelta(days=1)
-        if (datetime.now() - current).days > 25: break
+        if (datetime.now() - current).days > 35: break
         time.sleep(0.5)
     return sorted(dates)
 
+# Global Cache to avoid redundant network requests
+DATA_CACHE = {}
+
 def fetch_institutional_all(date_str):
     """Fetch both TWSE and TPEx institutional investor data for a specific date."""
+    if date_str in DATA_CACHE:
+        return DATA_CACHE[date_str]
+        
     d_compact = date_str.replace("-", "")
     d_slash = get_roc_date(date_str)
     
@@ -140,13 +152,9 @@ def fetch_institutional_all(date_str):
     daily_map = {}
     
     # 1. TWSE (Stocks & ETFs)
-    # T86 URL: selectType=ALL includes everything
     twse_url = f"https://www.twse.com.tw/rwd/zh/fund/T86?date={d_compact}&selectType=ALL&response=json"
     twse_data = fetch_json(twse_url)
     if twse_data and twse_data.get("stat") == "OK":
-        # Index 0: ID
-        # Index 4: Foreign Net Buy
-        # Index 10: Investment Trust Net Buy
         for row in twse_data.get("data", []):
             sid = row[0].strip()
             try:
@@ -155,27 +163,29 @@ def fetch_institutional_all(date_str):
                 daily_map[sid] = {"foreign": foreign, "trust": trust}
             except: continue
             
-    # 2. TPEx (Comprehensive: Stocks + All ETFs including Bond ETFs)
-    tpex_url = f"https://www.tpex.org.tw/www/zh-tw/insti/dailyTrade?type=Daily&sect=AL&date={d_slash}&response=json"
-    tpex_data = fetch_json(tpex_url)
-    if tpex_data and tpex_data.get("stat") == "ok":
-        tables = tpex_data.get("tables", [])
-        if tables:
-            data_rows = tables[0].get("data", [])
-            # Index 13: Investment Trust Net Buy (TPEx Indexing Corrected)
-            for row in data_rows:
-                sid = row[0].strip()
-                try:
-                    # Column 10: Foreign, Column 13: Trust
-                    foreign = int(row[10].replace(",", ""))
-                    trust = int(row[13].replace(",", ""))
-                    if sid in daily_map:
-                        daily_map[sid]["foreign"] += foreign
-                        daily_map[sid]["trust"] += trust
-                    else:
-                        daily_map[sid] = {"foreign": foreign, "trust": trust}
-                except: continue
-            
+    # 2. TPEx
+    try:
+        tpex_url = f"https://www.tpex.org.tw/www/zh-tw/insti/dailyTrade?type=Daily&sect=AL&date={d_slash}&response=json"
+        tpex_data = fetch_json(tpex_url)
+        if tpex_data and tpex_data.get("stat") == "ok":
+            tables = tpex_data.get("tables", [])
+            if tables:
+                data_rows = tables[0].get("data", [])
+                for row in data_rows:
+                    sid = row[0].strip()
+                    try:
+                        foreign = int(row[10].replace(",", ""))
+                        trust = int(row[13].replace(",", ""))
+                        if sid in daily_map:
+                            daily_map[sid]["foreign"] += foreign
+                            daily_map[sid]["trust"] += trust
+                        else:
+                            daily_map[sid] = {"foreign": foreign, "trust": trust}
+                    except: continue
+    except Exception as e:
+        print(f"TPEx Fetch Error for {date_str}: {e}")
+    
+    DATA_CACHE[date_str] = daily_map
     return daily_map
 
 def fetch_latest_quotes(date_str, industry_mapping):
@@ -264,6 +274,75 @@ def fetch_latest_quotes(date_str, industry_mapping):
 
     return quotes
 
+def fetch_us_market():
+    """Fetch latest quotes for specific US indices and stocks via Stooq."""
+    symbols = {
+        "^GSPC": "S&P 500",
+        "^NDX": "Nasdaq 100",
+        "NVDA.US": "NVIDIA",
+        "TSM.US": "TSMC"
+    }
+    results = []
+    
+    for sym, name in symbols.items():
+        # Stooq CSV format: [Symbol, Date, Time, Open, High, Low, Close, Volume]
+        url = f"https://stooq.com/q/l/?s={sym}&f=sd2t2ohlcv&h&e=csv"
+        try:
+            res = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=15)
+            if res.status_code == 200:
+                lines = res.text.strip().split("\n")
+                if len(lines) > 1:
+                    data = lines[1].split(",")
+                    # Data: Symbol, Date, Time, Open, High, Low, Close, Volume
+                    close = float(data[6])
+                    results.append({
+                        "id": sym,
+                        "name": name,
+                        "close": close,
+                        "update_time": data[1]
+                    })
+            time.sleep(1)
+        except: continue
+    return results
+
+def calculate_streaks(trading_dates, investor_type):
+    """Calculate consecutive net buy days for all stocks."""
+    # Fetch data day by day in reverse
+    streaks = {} # sid -> days
+    active_stocks = set()
+    
+    # We need a longer history for streaks, let's try 30 days
+    history_dates = get_trading_days(30)
+    rev_dates = history_dates[::-1]
+    
+    if not rev_dates: return []
+
+    # Map to store institutional data for each day
+    daily_institutional = {}
+    for d in rev_dates:
+        daily_institutional[d] = fetch_institutional_all(d)
+        time.sleep(0.5)
+
+    # Calculate streaks starting from the most recent day
+    latest_day = rev_dates[0]
+    latest_data = daily_institutional[latest_day]
+    
+    for sid, data in latest_data.items():
+        if data[investor_type] > 0:
+            count = 1
+            # Check previous days
+            for d in rev_dates[1:]:
+                prev_data = daily_institutional.get(d, {})
+                if prev_data.get(sid, {}).get(investor_type, 0) > 0:
+                    count += 1
+                else:
+                    break
+            streaks[sid] = count
+            
+    # Sort and take Top 20
+    sorted_streaks = sorted(streaks.items(), key=lambda x: x[1], reverse=True)
+    return [{"id": k, "days": v} for k, v in sorted_streaks[:20]]
+
 def main():
     print("Starting All-Market stock data fetch (Official Source)...")
     
@@ -309,48 +388,52 @@ def main():
     
     for inv_type in investor_types:
         for days in intervals:
+            # Existing cumulative logic... (kept as is for brevity in this tool call, but ensuring it maps correctly)
+            pass 
+
+    # 4. Filter for Multi-Day Rankings (Re-implementing carefully to avoid loss)
+    for inv_type in investor_types:
+        for days in intervals:
             candidates = []
             for sid, history in buying_history.items():
                 recent_history = history[inv_type][-days:]
+                if not recent_history: continue
                 total_vol = sum(recent_history)
                 if total_vol > 0:
-                    candidates.append({
-                        "id": sid,
-                        "total_volume_shares": total_vol
-                    })
+                    candidates.append({"id": sid, "total_volume_shares": total_vol})
             
-            # Sort and take Top 50
             candidates.sort(key=lambda x: x["total_volume_shares"], reverse=True)
             top_50 = candidates[:50]
             
-            # Map Metadata
             final_list = []
             for entry in top_50:
                 sid = entry["id"]
                 q = latest_quotes.get(sid, {"name": f"Unknown({sid})", "close": 0, "change": 0, "industry": "其他"})
-                
                 volume_lots = round(entry["total_volume_shares"] / 1000)
                 close = q["close"]
                 change = q["change"]
-                
                 prev_close = close - change
                 change_pct = round(change / prev_close * 100, 2) if prev_close != 0 else 0
                 
                 final_list.append({
-                    "id": sid,
-                    "name": q["name"],
-                    "close": close,
-                    "change": change,
-                    "change_percent": change_pct,
-                    "volume": volume_lots,
-                    "industry": q["industry"],
-                    "update_time": last_date
+                    "id": sid, "name": q["name"], "close": close, "change": change,
+                    "change_percent": change_pct, "volume": volume_lots,
+                    "industry": q["industry"], "update_time": last_date
                 })
-            
             all_rankings[inv_type][str(days)] = final_list
-            print(f"Processed Top 50 for {inv_type} in {days}-day interval.")
 
-    # 6. Save Output
+    # 5. Module 2: Consecutive Buys
+    print("Calculating consecutive buy streaks...")
+    consecutive_buys = {
+        "foreign": calculate_streaks(trading_dates, "foreign"),
+        "trust": calculate_streaks(trading_dates, "trust")
+    }
+
+    # 6. Module 3: US Markets
+    print("Fetching US market indices...")
+    us_markets = fetch_us_market()
+
+    # 7. Save Output
     output = {
         "metadata": {
             "update_date": last_date,
@@ -358,14 +441,16 @@ def main():
             "available_intervals": intervals,
             "investor_types": investor_types
         },
-        "rankings": all_rankings
+        "rankings": all_rankings,
+        "consecutive_buys": consecutive_buys,
+        "us_markets": us_markets
     }
     
     os.makedirs('data', exist_ok=True)
     with open('data/data.json', 'w', encoding='utf-8') as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
         
-    print(f"Successfully generated data/data.json with multi-day rankings.")
+    print(f"Successfully generated data/data.json with all modules.")
 
 if __name__ == "__main__":
     main()

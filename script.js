@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             });
         }
 
-        updateDashboard();
+        updateDashboard(jsonData);
     } catch (error) {
         console.error('Error loading data:', error);
         const tbody = document.getElementById('table-body');
@@ -61,8 +61,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 });
 
-function updateDashboard() {
-    const stocks = allRankings[currentInvestorType] ? allRankings[currentInvestorType][currentInterval] : null;
+function updateDashboard(data) {
+    if (!data) return;
+    const stocks = data.rankings[currentInvestorType] ? data.rankings[currentInvestorType][currentInterval] : null;
     if (!stocks) return;
 
     const investorName = currentInvestorType === "foreign" ? "\u5916\u8cc7" : "\u6295\u4fe1";
@@ -79,13 +80,62 @@ function updateDashboard() {
     const tableTitle = document.querySelector('.card-title');
     if (tableTitle) tableTitle.textContent = `${investorName}\u8fd1 ${currentInterval} \u65e5\u7d2f\u7a4d\u8cb7\u8d85\u6392\u884c\u699c (Top 50)`;
 
-    // Update table header if needed
+    // Update table header
     const volumeHeader = document.querySelector('th:nth-child(5)');
     if (volumeHeader) volumeHeader.textContent = `${currentInterval}\u65e5\u7d2f\u7a4d\u8cb7\u8d85 (\u5bc5)`;
 
+    // Module 3: US Markets
+    renderUSMarkets(data.us_markets);
+
+    // Module 2: Industry Pie & Consecutive
     initPieChart(stocks);
+    renderConsecutiveBuys(data.consecutive_buys[currentInvestorType], stocks);
+
+    // Module 1: Main Table
     renderTable(stocks);
     setupShowMore(stocks.length);
+}
+
+function renderUSMarkets(markets) {
+    const grid = document.getElementById('us-market-grid');
+    if (!grid || !markets) return;
+    grid.innerHTML = '';
+
+    markets.forEach(m => {
+        const card = document.createElement('div');
+        card.className = 'market-card';
+        card.innerHTML = `
+            <div class="market-name">${m.name}</div>
+            <div class="market-value">${m.close.toLocaleString(undefined, {minimumFractionDigits: 2})}</div>
+            <div class="market-id">${m.id}</div>
+        `;
+        grid.appendChild(card);
+    });
+}
+
+function renderConsecutiveBuys(streaks, allStocks) {
+    const tbody = document.getElementById('consecutive-body');
+    const title = document.getElementById('consecutive-title');
+    if (!tbody || !streaks) return;
+
+    const investorName = currentInvestorType === "foreign" ? "\u5916\u8cc7" : "\u6295\u4fe1";
+    if (title) title.textContent = `${investorName}\u9023\u7e8c\u8cb7\u8d85\u6392\u884c\u699c (Top 10)`;
+
+    tbody.innerHTML = '';
+    streaks.forEach((item, index) => {
+        // Find metadata from main stocks list if possible
+        const meta = allStocks.find(s => s.id === item.id) || { name: `\u4ee3\u865f ${item.id}`, close: '--', industry: '--' };
+        
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+            <td>${index + 1}</td>
+            <td><span class="stock-id">${item.id}</span> <strong>${meta.name}</strong></td>
+            <td><span class="streak-badge">${item.days} \u5929</span></td>
+            <td>${meta.close}</td>
+            <td>${meta.industry}</td>
+        `;
+        tbody.appendChild(tr);
+    });
 }
 
 function initPieChart(stocks) {
@@ -93,7 +143,9 @@ function initPieChart(stocks) {
     if (!chartDom || typeof echarts === 'undefined') return;
 
     // Clear previous instance
-    echarts.dispose(chartDom);
+    const existing = echarts.getInstanceByDom(chartDom);
+    if (existing) existing.dispose();
+
     const myChart = echarts.init(chartDom, 'dark');
     
     const counts = {};
@@ -125,7 +177,8 @@ function initPieChart(stocks) {
         legend: {
             orient: 'vertical',
             left: 'left',
-            textStyle: { color: '#94a3b8' }
+            textStyle: { color: '#94a3b8' },
+            type: 'scroll'
         },
         series: [
             {
@@ -139,15 +192,7 @@ function initPieChart(stocks) {
                     borderWidth: 2
                 },
                 label: {
-                    show: true,
-                    formatter: '{b}: {d}%'
-                },
-                emphasis: {
-                    label: {
-                        show: true,
-                        fontSize: 18,
-                        fontWeight: 'bold'
-                    }
+                    show: false
                 },
                 data: finalData
             }
@@ -156,7 +201,6 @@ function initPieChart(stocks) {
     };
 
     myChart.setOption(option);
-    window.addEventListener('resize', () => myChart.resize());
 }
 
 function renderTable(stocks) {
@@ -202,15 +246,15 @@ function setupShowMore(total) {
     let isExpanded = false;
 
     newBtn.addEventListener('click', () => {
-        const hiddenRows = document.querySelectorAll('#table-body tr');
+        const hiddenRows = document.querySelectorAll('#table-body tr.hidden-row, #table-body tr:not(.hidden-row)');
         isExpanded = !isExpanded;
 
         hiddenRows.forEach((row, index) => {
             if (index >= 10) {
                 if (isExpanded) {
-                    row.classList.remove('hidden-row');
+                    row.style.display = 'table-row';
                 } else {
-                    row.classList.add('hidden-row');
+                    row.style.display = 'none';
                 }
             }
         });
@@ -219,7 +263,6 @@ function setupShowMore(total) {
             newBtn.textContent = `\u6536\u5408\u5167\u5bb9`;
         } else {
             newBtn.textContent = `\u986f\u793a\u66f4\u591a (\u9918 ${total - 10} \u6a94)`;
-            // Optional: scroll back to table start
             document.querySelector('.table-wrapper').scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     });
