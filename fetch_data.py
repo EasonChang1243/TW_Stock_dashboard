@@ -277,10 +277,14 @@ def fetch_latest_quotes(date_str, industry_mapping):
 def fetch_us_market():
     """Fetch latest quotes for specific US indices and stocks via Stooq."""
     symbols = {
-        "^GSPC": "S&P 500",
-        "^NDX": "Nasdaq 100",
-        "NVDA.US": "NVIDIA",
-        "TSM.US": "TSMC"
+        "^GSPC": "標普500指數",
+        "^NDX": "納斯達克100指數",
+        "^SOX": "費城半導體指數",
+        "NVDA.US": "英偉達",
+        "MU.US": "美光科技",
+        "SNDK.US": "閃迪",
+        "TSM.US": "台積電",
+        "AAPL.US": "蘋果"
     }
     results = []
     
@@ -305,14 +309,10 @@ def fetch_us_market():
         except: continue
     return results
 
-def calculate_streaks(trading_dates, investor_type):
+def calculate_streaks(history_dates, investor_type, industry_mapping):
     """Calculate consecutive net buy days for all stocks."""
     # Fetch data day by day in reverse
     streaks = {} # sid -> days
-    active_stocks = set()
-    
-    # We need a longer history for streaks, let's try 30 days
-    history_dates = get_trading_days(30)
     rev_dates = history_dates[::-1]
     
     if not rev_dates: return []
@@ -321,7 +321,6 @@ def calculate_streaks(trading_dates, investor_type):
     daily_institutional = {}
     for d in rev_dates:
         daily_institutional[d] = fetch_institutional_all(d)
-        time.sleep(0.5)
 
     # Calculate streaks starting from the most recent day
     latest_day = rev_dates[0]
@@ -341,7 +340,15 @@ def calculate_streaks(trading_dates, investor_type):
             
     # Sort and take Top 50
     sorted_streaks = sorted(streaks.items(), key=lambda x: x[1], reverse=True)
-    return [{"id": k, "days": v} for k, v in sorted_streaks[:50]]
+    results = []
+    for k, v in sorted_streaks[:50]:
+        industry = industry_mapping.get(k, "其他")
+        # Handle ETF logic like in quotes
+        if k.endswith("B"): industry = "債券 ETF"
+        elif k.startswith("00") and industry == "上市股": industry = "成分股 ETF"
+        
+        results.append({"id": k, "days": v, "industry": industry})
+    return results
 
 def main():
     print("Starting All-Market stock data fetch (Official Source)...")
@@ -424,9 +431,10 @@ def main():
 
     # 5. Module 2: Consecutive Buys
     print("Calculating consecutive buy streaks...")
+    history_dates = get_trading_days(30)
     consecutive_buys = {
-        "foreign": calculate_streaks(trading_dates, "foreign"),
-        "trust": calculate_streaks(trading_dates, "trust")
+        "foreign": calculate_streaks(history_dates, "foreign", industry_mapping),
+        "trust": calculate_streaks(history_dates, "trust", industry_mapping)
     }
 
     # 6. Module 3: US Markets

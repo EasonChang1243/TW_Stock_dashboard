@@ -42,6 +42,7 @@ h1 {
     font-size: 2rem;
     font-weight: 700;
     background: linear-gradient(to right, #ff4d4d, #f97316);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -163,7 +164,7 @@ tr:hover {
 .change-up { color: var(--accent-color); font-weight: 600; }
 .change-down { color: var(--success-color); font-weight: 600; }
 
-#show-more-btn {
+.show-more-btn {
     display: block;
     width: 100%;
     padding: 12px;
@@ -176,7 +177,7 @@ tr:hover {
     margin-top: 10px;
 }
 
-#show-more-btn:hover {
+.show-more-btn:hover {
     background-color: rgba(255, 255, 255, 0.05);
     color: var(--text-primary);
     border-color: var(--text-secondary);

@@ -91,10 +91,11 @@ function updateDashboard(data) {
     initPieChart('industry-pie-chart', stocks);
     initPieChart('consecutive-industry-pie-chart', data.consecutive_buys[currentInvestorType], stocks);
     renderConsecutiveBuys(data.consecutive_buys[currentInvestorType], stocks);
+    setupTableShowMore('consecutive-body', 'consecutive-show-more-btn', data.consecutive_buys[currentInvestorType].length, '.consecutive-section .card');
 
     // Module 1: Main Table
     renderTable(stocks);
-    setupShowMore(stocks.length);
+    setupTableShowMore('table-body', 'show-more-btn', stocks.length, '.table-section .card');
 }
 
 function renderUSMarkets(markets) {
@@ -137,7 +138,7 @@ function renderConsecutiveBuys(streaks, allStocks) {
             <td><span class="stock-id">${item.id}</span> <strong>${meta.name}</strong></td>
             <td><span class="streak-badge">${item.days} \u5929</span></td>
             <td>${meta.close}</td>
-            <td>${meta.industry}</td>
+            <td>${item.industry || meta.industry}</td>
         `;
         tbody.appendChild(tr);
     });
@@ -156,17 +157,18 @@ function initPieChart(chartId, stocks, metadataSource = null) {
     const myChart = echarts.init(chartDom, 'dark');
     
     const counts = {};
-    stocks.forEach(s => {
-        // If s only has ID (like in streaks), look up industry from metadataSource
-        let industry = s.industry;
-        if (!industry && metadataSource) {
-            const meta = metadataSource.find(m => m.id === s.id);
-            industry = meta ? meta.industry : "\u5176\u4ed6";
-        }
-        if (!industry) industry = "\u5176\u4ed6";
-        
-        counts[industry] = (counts[industry] || 0) + 1;
-    });
+    if (stocks && stocks.length > 0) {
+        stocks.forEach(s => {
+            let industry = s.industry;
+            if (!industry && metadataSource) {
+                const meta = metadataSource.find(m => m.id === s.id);
+                industry = meta ? meta.industry : "\u5176\u4ed6";
+            }
+            if (!industry) industry = "\u5176\u4ed6";
+            
+            counts[industry] = (counts[industry] || 0) + 1;
+        });
+    }
 
     let data = Object.keys(counts).map(name => ({
         name: name,
@@ -253,18 +255,22 @@ function renderTable(stocks) {
     }
 }
 
-function setupShowMore(total) {
-    const btn = document.getElementById('show-more-btn');
+function setupTableShowMore(tbodyId, showMoreBtnId, total, scrollTargetSelector) {
+    const btn = document.getElementById(showMoreBtnId);
     if (!btn) return;
 
-    // Remove old listeners to avoid multiple binds
+    // Use total for consistency
+    btn.style.display = total > 10 ? 'block' : 'none';
+    btn.textContent = `\u986f\u793a\u66f4\u591a (\u9918 ${total - 10} \u6a94)`;
+
+    // Remove old listeners
     const newBtn = btn.cloneNode(true);
     btn.parentNode.replaceChild(newBtn, btn);
 
     let isExpanded = false;
-
     newBtn.addEventListener('click', () => {
-        const hiddenRows = document.querySelectorAll('#table-body tr.hidden-row');
+        const tbody = document.getElementById(tbodyId);
+        const hiddenRows = tbody.querySelectorAll('tr.hidden-row');
         isExpanded = !isExpanded;
 
         hiddenRows.forEach((row) => {
@@ -275,33 +281,7 @@ function setupShowMore(total) {
             newBtn.textContent = `\u6536\u5408\u5167\u5bb9`;
         } else {
             newBtn.textContent = `\u986f\u793a\u66f4\u591a (\u9918 ${total - 10} \u6a94)`;
-            document.querySelector('#stock-table').scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-    });
-}
-
-function setupConsecutiveShowMore(total) {
-    const btn = document.getElementById('consecutive-show-more-btn');
-    if (!btn) return;
-
-    const newBtn = btn.cloneNode(true);
-    btn.parentNode.replaceChild(newBtn, btn);
-
-    let isExpanded = false;
-
-    newBtn.addEventListener('click', () => {
-        const hiddenRows = document.querySelectorAll('#consecutive-body tr.hidden-row');
-        isExpanded = !isExpanded;
-
-        hiddenRows.forEach((row) => {
-            row.style.display = isExpanded ? 'table-row' : 'none';
-        });
-
-        if (isExpanded) {
-            newBtn.textContent = `\u6536\u5408\u5167\u5bb9`;
-        } else {
-            newBtn.textContent = `\u986f\u793a\u66f4\u591a (\u9918 ${total - 10} \u6a94)`;
-            document.querySelector('#consecutive-table').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            document.querySelector(scrollTargetSelector).scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     });
 }
