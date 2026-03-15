@@ -142,9 +142,8 @@ function renderConsecutiveBuys(streaks, allStocks) {
         `;
         tbody.appendChild(tr);
     });
-
-    setupConsecutiveShowMore(streaks.length);
 }
+
 
 function initPieChart(chartId, stocks, metadataSource = null) {
     const chartDom = document.getElementById(chartId);

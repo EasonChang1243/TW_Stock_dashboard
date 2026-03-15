@@ -1,6 +1,8 @@
 name: Stock Dashboard Auto-Update
 
 on:
+  push:
+    branches: [ main ]
   schedule:
     # 05:00 and 17:00 Taiwan Time (21:00 and 09:00 UTC)
     - cron: '0 9 * * *'
