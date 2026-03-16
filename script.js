@@ -121,7 +121,7 @@ function renderUSMarkets(markets) {
             </div>
             <div class="market-value ${colorClass}">${m.close.toLocaleString(undefined, {minimumFractionDigits: 2})}</div>
             <div class="market-change-container">
-                <div class="market-change ${bgClass}">${sign}${m.change_percent.toFixed(2)}%</div>
+                <div class="market-change ${bgClass}">${sign}${(m.change_percent || 0).toFixed(2)}%</div>
             </div>
         `;
         grid.appendChild(card);
@@ -175,33 +175,39 @@ function drawSparkline(canvas, data, color) {
     ctx.fill();
 }
 
-function renderConsecutiveBuys(streaks, allStocks) {
+function renderConsecutiveBuys(streaks) {
     const tbody = document.getElementById('consecutive-body');
     const title = document.getElementById('consecutive-title');
     if (!tbody || !streaks) return;
 
     const investorName = currentInvestorType === "foreign" ? "\u5916\u8cc7" : "\u6295\u4fe1";
-    if (title) title.textContent = `${investorName}\u9023\u7e8c\u8cb7\u8d85\u6392\u884c\u699c (Top 50)`;
+    if (title) title.textContent = `${investorName}\u9023\u7e8c\u8cb7\u8d85\u6392\u884c\u699c`;
 
     tbody.innerHTML = '';
     streaks.forEach((item, index) => {
-        // Find metadata from main stocks list if possible
-        const meta = allStocks.find(s => s.id === item.id) || { name: `\u4ee3\u865f ${item.id}`, close: '--', industry: '--' };
-        
         const tr = document.createElement('tr');
-        if (index >= 10) {
-            tr.classList.add('hidden-row');
-            tr.style.display = 'none';
-        }
+        if (index >= 10) tr.classList.add('hidden-row');
+        
+        const isUp = item.change >= 0;
+        const colorClass = isUp ? 'text-up' : 'text-down';
+        const sign = isUp ? '+' : '';
+
         tr.innerHTML = `
             <td>${index + 1}</td>
-            <td><span class="stock-id">${item.id}</span> <strong>${meta.name}</strong></td>
+            <td class="stock-name-cell">
+                <span class="stock-name">${item.name}</span>
+            </td>
+            <td>${item.close > 0 ? item.close.toFixed(2) : '--'}</td>
+            <td class="${colorClass}">${item.change !== 0 ? sign + item.change.toFixed(2) : '0'}</td>
+            <td class="${colorClass}">${item.change_percent !== 0 ? sign + item.change_percent.toFixed(2) + '%' : '0%'}</td>
+            <td class="text-up">${item.volume.toLocaleString()}</td>
+            <td class="text-up">${item.amount.toLocaleString()}</td>
             <td><span class="streak-badge">${item.days} \u5929</span></td>
-            <td>${meta.close}</td>
-            <td>${item.industry || meta.industry}</td>
         `;
-        tbody.appendChild(tr);
+        tbody.innerHTML += tr.outerHTML;
     });
+
+    setupShowMore('consecutive-show-more-btn', 'consecutive-body', streaks.length);
 }
 
 

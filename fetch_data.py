@@ -5,6 +5,7 @@ import pandas as pd
 from datetime import datetime, timedelta
 import time
 import sys
+import io
 
 # Constants
 USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
@@ -309,6 +310,7 @@ def fetch_us_market():
                         "id": sym,
                         "name": name,
                         "close": round(latest_close, 2),
+                        "change": round(latest_close - prev_close, 2),
                         "change_percent": round(change_percent, 2),
                         "history": [round(p, 2) for p in close_prices],
                         "update_time": str(df.iloc[-1]['Date'])
@@ -319,25 +321,23 @@ def fetch_us_market():
             continue
     return results
 
-def calculate_streaks(history_dates, investor_type, industry_mapping):
-    """Calculate consecutive net buy days for all stocks."""
-    # Fetch data day by day in reverse
+def calculate_streaks(history_dates, investor_type, industry_mapping, latest_quotes, latest_institutional):
+    """Calculate consecutive net buy days with enriched data."""
     streaks = {} # sid -> days
     rev_dates = history_dates[::-1]
     
     if not rev_dates: return []
 
-    # Map to store institutional data for each day
+    # Map to store institutional data for each day (cached)
     daily_institutional = {}
     for d in rev_dates:
         daily_institutional[d] = fetch_institutional_all(d)
 
     # Calculate streaks starting from the most recent day
     latest_day = rev_dates[0]
-    latest_data = daily_institutional[latest_day]
     
-    for sid, data in latest_data.items():
-        if data[investor_type] > 0:
+    for sid, data in latest_institutional.items():
+        if data.get(investor_type, 0) > 0:
             count = 1
             # Check previous days
             for d in rev_dates[1:]:
@@ -352,12 +352,30 @@ def calculate_streaks(history_dates, investor_type, industry_mapping):
     sorted_streaks = sorted(streaks.items(), key=lambda x: x[1], reverse=True)
     results = []
     for k, v in sorted_streaks[:50]:
-        industry = industry_mapping.get(k, "其他")
-        # Handle ETF logic like in quotes
-        if k.endswith("B"): industry = "債券 ETF"
-        elif k.startswith("00") and industry == "上市股": industry = "成分股 ETF"
+        q = latest_quotes.get(k, {"name": f"Unknown({k})", "close": 0, "change": 0, "industry": "其他"})
+        inst_data = latest_institutional.get(k, {investor_type: 0})
+        net_buy_shares = inst_data.get(investor_type, 0)
         
-        results.append({"id": k, "days": v, "industry": industry})
+        # Calculate change percent
+        close = q["close"]
+        change = q["change"]
+        prev_close = close - change
+        change_pct = round(change / prev_close * 100, 2) if prev_close != 0 else 0
+        
+        # Estimate amount (Volume * Close / 1000 for k-NTD)
+        amount_k = round((net_buy_shares * close) / 1000) if close > 0 else 0
+        
+        results.append({
+            "id": k, 
+            "name": q["name"],
+            "days": v, 
+            "close": close,
+            "change": change,
+            "change_percent": change_pct,
+            "volume": round(net_buy_shares / 1000), # 张 (Lots)
+            "amount": amount_k,
+            "industry": q["industry"]
+        })
     return results
 
 def main():
@@ -442,9 +460,10 @@ def main():
     # 5. Module 2: Consecutive Buys
     print("Calculating consecutive buy streaks...")
     history_dates = get_trading_days(30)
+    latest_inst = fetch_institutional_all(last_date)
     consecutive_buys = {
-        "foreign": calculate_streaks(history_dates, "foreign", industry_mapping),
-        "trust": calculate_streaks(history_dates, "trust", industry_mapping)
+        "foreign": calculate_streaks(history_dates, "foreign", industry_mapping, latest_quotes, latest_inst),
+        "trust": calculate_streaks(history_dates, "trust", industry_mapping, latest_quotes, latest_inst)
     }
 
     # 6. Module 3: US Markets
