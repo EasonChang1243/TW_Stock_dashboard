@@ -479,8 +479,37 @@ def main():
             "investor_types": investor_types
         },
         "rankings": all_rankings,
+        "ai_context": {}, # To be populated
         "consecutive_buys": consecutive_buys,
         "us_markets": us_markets
+    }
+
+    # 8. Extra: AI Context Logic (Strong of Strongs + Industry Proportions)
+    print("Extracting AI Context (Strong of Strongs)...")
+    foreign_1d = {s["id"] for s in all_rankings["foreign"]["1"]}
+    foreign_5d = {s["id"] for s in all_rankings["foreign"]["5"]}
+    super_strong_ids = foreign_1d.intersection(foreign_5d)
+    
+    super_strong_list = []
+    for sid in super_strong_ids:
+        q = latest_quotes.get(sid, {})
+        if q:
+            super_strong_list.append({"id": sid, "name": q["name"], "industry": q["industry"]})
+    
+    # Industry Distribution (Top 50 5-day)
+    industry_counts = {}
+    for s in all_rankings["foreign"]["5"]:
+        ind = s["industry"]
+        industry_counts[ind] = industry_counts.get(ind, 0) + 1
+    
+    top_industries = sorted(industry_counts.items(), key=lambda x: x[1], reverse=True)[:3]
+    
+    output["ai_context"] = {
+        "super_strong": super_strong_list,
+        "top_industries": [{"name": k, "count": v} for k, v in top_industries],
+        "market_summary": {
+            "us_indices": [{"id": m["id"], "change": m["change_percent"]} for m in us_markets[:3]]
+        }
     }
     
     os.makedirs('data', exist_ok=True)

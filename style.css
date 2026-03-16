@@ -7,6 +7,8 @@
     --accent-hover: #dc2626;
     --success-color: #22c55e;
     --border-color: #334155;
+    --ai-bg: #1e1b4b; /* Deep Indigo for AI section */
+    --ai-accent: #a855f7; /* Purple accent */
     --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
 
@@ -331,4 +333,107 @@ footer {
     .market-grid {
         grid-template-columns: 1fr 1fr;
     }
+}
+/* AI Analysis Card */
+.ai-card {
+    background-color: var(--ai-bg);
+    border-left: 4px solid var(--ai-accent);
+    padding: 30px;
+}
+
+.ai-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(168, 85, 247, 0.2);
+    padding-bottom: 15px;
+}
+
+.ai-header h2 {
+    margin-bottom: 0;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.gemini-tag {
+    background: linear_gradient(45deg, #4f46e5, #9333ea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.mic-icon {
+    font-size: 1.2rem;
+}
+
+.update-time-tag {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.ai-content {
+    color: #e2e8f0;
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+/* Markdown Styling in AI Content */
+.ai-content h3 {
+    color: var(--ai-accent);
+    margin: 20px 0 10px 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.ai-content p {
+    margin-bottom: 15px;
+}
+
+.ai-content strong {
+    color: #ffffff;
+    font-weight: 700;
+    background: rgba(168, 85, 247, 0.15);
+    padding: 0 4px;
+    border-radius: 2px;
+}
+
+.ai-content ul {
+    margin-bottom: 15px;
+    padding-left: 20px;
+}
+
+.ai-content li {
+    margin-bottom: 8px;
+}
+
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    color: var(--text-secondary);
+}
+
+.spinner {
+    width: 30px;
+    height: 30px;
+    border: 3px solid rgba(168, 85, 247, 0.1);
+    border-top: 3px solid var(--ai-accent);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 15px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }

@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <!-- ECharts -->
     <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+    <!-- Marked for Markdown Rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -122,6 +124,22 @@
                     <div class="table-footer">
                         <button id="show-more-btn" class="show-more-btn">顯示更多 (餘 40 檔)</button>
                         <p class="source-link">資料來源：<a href="https://www.esunsec.com.tw/tw-rank/b2brwd/page/rank/chip/0003" target="_blank">官方數據彙整</a></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Module Four: AI Analysis -->
+            <section class="ai-analysis-section">
+                <div class="card ai-card">
+                    <div class="ai-header">
+                        <h2>📢 AI 名嘴盤後分析 <span class="gemini-tag">Gemini</span> <span class="mic-icon">🎤</span></h2>
+                        <div id="ai-update-time" class="update-time-tag">--</div>
+                    </div>
+                    <div id="ai-content" class="ai-content">
+                        <div class="loading-container">
+                            <div class="spinner"></div>
+                            <p>正在連線分析師...</p>
+                        </div>
                     </div>
                 </div>
             </section>

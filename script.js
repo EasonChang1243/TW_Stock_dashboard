@@ -53,6 +53,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
 
         updateDashboard();
+        fetchAIAnalysis();
     } catch (error) {
         console.error('Error loading data:', error);
         const tbody = document.getElementById('table-body');
@@ -342,4 +343,30 @@ function setupTableShowMore(tbodyId, showMoreBtnId, total, scrollTargetSelector)
             document.querySelector(scrollTargetSelector).scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     });
+}
+function fetchAIAnalysis() {
+    const contentDiv = document.getElementById('ai-content');
+    const timeTag = document.getElementById('ai-update-time');
+    if (!contentDiv) return;
+
+    fetch('data/ai_analysis.json')
+        .then(response => {
+            if (!response.ok) throw new Error('AI analysis not found');
+            return response.json();
+        })
+        .then(data => {
+            if (data && data.analysis) {
+                // Use marked.js to render markdown
+                contentDiv.innerHTML = marked.parse(data.analysis);
+                if (data.update_time) {
+                    timeTag.textContent = `最後分析時間：${data.update_time}`;
+                }
+            } else {
+                contentDiv.innerHTML = '<p>\u76ee\u524d\u5c1a\u7121\u5206\u6790\u6578\u64da\u3002</p>';
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching AI analysis:', error);
+            contentDiv.innerHTML = '<p>\u7121\u6cd5\u8f09\u5165 AI \u5206\u6790 (\u8acb\u78ba\u8a8d\u5f8c\u7aef\u5df2\u57f7\u884c)\u3002</p>';
+        });
 }
