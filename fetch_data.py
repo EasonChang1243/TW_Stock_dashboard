@@ -279,7 +279,7 @@ def fetch_us_market():
     symbols = {
         "^SPX": "標普500指數",
         "^NDX": "納斯達克100指數",
-        "^SOX": "費城半導體指數",
+        "SOXX.US": "費城半導體 (SOXX)",
         "NVDA.US": "英偉達",
         "MU.US": "美光科技",
         "SNDK.US": "閃迪",
