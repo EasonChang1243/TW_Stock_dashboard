@@ -191,7 +191,7 @@ function renderConsecutiveBuys(streaks) {
         if (index >= 10) tr.classList.add('hidden-row');
         
         const isUp = item.change >= 0;
-        const colorClass = isUp ? 'text-up' : 'text-down';
+        const colorClass = isUp ? 'change-up' : 'change-down';
         const sign = isUp ? '+' : '';
 
         tr.innerHTML = `
@@ -202,8 +202,8 @@ function renderConsecutiveBuys(streaks) {
             <td>${item.close > 0 ? item.close.toFixed(2) : '--'}</td>
             <td class="${colorClass}">${item.change !== 0 ? sign + item.change.toFixed(2) : '0'}</td>
             <td class="${colorClass}">${item.change_percent !== 0 ? sign + item.change_percent.toFixed(2) + '%' : '0%'}</td>
-            <td class="text-up">${item.volume.toLocaleString()}</td>
-            <td class="text-up">${item.amount.toLocaleString()}</td>
+            <td class="change-up">${item.volume.toLocaleString()}</td>
+            <td class="change-up">${item.amount.toLocaleString()}</td>
             <td><span class="streak-badge">${item.days} \u5929</span></td>
         `;
         tbody.innerHTML += tr.outerHTML;
