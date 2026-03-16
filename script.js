@@ -209,7 +209,6 @@ function renderConsecutiveBuys(streaks) {
         tbody.innerHTML += tr.outerHTML;
     });
 
-    setupShowMore('consecutive-show-more-btn', 'consecutive-body', streaks.length);
 }
 
 
