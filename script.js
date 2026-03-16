@@ -1,4 +1,5 @@
 let allRankings = {};
+let jsonData = null;
 let currentInterval = "5";
 let currentInvestorType = "foreign";
 
@@ -24,7 +25,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     try {
         const response = await fetch('data/data.json');
         if (!response.ok) throw new Error('Network response was not ok');
-        const jsonData = await response.json();
+        jsonData = await response.json();
         
         allRankings = jsonData.rankings;
         const metadata = jsonData.metadata;
@@ -51,7 +52,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             });
         }
 
-        updateDashboard(jsonData);
+        updateDashboard();
     } catch (error) {
         console.error('Error loading data:', error);
         const tbody = document.getElementById('table-body');
@@ -61,8 +62,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 });
 
-function updateDashboard(data) {
-    if (!data) return;
+function updateDashboard() {
+    if (!jsonData) return;
+    const data = jsonData;
     const stocks = data.rankings[currentInvestorType] ? data.rankings[currentInvestorType][currentInterval] : null;
     if (!stocks) return;
 
@@ -80,8 +82,8 @@ function updateDashboard(data) {
     const tableTitle = document.querySelector('.card-title');
     if (tableTitle) tableTitle.textContent = `${investorName}\u8fd1 ${currentInterval} \u65e5\u7d2f\u7a4d\u8cb7\u8d85\u6392\u884c\u699c (Top 50)`;
 
-    // Update table header
-    const volumeHeader = document.querySelector('th:nth-child(5)');
+    // Update volume header for Module 1 ONLY
+    const volumeHeader = document.querySelector('.table-section th:nth-child(5)');
     if (volumeHeader) volumeHeader.textContent = `${currentInterval}\u65e5\u7d2f\u7a4d\u8cb7\u8d85 (\u5bc5)`;
 
     // Module 3: US Markets
