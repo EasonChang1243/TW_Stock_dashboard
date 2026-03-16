@@ -70,14 +70,6 @@ function updateDashboard() {
 
     const investorName = currentInvestorType === "foreign" ? "\u5916\u8cc7" : "\u6295\u4fe1";
 
-    // Update subtitles
-    const subtitleDays = document.getElementById('subtitle-days');
-    if (subtitleDays) {
-        const headerP = document.querySelector('.header-content p');
-        if (headerP) {
-            headerP.innerHTML = `\u8ffd\u8e64${investorName} <span id="subtitle-days">${currentInterval}</span> \u65e5\u7d2f\u7a4d\u8cb7\u8d85\u6392\u884c (\u5b98\u65b9\u6578\u64da\u7248)`;
-        }
-    }
     
     const tableTitle = document.querySelector('.card-title');
     if (tableTitle) tableTitle.textContent = `${investorName}\u8fd1 ${currentInterval} \u65e5\u7d2f\u7a4d\u8cb7\u8d85\u6392\u884c\u699c (Top 50)`;
