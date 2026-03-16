@@ -39,6 +39,12 @@ jobs:
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
         run: python generate_ai_analysis.py
 
+      - name: Run LINE Report
+        env:
+          LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
+          LINE_USER_ID: ${{ secrets.LINE_USER_ID }}
+        run: python send_line_report.py
+
       - name: Commit and push if data changed
         run: |
           git config --global user.name "github-actions[bot]"
