@@ -213,47 +213,80 @@ footer {
     margin-bottom: 24px;
 }
 
-.market-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 16px;
+/* Market Summary */
+.market-summary-section {
+    margin-bottom: 24px;
 }
-
-.market-card {
-    background-color: var(--card-bg);
-    padding: 20px;
-    border-radius: 12px;
-    border: 1px solid var(--border-color);
+ 
+.market-grid {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    transition: transform 0.2s;
+    gap: 8px; /* Compact spacing between rows */
 }
-
+ 
+.market-card {
+    background-color: var(--card-bg);
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr 1fr 1fr;
+    align-items: center;
+    gap: 16px;
+    transition: background-color 0.2s;
+}
+ 
 .market-card:hover {
-    transform: translateY(-2px);
+    background-color: rgba(255, 255, 255, 0.03);
     border-color: var(--text-secondary);
 }
-
+ 
+.market-info {
+    display: flex;
+    flex-direction: column;
+}
+ 
 .market-name {
-    font-size: 0.8rem;
-    color: var(--text-secondary);
+    font-size: 0.95rem;
+    color: var(--text-primary);
     font-weight: 600;
 }
-
-.market-value {
-    font-size: 1.5rem;
-    font-weight: 700;
-}
-
+ 
 .market-id {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     color: var(--text-secondary);
-    background: rgba(255, 255, 255, 0.05);
-    padding: 2px 6px;
-    border-radius: 4px;
-    width: fit-content;
 }
+ 
+.market-sparkline-container {
+    height: 40px;
+    width: 100%;
+}
+ 
+.market-value {
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-align: right;
+    color: var(--success-color); /* Neutral default, color applied via script if needed */
+}
+ 
+.market-change-container {
+    display: flex;
+    justify-content: flex-end;
+}
+ 
+.market-change {
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    min-width: 80px;
+    text-align: center;
+}
+ 
+.bg-up { background-color: var(--success-color); color: white; }
+.bg-down { background-color: var(--accent-color); color: white; }
+.text-up { color: var(--success-color); }
+.text-down { color: var(--accent-color); }
 
 /* Consecutive Section */
 .consecutive-section .card {

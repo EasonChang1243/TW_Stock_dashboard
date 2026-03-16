@@ -104,15 +104,75 @@ function renderUSMarkets(markets) {
     grid.innerHTML = '';
 
     markets.forEach(m => {
+        const isUp = m.change_percent >= 0;
+        const colorClass = isUp ? 'text-up' : 'text-down';
+        const bgClass = isUp ? 'bg-up' : 'bg-down';
+        const sign = isUp ? '+' : '';
+
         const card = document.createElement('div');
         card.className = 'market-card';
         card.innerHTML = `
-            <div class="market-name">${m.name}</div>
-            <div class="market-value">${m.close.toLocaleString(undefined, {minimumFractionDigits: 2})}</div>
-            <div class="market-id">${m.id}</div>
+            <div class="market-info">
+                <div class="market-name">${m.name}</div>
+                <div class="market-id">${m.id}</div>
+            </div>
+            <div class="market-sparkline-container">
+                <canvas id="sparkline-${m.id.replace('^', '').replace('.', '-')}" width="120" height="40"></canvas>
+            </div>
+            <div class="market-value ${colorClass}">${m.close.toLocaleString(undefined, {minimumFractionDigits: 2})}</div>
+            <div class="market-change-container">
+                <div class="market-change ${bgClass}">${sign}${m.change_percent.toFixed(2)}%</div>
+            </div>
         `;
         grid.appendChild(card);
+        
+        // Draw Sparkline
+        setTimeout(() => {
+            const canvas = document.getElementById(`sparkline-${m.id.replace('^', '').replace('.', '-')}`);
+            if (canvas && m.history && m.history.length > 0) {
+                drawSparkline(canvas, m.history, isUp ? '#22c55e' : '#ef4444');
+            }
+        }, 0);
     });
+}
+
+function drawSparkline(canvas, data, color) {
+    const ctx = canvas.getContext('2d');
+    const width = canvas.width;
+    const height = canvas.height;
+    
+    ctx.clearRect(0, 0, width, height);
+    
+    if (data.length < 2) return;
+    
+    const min = Math.min(...data);
+    const max = Math.max(...data);
+    const range = max - min || 1;
+    
+    ctx.beginPath();
+    ctx.strokeStyle = color;
+    ctx.lineWidth = 2;
+    ctx.lineJoin = 'round';
+    
+    const xStep = width / (data.length - 1);
+    
+    data.forEach((val, i) => {
+        const x = i * xStep;
+        const y = height - ((val - min) / range) * height;
+        if (i === 0) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
+    });
+    
+    ctx.stroke();
+    
+    // Add subtle gradient fill
+    ctx.lineTo(width, height);
+    ctx.lineTo(0, height);
+    const gradient = ctx.createLinearGradient(0, 0, 0, height);
+    gradient.addColorStop(0, color + '33'); // 20% opacity
+    gradient.addColorStop(1, color + '00'); // 0% opacity
+    ctx.fillStyle = gradient;
+    ctx.fill();
 }
 
 function renderConsecutiveBuys(streaks, allStocks) {

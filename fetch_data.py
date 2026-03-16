@@ -275,7 +275,7 @@ def fetch_latest_quotes(date_str, industry_mapping):
     return quotes
 
 def fetch_us_market():
-    """Fetch latest quotes for specific US indices and stocks via Stooq."""
+    """Fetch latest quotes and history for specific US indices and stocks via Stooq."""
     symbols = {
         "^SPX": "標普500指數",
         "^NDX": "納斯達克100指數",
@@ -289,24 +289,34 @@ def fetch_us_market():
     results = []
     
     for sym, name in symbols.items():
-        # Stooq CSV format: [Symbol, Date, Time, Open, High, Low, Close, Volume]
-        url = f"https://stooq.com/q/l/?s={sym}&f=sd2t2ohlcv&h&e=csv"
+        # Stooq Daily History CSV format: Date,Open,High,Low,Close,Volume
+        url = f"https://stooq.com/q/d/l/?s={sym}&i=d"
         try:
             res = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=15)
             if res.status_code == 200:
-                lines = res.text.strip().split("\n")
-                if len(lines) > 1:
-                    data = lines[1].split(",")
-                    # Data: Symbol, Date, Time, Open, High, Low, Close, Volume
-                    close = float(data[6])
+                df = pd.read_csv(io.StringIO(res.text))
+                if not df.empty and len(df) >= 2:
+                    # Get the last 30 entries for the sparkline
+                    history_df = df.tail(30)
+                    close_prices = history_df['Close'].tolist()
+                    
+                    # Latest and previous for change calculation
+                    latest_close = float(df.iloc[-1]['Close'])
+                    prev_close = float(df.iloc[-2]['Close'])
+                    change_percent = ((latest_close - prev_close) / prev_close) * 100
+                    
                     results.append({
                         "id": sym,
                         "name": name,
-                        "close": close,
-                        "update_time": data[1]
+                        "close": round(latest_close, 2),
+                        "change_percent": round(change_percent, 2),
+                        "history": [round(p, 2) for p in close_prices],
+                        "update_time": str(df.iloc[-1]['Date'])
                     })
             time.sleep(1)
-        except: continue
+        except Exception as e:
+            print(f"Error fetching {sym}: {e}")
+            continue
     return results
 
 def calculate_streaks(history_dates, investor_type, industry_mapping):
