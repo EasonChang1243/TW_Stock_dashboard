@@ -252,17 +252,18 @@ function initPieChart(chartId, stocks, metadataSource = null) {
             formatter: '{b}: {c} \u5bb6 ({d}%)'
         },
         legend: {
-            orient: 'vertical',
-            left: 'left',
+            orient: chartDom.clientWidth < 450 ? 'horizontal' : 'vertical',
+            left: chartDom.clientWidth < 450 ? 'center' : 'left',
+            bottom: chartDom.clientWidth < 450 ? 0 : 'auto',
             textStyle: { color: '#94a3b8' },
             type: 'scroll',
-            show: stocks.length > 5
+            show: stocks.length > 3
         },
         series: [
             {
                 name: '\u7522\u696d\u4f54\u6bd4',
                 type: 'pie',
-                radius: ['40%', '70%'],
+                radius: chartDom.clientWidth < 450 ? ['30%', '55%'] : ['40%', '70%'],
                 avoidLabelOverlap: true,
                 itemStyle: {
                     borderRadius: 10,
@@ -279,6 +280,11 @@ function initPieChart(chartId, stocks, metadataSource = null) {
     };
 
     myChart.setOption(option);
+
+    // Responsive resize
+    window.addEventListener('resize', () => {
+        myChart.resize();
+    });
 }
 
 function renderTable(stocks) {
