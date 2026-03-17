@@ -3,10 +3,12 @@ import json
 import requests
 from dotenv import load_dotenv
 
+# 1. Configuration
+LINE_BROADCAST = 0  # 0: Test (Push to single ID), 1: Production (Broadcast to ALL)
+
 def send_line_message():
     load_dotenv()
     
-    # 1. Configuration
     line_token = os.getenv("LINE_CHANNEL_ACCESS_TOKEN")
     line_user_id = os.getenv("LINE_USER_ID")
     dashboard_url = "https://easonchang1243.github.io/TW_Stock_dashboard/"
@@ -36,22 +38,31 @@ def send_line_message():
     if len(message_content) > 2000:
         message_content = message_content[:1997] + "..."
 
-    # 4. Send via LINE Messaging API (Broadcast Message)
-    url = "https://api.line.me/v2/bot/message/broadcast"
+    # 4. Send via LINE Messaging API
+    if LINE_BROADCAST == 1:
+        url = "https://api.line.me/v2/bot/message/broadcast"
+        payload = {
+            "messages": [
+                {"type": "text", "text": message_content}
+            ]
+        }
+        print("Mode: PRODUCTION (Broadcast to all followers)")
+    else:
+        url = "https://api.line.me/v2/bot/message/push"
+        payload = {
+            "to": line_user_id,
+            "messages": [
+                {"type": "text", "text": message_content}
+            ]
+        }
+        print(f"Mode: TEST (Push to single user: {line_user_id})")
+
     headers = {
         "Content-Type": "application/json",
         "Authorization": f"Bearer {line_token}"
     }
-    payload = {
-        "messages": [
-            {
-                "type": "text",
-                "text": message_content
-            }
-        ]
-    }
 
-    print(f"Sending message to LINE (User: {line_user_id})...")
+    print("Sending message to LINE...")
     try:
         response = requests.post(url, headers=headers, json=payload, timeout=15)
         if response.status_code == 200:
