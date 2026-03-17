@@ -190,7 +190,7 @@ function renderConsecutiveBuys(streaks) {
         tr.innerHTML = `
             <td>${index + 1}</td>
             <td class="stock-name-cell">
-                <span class="stock-name">${item.name}</span>
+                <span class="stock-id">${item.id}</span> <strong>${item.name}</strong>
             </td>
             <td>${item.close > 0 ? item.close.toFixed(2) : '--'}</td>
             <td class="${colorClass}">${item.change !== 0 ? sign + item.change.toFixed(2) : '0'}</td>
