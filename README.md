@@ -9,7 +9,7 @@
 *   **精確排行**：鎖定連續 5 日淨買超標的，並依累積買超張數排序 (Top 50)。
 *   **產業洞察**：即時呈現前 50 檔個股的產業分佈比例。
 *   **響應式面版**：支援手機與電腦瀏覽，現代化深色 UI 設計。
-*   **每日更新**：透過 GitHub Actions 於台灣時間每天凌晨 02:00 自動執行並部署。
+*   **每日更新**：透過 GitHub Actions 於台灣時間每天凌晨 04:30 自動執行並部署。
 
 ## 🛠 技術架構
 *   **Backend**: Python (FinMind API, Pandas)
@@ -27,7 +27,7 @@
 3. 開啟網頁：使用 Live Server 或 `python -m http.server` 開啟 `index.html`。
 
 ### GitHub 自動化
-專案已內建 GitHub Actions，每天下午 2:00（台灣時間）會自動更新資料並部署至 GitHub Pages。
+專案已內建 GitHub Actions，每天上午 04:30 與 下午 04:30（台灣時間）會自動更新資料並部署至 GitHub Pages。
 
 ## 📊 資料來源
 *   [證交所 (TWSE) 官方數據](https://www.twse.com.tw/)

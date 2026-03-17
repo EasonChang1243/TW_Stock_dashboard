@@ -4,9 +4,9 @@ on:
   push:
     branches: [ main ]
   schedule:
-    # 05:00 and 17:00 Taiwan Time (21:00 and 09:00 UTC)
-    - cron: '0 9 * * *'
-    - cron: '0 21 * * *'
+    # 04:30 and 16:30 Taiwan Time (20:30 and 08:30 UTC)
+    - cron: '30 8 * * *'
+    - cron: '30 20 * * *'
   workflow_dispatch: # Enable manual trigger
 
 permissions:

@@ -2,6 +2,8 @@
 
 | 修改日期 | 變更版本 | 修改原因 | 對應 GitHub PR / 分段目標 |
 | :--- | :--- | :--- | :--- |
+| 2026-03-17 | v1.9.9.10 | 更新自動化更新排程為台灣時間 04:30 與 16:30 | `feat: adjust-schedule` |
+| 2026-03-17 | v1.9.9.4 | 修正 LINE Bot 發送邏輯：切換至 Broadcast API 並加入測試開關 | `feat: line-broadcast-toggle` |
 | 2026-03-16 | v1.9.9.3 | 新增 LINE Bot 自動化推送：整合 Messaging API 每日推送 AI 分析與網頁連結 | `feat: line-bot-notification` |
 | 2026-03-16 | v1.9.9.2 | 整合 Gemini 3.1 Pro AI 名嘴分析：新增「強中之強」鎖碼個股比對與專屬 UI | `feat: ai-analyst-module` |
 | 2026-03-15 | v1.9.2 | 更新自動化更新排程為台灣時間 05:00 與 17:00 | `feat: update-schedule` |
