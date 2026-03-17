@@ -4,7 +4,7 @@ import requests
 from dotenv import load_dotenv
 
 # 1. Configuration
-LINE_BROADCAST = 0  # 0: Test (Push to single ID), 1: Production (Broadcast to ALL)
+LINE_BROADCAST = 1  # 0: Test (Push to single ID), 1: Production (Broadcast to ALL)
 
 def send_line_message():
     load_dotenv()
