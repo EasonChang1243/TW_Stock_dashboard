@@ -312,10 +312,13 @@ footer {
 .streak-badge {
     background-color: var(--accent-color);
     color: white;
-    padding: 4px 10px;
+    padding: 2px 8px;
     border-radius: 12px;
     font-weight: 700;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    display: inline-block;
+    line-height: 1.4;
 }
 
 /* Responsive Update */
@@ -337,7 +340,27 @@ footer {
     }
 
     .market-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    .market-card {
+        grid-template-columns: 1.5fr 1fr 1fr;
+        gap: 10px;
+        padding: 12px;
+    }
+
+    .market-sparkline-container {
+        display: none; /* Hide sparkline on mobile to save space */
+    }
+
+    .market-value {
+        font-size: 1rem;
+    }
+
+    .market-change {
+        min-width: 65px;
+        font-size: 0.8rem;
+        padding: 4px 6px;
     }
 
     .charts-grid {
@@ -347,6 +370,11 @@ footer {
 
     .card {
         padding: 16px;
+    }
+
+    #consecutive-table th:last-child, 
+    #consecutive-table td:last-child {
+        min-width: 80px;
     }
 }
 /* AI Analysis Card */
