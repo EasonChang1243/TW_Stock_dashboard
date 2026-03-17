@@ -36,14 +36,13 @@ def send_line_message():
     if len(message_content) > 2000:
         message_content = message_content[:1997] + "..."
 
-    # 4. Send via LINE Messaging API (Push Message)
-    url = "https://api.line.me/v2/bot/message/push"
+    # 4. Send via LINE Messaging API (Broadcast Message)
+    url = "https://api.line.me/v2/bot/message/broadcast"
     headers = {
         "Content-Type": "application/json",
         "Authorization": f"Bearer {line_token}"
     }
     payload = {
-        "to": line_user_id,
         "messages": [
             {
                 "type": "text",
