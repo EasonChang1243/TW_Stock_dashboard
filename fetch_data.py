@@ -138,6 +138,24 @@ def get_trading_days(count=5):
         time.sleep(0.5)
     return sorted(dates)
 
+def fetch_institutional_summary(date_str):
+    """Fetch '三大法人買賣金額統計表' from TWSE (BFI82U)."""
+    d_compact = date_str.replace("-", "")
+    url = f"https://www.twse.com.tw/rwd/zh/fund/BFI82U?date={d_compact}&response=json"
+    data = fetch_json(url)
+    
+    summary = []
+    if data and data.get("stat") == "OK" and data.get("data"):
+        for row in data["data"]:
+            if len(row) >= 4:
+                summary.append({
+                    "name": row[0].strip(),
+                    "buy": row[1].strip(),
+                    "sell": row[2].strip(),
+                    "net": row[3].strip()
+                })
+    return summary
+
 # Global Cache to avoid redundant network requests
 DATA_CACHE = {}
 
@@ -470,6 +488,10 @@ def main():
     print("Fetching US market indices...")
     us_markets = fetch_us_market()
 
+    # 6.5 Module 5: Institutional Summary
+    print("Fetching Institutional Summary...")
+    institutional_summary = fetch_institutional_summary(last_date)
+
     # 7. Save Output
     output = {
         "metadata": {
@@ -481,6 +503,7 @@ def main():
         "rankings": all_rankings,
         "ai_context": {}, # To be populated
         "consecutive_buys": consecutive_buys,
+        "institutional_summary": institutional_summary,
         "us_markets": us_markets
     }
 

@@ -91,6 +91,39 @@ function updateDashboard() {
     // Module 1: Main Table
     renderTable(stocks);
     setupTableShowMore('table-body', 'show-more-btn', stocks.length, '.table-section .card');
+
+    // Module 5: Institutional Summary
+    if (data.institutional_summary) {
+        renderInstitutionalSummary(data.institutional_summary);
+    }
+}
+
+function renderInstitutionalSummary(summaryData) {
+    const tbody = document.getElementById('summary-body');
+    if (!tbody || !summaryData) return;
+    tbody.innerHTML = '';
+
+    summaryData.forEach((item) => {
+        const tr = document.createElement('tr');
+        
+        // Determine color for Net amount
+        // Replace commas to parse number
+        const netValue = parseFloat(item.net.replace(/,/g, ''));
+        let colorClass = '';
+        if (netValue > 0) {
+            colorClass = 'change-up';
+        } else if (netValue < 0) {
+            colorClass = 'change-down';
+        }
+
+        tr.innerHTML = `
+            <td style="font-weight: 600;">${item.name}</td>
+            <td>${item.buy}</td>
+            <td>${item.sell}</td>
+            <td class="${colorClass}">${item.net}</td>
+        `;
+        tbody.appendChild(tr);
+    });
 }
 
 function renderUSMarkets(markets) {
