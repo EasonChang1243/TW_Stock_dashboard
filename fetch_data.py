@@ -207,90 +207,88 @@ def fetch_institutional_all(date_str):
     DATA_CACHE[date_str] = daily_map
     return daily_map
 
-def fetch_latest_quotes(date_str, industry_mapping):
-    """Fetch metadata and price for industry mapping."""
-    d_compact = date_str.replace("-", "")
-    d_slash = get_roc_date(date_str)
+def fetch_latest_quotes():
+    """Fetch all latest close prices from TWSE and TPEx."""
+    quotes = {}
     
-    quotes = {} # sid -> {name, close, change, industry}
-    
-    # 1. TWSE Quotes
-    twse_url = f"https://www.twse.com.tw/rwd/zh/afterTrading/MI_INDEX?date={d_compact}&type=ALLBUT0999&response=json"
-    data = fetch_json(twse_url)
-    if data and data.get("tables"):
-        # Table with stock data
-        stock_table = next((t for t in data["tables"] if "證券代號" in t.get("fields", [])), None)
-        if stock_table:
-            for row in stock_table["data"]:
-                sid = row[0].strip()
-                try:
-                    close = float(row[8].replace(",", "")) if row[8].strip() != "--" else 0
-                    sign = -1 if "down" in row[9] or "-" in row[9] else 1
-                    spread = float(row[10].replace(",", "")) if row[10].strip() != "--" else 0
-                    
-                    # Industry lookup
-                    sid_clean = sid.strip()
-                    industry = industry_mapping.get(sid_clean, "上市股")
-                    
-                    # Enhanced Detection
-                    if sid_clean.endswith("B"):
-                        industry = "債券 ETF"
-                    elif sid_clean.startswith("00") and industry == "上市股":
-                        industry = "成分股 ETF"
-                    
-                    quotes[sid_clean] = {
-                        "name": row[1].strip(),
-                        "close": close,
-                        "change": sign * spread,
-                        "industry": industry
-                    }
-                except: continue
-
-    # 2. TPEx Quotes (Fetch multiple categories to ensure coverage)
-    tpex_url = "https://www.tpex.org.tw/www/zh-tw/afterTrading/otc"
-    for type_code in ['AL', '04']:
-        payload = f"date={d_slash}&type={type_code}&id=&response=json"
-        data = fetch_json(tpex_url, method='POST', payload=payload)
-        if data and data.get("tables"):
-            table = data["tables"][0]
-            # Fields: [代號, 名稱, 收盤, 漲跌, ...]
-            for row in table.get("data", []):
-                sid = row[0].strip()
-                try:
-                    close_val = row[2].replace(",", "").strip()
-                    close = float(close_val) if close_val and close_val != "--" else 0
-                    
-                    # Handle non-numeric change like "除息", "除權"
-                    change_str = row[3].strip()
-                    sign = -1 if "down" in change_str or "-" in change_str else 1
-                    
-                    # Try to extract numeric part, or default to 0
+    # TWSE
+    twse_url = "https://openapi.twse.com.tw/v1/exchangeReport/MI_INDEX_ALL"
+    twse_data = fetch_json(twse_url)
+    if twse_data:
+        for row in twse_data:
+            try:
+                close = float(str(row.get("ClosingPrice", "0")).replace(",", ""))
+            except:
+                close = 0.0
+            try:
+                change = float(str(row.get("Change", "0")).replace(",", ""))
+            except:
+                change = 0.0
+                
+            quotes[row.get("Code", "")] = {
+                "name": row.get("Name", ""),
+                "close": close,
+                "change": change
+            }
+    else:
+        print("Fallback to www.twse.com.tw for MI_INDEX_ALL")
+        fallback_url = "https://www.twse.com.tw/rwd/zh/afterTrading/MI_INDEX?type=ALL&response=json"
+        data = fetch_json(fallback_url)
+        if data and "tables" in data:
+            for table in data["tables"]:
+                if "每日收盤行情" in table.get("title", ""):
+                    fields = table.get("fields", [])
                     try:
-                        spread_val = change_str.replace("+", "").replace("-", "").replace(",", "").strip()
-                        spread = float(spread_val) if spread_val and spread_val != "--" else 0
-                    except:
-                        spread = 0
-                    
-                    # Industry detection
-                    sid_clean = sid.strip()
-                    industry = industry_mapping.get(sid_clean, "上櫃股")
-                    
-                    # Enhanced Detection
-                    if sid_clean.endswith("B"):
-                        industry = "債券 ETF"
-                    elif sid_clean.startswith("00") and industry == "上櫃股":
-                        industry = "成分股 ETF"
-                    
-                    # Store if not already exists (prioritize first found name)
-                    if sid_clean not in quotes or quotes[sid_clean]['name'].startswith("Unknown"):
-                        quotes[sid_clean] = {
-                            "name": row[1].strip(),
-                            "close": close,
-                            "change": sign * spread,
-                            "industry": industry
-                        }
-                except: continue
+                        idx_code = fields.index("證券代號")
+                        idx_name = fields.index("證券名稱")
+                        idx_close = fields.index("收盤價")
+                        idx_dir = fields.index("漲跌(+/-)")
+                        idx_change = fields.index("漲跌價差")
+                        for row in table.get("data", []):
+                            code = row[idx_code]
+                            name = row[idx_name]
+                            
+                            try:
+                                close_val = float(str(row[idx_close]).replace(",", ""))
+                            except:
+                                close_val = 0.0
 
+                            try:
+                                chg_val = float(str(row[idx_change]).replace(",", ""))
+                            except:
+                                chg_val = 0.0
+                            
+                            dir_str = str(row[idx_dir])
+                            if "-" in dir_str:
+                                chg_val = -chg_val
+                                
+                            quotes[code] = {
+                                "name": name,
+                                "close": close_val,
+                                "change": chg_val
+                            }
+                    except ValueError:
+                        pass
+                        
+    # TPEx
+    tpex_url = "https://www.tpex.org.tw/openapi/v1/tpex_mainboard_quotes"
+    tpex_data = fetch_json(tpex_url)
+    if tpex_data:
+        for row in tpex_data:
+            try:
+                close = float(str(row.get("ClosingPrice", "0")).replace(",", ""))
+            except:
+                close = 0.0
+            try:
+                change = float(str(row.get("Change", "0")).replace(",", ""))
+            except:
+                change = 0.0
+                
+            quotes[row.get("Code", "")] = {
+                "name": row.get("Name", ""),
+                "close": close,
+                "change": change
+            }
     return quotes
 
 def fetch_us_market():
@@ -339,8 +337,10 @@ def fetch_us_market():
             continue
     return results
 
-def calculate_streaks(history_dates, investor_type, industry_mapping, latest_quotes, latest_institutional):
+def calculate_streaks(history_dates, investor_type, industry_mapping, latest_quotes, latest_institutional, local_cache_names=None, local_cache_inds=None):
     """Calculate consecutive net buy days with enriched data."""
+    if local_cache_names is None: local_cache_names = {}
+    if local_cache_inds is None: local_cache_inds = {}
     streaks = {} # sid -> days
     rev_dates = history_dates[::-1]
     
@@ -370,7 +370,16 @@ def calculate_streaks(history_dates, investor_type, industry_mapping, latest_quo
     sorted_streaks = sorted(streaks.items(), key=lambda x: x[1], reverse=True)
     results = []
     for k, v in sorted_streaks[:50]:
-        q = latest_quotes.get(k, {"name": f"Unknown({k})", "close": 0, "change": 0, "industry": "其他"})
+        q = latest_quotes.get(k, {"name": "", "close": 0, "change": 0})
+        
+        found_name = q.get("name")
+        if not found_name or found_name.startswith("Unknown"):
+            found_name = local_cache_names.get(k, f"Unknown({k})")
+            
+        found_ind = industry_mapping.get(k)
+        if not found_ind or found_ind == "其他":
+            found_ind = local_cache_inds.get(k, "其他")
+
         inst_data = latest_institutional.get(k, {investor_type: 0})
         net_buy_shares = inst_data.get(investor_type, 0)
         
@@ -385,38 +394,54 @@ def calculate_streaks(history_dates, investor_type, industry_mapping, latest_quo
         
         results.append({
             "id": k, 
-            "name": q["name"],
+            "name": found_name,
             "days": v, 
             "close": close,
             "change": change,
             "change_percent": change_pct,
             "volume": round(net_buy_shares / 1000), # 张 (Lots)
             "amount": amount_k,
-            "industry": q["industry"]
+            "industry": found_ind
         })
     return results
 
 def main():
     print("Starting All-Market stock data fetch (Official Source)...")
     
-    # 1. Get dates
-    trading_dates = get_trading_days(5)
-    if not trading_dates:
+    target_dates = get_trading_days(5)
+    if not target_dates:
         print("Error: Could not retrieve trading days.")
         sys.exit(1)
-        
-    last_date = trading_dates[-1]
-    print(f"Target trading dates: {trading_dates}")
+    print(f"Target trading dates: {target_dates}")
+    last_date = target_dates[-1]
 
-    # 2. Get industry mapping
+    # Load local cache from data.json to prevent Unknowns
+    local_cache_names = {}
+    local_cache_inds = {}
+    try:
+        import os, json
+        if os.path.exists("data/data.json"):
+            with open("data/data.json", "r", encoding="utf-8") as f:
+                old_data = json.load(f)
+                for inv_type_data in old_data.get("rankings", {}).values():
+                    for days_data in inv_type_data.values():
+                        for item in days_data:
+                            if item.get("name") and not item.get("name").startswith("Unknown"):
+                                local_cache_names[item["id"]] = item["name"]
+                            if item.get("industry") and item.get("industry") != "其他":
+                                local_cache_inds[item["id"]] = item["industry"]
+    except Exception as e:
+        print(f"Warning: Failed to load local cache: {e}")
+
+    # 1. Fetch Basic Maps
     print("Fetching industry mapping...")
-    industry_mapping = fetch_industry_mapping()
+    industry_map = fetch_industry_mapping()
 
     # 3. Accumulate buying history
     # sid -> {"foreign": [day1, ...], "trust": [day1, ...]}
     buying_history = {}
     
-    for d in trading_dates:
+    for d in target_dates:
         print(f"Fetching institutional data for {d}...")
         daily = fetch_institutional_all(d)
         for sid, data in daily.items():
@@ -428,7 +453,7 @@ def main():
 
     # 4. Map Metadata
     print("Fetching latest quotes...")
-    latest_quotes = fetch_latest_quotes(last_date, industry_mapping)
+    latest_quotes = fetch_latest_quotes()
 
     # 5. Filter for Multi-Day Rankings (1, 3, 5 Day)
     all_rankings = {
@@ -461,7 +486,17 @@ def main():
             final_list = []
             for entry in top_50:
                 sid = entry["id"]
-                q = latest_quotes.get(sid, {"name": f"Unknown({sid})", "close": 0, "change": 0, "industry": "其他"})
+                q = latest_quotes.get(sid, {"name": "", "close": 0, "change": 0})
+                
+                # Metadata fallbacks
+                found_name = q.get("name")
+                if not found_name or found_name.startswith("Unknown"):
+                    found_name = local_cache_names.get(sid, f"Unknown({sid})")
+                
+                found_ind = industry_map.get(sid)
+                if not found_ind or found_ind == "其他":
+                    found_ind = local_cache_inds.get(sid, "其他")
+                
                 volume_lots = round(entry["total_volume_shares"] / 1000)
                 close = q["close"]
                 change = q["change"]
@@ -469,9 +504,9 @@ def main():
                 change_pct = round(change / prev_close * 100, 2) if prev_close != 0 else 0
                 
                 final_list.append({
-                    "id": sid, "name": q["name"], "close": close, "change": change,
+                    "id": sid, "name": found_name, "close": close, "change": change,
                     "change_percent": change_pct, "volume": volume_lots,
-                    "industry": q["industry"], "update_time": last_date
+                    "industry": found_ind, "update_time": last_date
                 })
             all_rankings[inv_type][str(days)] = final_list
 
@@ -480,8 +515,8 @@ def main():
     history_dates = get_trading_days(30)
     latest_inst = fetch_institutional_all(last_date)
     consecutive_buys = {
-        "foreign": calculate_streaks(history_dates, "foreign", industry_mapping, latest_quotes, latest_inst),
-        "trust": calculate_streaks(history_dates, "trust", industry_mapping, latest_quotes, latest_inst)
+        "foreign": calculate_streaks(history_dates, "foreign", industry_map, latest_quotes, latest_inst, local_cache_names, local_cache_inds),
+        "trust": calculate_streaks(history_dates, "trust", industry_map, latest_quotes, latest_inst, local_cache_names, local_cache_inds)
     }
 
     # 6. Module 3: US Markets
