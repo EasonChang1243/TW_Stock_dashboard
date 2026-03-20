@@ -1,5 +1,6 @@
 import os
 import json
+import re
 import requests
 import pandas as pd
 from datetime import datetime, timedelta
@@ -258,8 +259,8 @@ def fetch_latest_quotes():
                             except:
                                 chg_val = 0.0
                             
-                            dir_str = str(row[idx_dir])
-                            if "-" in dir_str:
+                            dir_str = re.sub(r'<[^>]+>', '', str(row[idx_dir])).strip()
+                            if dir_str == '-':
                                 chg_val = -chg_val
                                 
                             quotes[code] = {
@@ -552,7 +553,9 @@ def main():
     for sid in super_strong_ids:
         q = latest_quotes.get(sid, {})
         if q:
-            super_strong_list.append({"id": sid, "name": q["name"], "industry": q["industry"]})
+            found_name = q.get("name") or local_cache_names.get(sid, f"Unknown({sid})")
+            found_ind = industry_map.get(sid) or local_cache_inds.get(sid, "其他")
+            super_strong_list.append({"id": sid, "name": found_name, "industry": found_ind})
     
     # Industry Distribution (Top 50 5-day)
     industry_counts = {}
