@@ -27,6 +27,17 @@ def generate_analysis():
     super_strong = ", ".join([f"{s['name']}({s['id']}, {s['industry']})" for s in ai_context.get("super_strong", [])])
     top_industries = ", ".join([f"{i['name']}({i['count']} 檔)" for i in ai_context.get("top_industries", [])])
     us_indices = ", ".join([f"{m['id']}: {m['change']}%" for m in ai_context.get("market_summary", {}).get("us_indices", [])])
+    
+    # Format institutional summary
+    inst_summary_data = data.get("institutional_summary", [])
+    inst_summary_text = ""
+    if inst_summary_data:
+        lines = []
+        for item in inst_summary_data:
+            lines.append(f"  {item['name']}: 買進 {item['buy']}, 賣出 {item['sell']}, 買賣差額 {item['net']}")
+        inst_summary_text = "\n".join(lines)
+    else:
+        inst_summary_text = "無數據"
 
     genai.configure(api_key=api_key)
     model = genai.GenerativeModel('gemini-3.1-pro-preview') # Upgraded for enhanced analysis
@@ -41,6 +52,7 @@ def generate_analysis():
 3. 字數：限制在 400 字以內，適合手機快速瀏覽。
 4. 結構要求：
    - 【名嘴點評】：用極具張力的口吻分析美股與大盤關聯，點出目前市場的「恐慌」或「貪婪」。
+   - 【法人風向球】：解讀三大法人的買賣超金額，判斷目前的資金風向（外資與投信是聯手還是對作？）。
    - 【籌碼密碼】：從產業佔比告訴投資人資金是在避險還是進攻。
    - 【強中之強推薦】：針對 Super_Strong_List 的個股，用激昂的語氣說明為何法大戶非買不可。
    - 【明日錦囊】：給出犀利的短線操作建議。
@@ -49,6 +61,8 @@ def generate_analysis():
     user_prompt = f"""
 [最新數據數據]
 - 美股指數表現: {us_indices}
+- 三大法人買賣金額統計 (元):
+{inst_summary_text}
 - 法人買超產業分佈 (前 3 大): {top_industries}
 - 「強中之強」鎖碼股 (1日與5日買超交集): {super_strong if super_strong else "今日無顯著鎖碼股"}
 

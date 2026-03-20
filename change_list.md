@@ -2,6 +2,7 @@
 
 | 修改日期 | 變更版本 | 修改原因 | 對應 GitHub PR / 分段目標 |
 | :--- | :--- | :--- | :--- |
+| 2026-03-20 | v1.9.9.12 | 升級 AI 分析模組：導入三大法人金額盤後數據，新增「法人風向球」段落 | `feat: ai-institutional-sentiment` |
 | 2026-03-20 | v1.9.9.11 | 新增模組 5：「三大法人買賣金額統計表」，抓取 TWSE `BFI82U` 端點數據 | `feat: module-5-summary` |
 | 2026-03-17 | v1.9.9.10 | 更新自動化更新排程為台灣時間 04:30 與 16:30 | `feat: adjust-schedule` |
 | 2026-03-17 | v1.9.9.4 | 修正 LINE Bot 發送邏輯：切換至 Broadcast API 並加入測試開關 | `feat: line-broadcast-toggle` |
