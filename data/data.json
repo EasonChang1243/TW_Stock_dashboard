@@ -3033,33 +3033,13 @@
   "ai_context": {
     "super_strong": [
       {
-        "id": "2379",
-        "name": "瑞昱",
-        "industry": "半導體業"
-      },
-      {
-        "id": "2912",
-        "name": "統一超",
-        "industry": "上市其他"
-      },
-      {
         "id": "2618",
         "name": "長榮航",
         "industry": "上市其他"
       },
       {
-        "id": "3034",
-        "name": "聯詠",
-        "industry": "半導體業"
-      },
-      {
-        "id": "2880",
-        "name": "華南金",
-        "industry": "上市其他"
-      },
-      {
-        "id": "2615",
-        "name": "萬海",
+        "id": "2912",
+        "name": "統一超",
         "industry": "上市其他"
       },
       {
@@ -3068,29 +3048,14 @@
         "industry": "電腦及週邊設備業"
       },
       {
-        "id": "2027",
-        "name": "大成鋼",
-        "industry": "造紙工業"
-      },
-      {
-        "id": "00953B",
-        "name": "群益優選非投等債",
-        "industry": "債券 ETF"
+        "id": "3702",
+        "name": "大聯大",
+        "industry": "電子通路業"
       },
       {
         "id": "1711",
         "name": "永光",
         "industry": "化學工業"
-      },
-      {
-        "id": "3231",
-        "name": "緯創",
-        "industry": "電腦及週邊設備業"
-      },
-      {
-        "id": "4904",
-        "name": "遠傳",
-        "industry": "通信網路業"
       },
       {
         "id": "4919",
@@ -3103,14 +3068,49 @@
         "industry": "化學工業"
       },
       {
-        "id": "3702",
-        "name": "大聯大",
-        "industry": "電子通路業"
+        "id": "3034",
+        "name": "聯詠",
+        "industry": "半導體業"
+      },
+      {
+        "id": "3231",
+        "name": "緯創",
+        "industry": "電腦及週邊設備業"
+      },
+      {
+        "id": "4904",
+        "name": "遠傳",
+        "industry": "通信網路業"
+      },
+      {
+        "id": "2615",
+        "name": "萬海",
+        "industry": "上市其他"
       },
       {
         "id": "00990A",
         "name": "主動元大AI新經濟",
         "industry": "成分股 ETF"
+      },
+      {
+        "id": "2880",
+        "name": "華南金",
+        "industry": "上市其他"
+      },
+      {
+        "id": "2027",
+        "name": "大成鋼",
+        "industry": "造紙工業"
+      },
+      {
+        "id": "00953B",
+        "name": "群益優選非投等債",
+        "industry": "債券 ETF"
+      },
+      {
+        "id": "2379",
+        "name": "瑞昱",
+        "industry": "半導體業"
       }
     ],
     "top_industries": [
@@ -3149,7 +3149,7 @@
       {
         "id": "2412",
         "name": "中華電",
-        "days": 19,
+        "days": 14,
         "close": 134.0,
         "change": -1.5,
         "change_percent": -1.11,
@@ -3158,26 +3158,26 @@
         "industry": "通信網路業"
       },
       {
-        "id": "4737",
-        "name": "華廣",
-        "days": 19,
-        "close": 63.0,
-        "change": 0.4,
-        "change_percent": 0.64,
-        "volume": 78,
-        "amount": 4914,
-        "industry": "生技醫療業"
-      },
-      {
         "id": "00763U",
         "name": "期街口道瓊銅",
-        "days": 16,
+        "days": 14,
         "close": 30.15,
         "change": 0.18,
         "change_percent": 0.6,
         "volume": 231,
         "amount": 6965,
         "industry": "其他"
+      },
+      {
+        "id": "4737",
+        "name": "華廣",
+        "days": 14,
+        "close": 63.0,
+        "change": 0.4,
+        "change_percent": 0.64,
+        "volume": 78,
+        "amount": 4914,
+        "industry": "生技醫療業"
       },
       {
         "id": "8033",
@@ -3701,7 +3701,7 @@
       {
         "id": "6438",
         "name": "迅得",
-        "days": 16,
+        "days": 14,
         "close": 173.0,
         "change": 15.5,
         "change_percent": 9.84,
