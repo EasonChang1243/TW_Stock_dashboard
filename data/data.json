@@ -1539,7 +1539,7 @@
           "close": 266.0,
           "change": 18.0,
           "change_percent": 7.26,
-          "volume": 4773,
+          "volume": 4844,
           "industry": "電子零組件業",
           "update_time": "2026-04-01"
         },
@@ -1689,7 +1689,7 @@
           "close": 290.5,
           "change": 12.0,
           "change_percent": 4.31,
-          "volume": 1133,
+          "volume": 1128,
           "industry": "電腦及週邊設備業",
           "update_time": "2026-04-01"
         },
@@ -2081,7 +2081,7 @@
           "close": 266.0,
           "change": 18.0,
           "change_percent": 7.26,
-          "volume": 8780,
+          "volume": 8851,
           "industry": "電子零組件業",
           "update_time": "2026-04-01"
         },
@@ -2281,7 +2281,7 @@
           "close": 290.5,
           "change": 12.0,
           "change_percent": 4.31,
-          "volume": 1575,
+          "volume": 1570,
           "industry": "電腦及週邊設備業",
           "update_time": "2026-04-01"
         },
@@ -2553,7 +2553,7 @@
           "close": 266.0,
           "change": 18.0,
           "change_percent": 7.26,
-          "volume": 15677,
+          "volume": 15748,
           "industry": "電子零組件業",
           "update_time": "2026-04-01"
         },
@@ -2888,16 +2888,6 @@
           "update_time": "2026-04-01"
         },
         {
-          "id": "2382",
-          "name": "廣達",
-          "close": 290.5,
-          "change": 12.0,
-          "change_percent": 4.31,
-          "volume": 1475,
-          "industry": "電腦及週邊設備業",
-          "update_time": "2026-04-01"
-        },
-        {
           "id": "2385",
           "name": "群光",
           "close": 120.0,
@@ -2905,6 +2895,16 @@
           "change_percent": 0.42,
           "volume": 1473,
           "industry": "電子零組件業",
+          "update_time": "2026-04-01"
+        },
+        {
+          "id": "2382",
+          "name": "廣達",
+          "close": 290.5,
+          "change": 12.0,
+          "change_percent": 4.31,
+          "volume": 1470,
+          "industry": "電腦及週邊設備業",
           "update_time": "2026-04-01"
         },
         {
@@ -2953,7 +2953,7 @@
           "close": 2125.0,
           "change": 75.0,
           "change_percent": 3.66,
-          "volume": 1283,
+          "volume": 1328,
           "industry": "電子零組件業",
           "update_time": "2026-04-01"
         },
@@ -3033,24 +3033,29 @@
   "ai_context": {
     "super_strong": [
       {
+        "id": "00981A",
+        "name": "主動統一台股增長",
+        "industry": "其他"
+      },
+      {
         "id": "5880",
         "name": "合庫金",
+        "industry": "上市其他"
+      },
+      {
+        "id": "2892",
+        "name": "第一金",
+        "industry": "上市其他"
+      },
+      {
+        "id": "2886",
+        "name": "兆豐金",
         "industry": "上市其他"
       },
       {
         "id": "2105",
         "name": "正新",
         "industry": "鋼鐵工業"
-      },
-      {
-        "id": "00985B",
-        "name": "群益ESG投等債0-5",
-        "industry": "其他"
-      },
-      {
-        "id": "2618",
-        "name": "長榮航",
-        "industry": "上市其他"
       },
       {
         "id": "2002",
@@ -3063,18 +3068,23 @@
         "industry": "其他"
       },
       {
-        "id": "1303",
-        "name": "南亞",
-        "industry": "塑膠工業"
-      },
-      {
         "id": "2615",
         "name": "萬海",
         "industry": "上市其他"
       },
       {
-        "id": "2884",
-        "name": "玉山金",
+        "id": "2618",
+        "name": "長榮航",
+        "industry": "上市其他"
+      },
+      {
+        "id": "00985B",
+        "name": "群益ESG投等債0-5",
+        "industry": "其他"
+      },
+      {
+        "id": "2812",
+        "name": "台中銀",
         "industry": "上市其他"
       },
       {
@@ -3083,24 +3093,14 @@
         "industry": "塑膠工業"
       },
       {
-        "id": "2892",
-        "name": "第一金",
+        "id": "2884",
+        "name": "玉山金",
         "industry": "上市其他"
       },
       {
-        "id": "00981A",
-        "name": "主動統一台股增長",
-        "industry": "其他"
-      },
-      {
-        "id": "2886",
-        "name": "兆豐金",
-        "industry": "上市其他"
-      },
-      {
-        "id": "2812",
-        "name": "台中銀",
-        "industry": "上市其他"
+        "id": "1303",
+        "name": "南亞",
+        "industry": "塑膠工業"
       }
     ],
     "top_industries": [
@@ -3737,8 +3737,8 @@
         "close": 2125.0,
         "change": 75.0,
         "change_percent": 3.66,
-        "volume": 19,
-        "amount": 40269,
+        "volume": 64,
+        "amount": 135894,
         "industry": "電子零組件業"
       },
       {
@@ -3781,8 +3781,8 @@
         "close": 2030.0,
         "change": 130.0,
         "change_percent": 6.84,
-        "volume": 38,
-        "amount": 77077,
+        "volume": 3,
+        "amount": 6027,
         "industry": "通信網路業"
       },
       {
@@ -3902,8 +3902,8 @@
         "close": 266.0,
         "change": 18.0,
         "change_percent": 7.26,
-        "volume": 4773,
-        "amount": 1269612,
+        "volume": 4844,
+        "amount": 1288498,
         "industry": "電子零組件業"
       },
       {
@@ -4133,8 +4133,8 @@
         "close": 290.5,
         "change": 12.0,
         "change_percent": 4.31,
-        "volume": 1133,
-        "amount": 329101,
+        "volume": 1128,
+        "amount": 327648,
         "industry": "電腦及週邊設備業"
       },
       {
@@ -4236,20 +4236,20 @@
     },
     {
       "name": "自營商(避險)",
-      "buy": "32,457,407,435",
-      "sell": "17,598,166,582",
+      "buy": "32,457,754,041",
+      "sell": "17,598,513,188",
       "net": "14,859,240,853"
     },
     {
       "name": "投信",
-      "buy": "17,675,363,536",
-      "sell": "7,564,545,646",
-      "net": "10,110,817,890"
+      "buy": "17,790,110,536",
+      "sell": "7,651,575,716",
+      "net": "10,138,534,820"
     },
     {
       "name": "外資及陸資(不含外資自營商)",
-      "buy": "246,000,418,718",
-      "sell": "222,749,100,665",
+      "buy": "263,895,638,342",
+      "sell": "240,644,320,289",
       "net": "23,251,318,053"
     },
     {
@@ -4260,9 +4260,9 @@
     },
     {
       "name": "合計",
-      "buy": "308,057,703,529",
-      "sell": "253,075,934,258",
-      "net": "54,981,769,271"
+      "buy": "326,068,016,759",
+      "sell": "271,058,530,558",
+      "net": "55,009,486,201"
     }
   ],
   "us_markets": []
