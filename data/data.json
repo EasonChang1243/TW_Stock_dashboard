@@ -3033,19 +3033,14 @@
   "ai_context": {
     "super_strong": [
       {
-        "id": "2002",
-        "name": "中鋼",
-        "industry": "造紙工業"
-      },
-      {
         "id": "2409",
         "name": "友達",
         "industry": "光電業"
       },
       {
-        "id": "3702",
-        "name": "大聯大",
-        "industry": "電子通路業"
+        "id": "2886",
+        "name": "兆豐金",
+        "industry": "上市其他"
       },
       {
         "id": "2337",
@@ -3053,8 +3048,8 @@
         "industry": "半導體業"
       },
       {
-        "id": "2886",
-        "name": "兆豐金",
+        "id": "2812",
+        "name": "台中銀",
         "industry": "上市其他"
       },
       {
@@ -3063,9 +3058,14 @@
         "industry": "上市其他"
       },
       {
-        "id": "2812",
-        "name": "台中銀",
-        "industry": "上市其他"
+        "id": "2002",
+        "name": "中鋼",
+        "industry": "造紙工業"
+      },
+      {
+        "id": "3702",
+        "name": "大聯大",
+        "industry": "電子通路業"
       }
     ],
     "top_industries": [
@@ -3643,7 +3643,7 @@
       {
         "id": "6438",
         "name": "迅得",
-        "days": 19,
+        "days": 21,
         "close": 170.0,
         "change": -2.5,
         "change_percent": -1.45,
@@ -3654,7 +3654,7 @@
       {
         "id": "5274",
         "name": "Unknown(5274)",
-        "days": 19,
+        "days": 20,
         "close": 0,
         "change": 0,
         "change_percent": 0,
