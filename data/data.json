@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "update_date": "2026-04-13",
+    "update_date": "2026-04-14",
     "data_source": "TWSE/TPEx Official (Enhanced)",
     "available_intervals": [
       1,
@@ -16,54 +16,14 @@
     "foreign": {
       "1": [
         {
-          "id": "1301",
-          "name": "台塑",
-          "close": 54.3,
-          "change": 2.9,
-          "change_percent": 5.64,
-          "volume": 57997,
-          "industry": "塑膠工業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "1326",
-          "name": "台化",
-          "close": 54.6,
-          "change": 4.65,
-          "change_percent": 9.31,
-          "volume": 52424,
-          "industry": "塑膠工業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "0050",
-          "name": "元大台灣50",
-          "close": 83.1,
-          "change": 2.5,
-          "change_percent": 3.1,
-          "volume": 30857,
-          "industry": "其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "1303",
-          "name": "南亞",
-          "close": 89.0,
-          "change": 3.3,
-          "change_percent": 3.85,
-          "volume": 28493,
-          "industry": "塑膠工業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2327",
-          "name": "國巨*",
-          "close": 312.0,
-          "change": 8.5,
-          "change_percent": 2.8,
-          "volume": 22704,
-          "industry": "電子零組件業",
-          "update_time": "2026-04-13"
+          "id": "2409",
+          "name": "友達",
+          "close": 19.8,
+          "change": 1.8,
+          "change_percent": 10.0,
+          "volume": 111488,
+          "industry": "光電業",
+          "update_time": "2026-04-14"
         },
         {
           "id": "3481",
@@ -71,9 +31,39 @@
           "close": 27.25,
           "change": 0.95,
           "change_percent": 3.61,
-          "volume": 22008,
+          "volume": 79240,
           "industry": "光電業",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "0050",
+          "name": "元大台灣50",
+          "close": 83.1,
+          "change": 2.5,
+          "change_percent": 3.1,
+          "volume": 65981,
+          "industry": "其他",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "1301",
+          "name": "台塑",
+          "close": 54.3,
+          "change": 2.9,
+          "change_percent": 5.64,
+          "volume": 62668,
+          "industry": "塑膠工業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "1326",
+          "name": "台化",
+          "close": 54.6,
+          "change": 4.65,
+          "change_percent": 9.31,
+          "volume": 59406,
+          "industry": "塑膠工業",
+          "update_time": "2026-04-14"
         },
         {
           "id": "1802",
@@ -81,129 +71,9 @@
           "close": 68.2,
           "change": 4.8,
           "change_percent": 7.57,
-          "volume": 20548,
+          "volume": 58274,
           "industry": "生技醫療業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2002",
-          "name": "中鋼",
-          "close": 20.5,
-          "change": 0.3,
-          "change_percent": 1.49,
-          "volume": 16655,
-          "industry": "造紙工業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "00922",
-          "name": "國泰台灣領袖50",
-          "close": 30.7,
-          "change": 0.81,
-          "change_percent": 2.71,
-          "volume": 13881,
-          "industry": "其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "1815",
-          "name": "Unknown(1815)",
-          "close": 0,
-          "change": 0,
-          "change_percent": 0,
-          "volume": 13683,
-          "industry": "光電業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "00878",
-          "name": "國泰永續高股息",
-          "close": 23.2,
-          "change": 0.19,
-          "change_percent": 0.83,
-          "volume": 12205,
-          "industry": "其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2402",
-          "name": "毅嘉",
-          "close": 72.4,
-          "change": 5.0,
-          "change_percent": 7.42,
-          "volume": 10980,
-          "industry": "電子零組件業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2408",
-          "name": "南亞科",
-          "close": 220.0,
-          "change": -5.5,
-          "change_percent": -2.44,
-          "volume": 8798,
-          "industry": "半導體業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "3714",
-          "name": "富采",
-          "close": 62.9,
-          "change": 5.7,
-          "change_percent": 9.97,
-          "volume": 8598,
-          "industry": "光電業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2317",
-          "name": "鴻海",
-          "close": 207.5,
-          "change": 7.5,
-          "change_percent": 3.75,
-          "volume": 7366,
-          "industry": "其他電子業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "00830",
-          "name": "國泰費城半導體",
-          "close": 63.6,
-          "change": 1.95,
-          "change_percent": 3.16,
-          "volume": 7282,
-          "industry": "其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2329",
-          "name": "華泰",
-          "close": 59.0,
-          "change": 0.4,
-          "change_percent": 0.68,
-          "volume": 7124,
-          "industry": "半導體業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "6505",
-          "name": "台塑化",
-          "close": 56.2,
-          "change": 1.1,
-          "change_percent": 2.0,
-          "volume": 6853,
-          "industry": "上市其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2356",
-          "name": "英業達",
-          "close": 44.6,
-          "change": 0.05,
-          "change_percent": 0.11,
-          "volume": 6731,
-          "industry": "電腦及週邊設備業",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
           "id": "009816",
@@ -211,179 +81,69 @@
           "close": 11.67,
           "change": 0.29,
           "change_percent": 2.55,
-          "volume": 6660,
+          "volume": 39651,
           "industry": "其他",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
-          "id": "2890",
-          "name": "永豐金",
-          "close": 33.2,
-          "change": 0.5,
-          "change_percent": 1.53,
-          "volume": 6595,
-          "industry": "上市其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "00891",
-          "name": "中信關鍵半導體",
-          "close": 26.79,
-          "change": 0.76,
-          "change_percent": 2.92,
-          "volume": 6211,
-          "industry": "其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2344",
-          "name": "華邦電",
-          "close": 93.5,
-          "change": -0.9,
-          "change_percent": -0.95,
-          "volume": 6074,
-          "industry": "半導體業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "00929",
-          "name": "復華台灣科技優息",
-          "close": 20.42,
-          "change": 0.33,
-          "change_percent": 1.64,
-          "volume": 5590,
-          "industry": "其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "1310",
-          "name": "台苯",
-          "close": 10.85,
-          "change": 0.45,
-          "change_percent": 4.33,
-          "volume": 5545,
+          "id": "1303",
+          "name": "南亞",
+          "close": 89.0,
+          "change": 3.3,
+          "change_percent": 3.85,
+          "volume": 35894,
           "industry": "塑膠工業",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
-          "id": "5347",
-          "name": "Unknown(5347)",
+          "id": "2002",
+          "name": "中鋼",
+          "close": 20.5,
+          "change": 0.3,
+          "change_percent": 1.49,
+          "volume": 34918,
+          "industry": "造紙工業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "00937B",
+          "name": "Unknown(00937B)",
           "close": 0,
           "change": 0,
           "change_percent": 0,
-          "volume": 5477,
-          "industry": "電子零組件業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "1312",
-          "name": "國喬",
-          "close": 14.85,
-          "change": 1.35,
-          "change_percent": 10.0,
-          "volume": 5388,
-          "industry": "塑膠工業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2897",
-          "name": "王道銀行",
-          "close": 10.35,
-          "change": 0.0,
-          "change_percent": 0.0,
-          "volume": 5356,
-          "industry": "上市其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "3231",
-          "name": "緯創",
-          "close": 136.5,
-          "change": 2.0,
-          "change_percent": 1.49,
-          "volume": 5206,
-          "industry": "電腦及週邊設備業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "4927",
-          "name": "泰鼎-KY",
-          "close": 50.7,
-          "change": 2.5,
-          "change_percent": 5.19,
-          "volume": 5193,
-          "industry": "電子零組件業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "00881",
-          "name": "國泰台灣科技龍頭",
-          "close": 41.2,
-          "change": 1.14,
-          "change_percent": 2.85,
-          "volume": 4734,
+          "volume": 28143,
           "industry": "其他",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
-          "id": "2883",
-          "name": "凱基金",
-          "close": 20.85,
-          "change": -0.2,
-          "change_percent": -0.95,
-          "volume": 4525,
-          "industry": "上市其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2324",
-          "name": "仁寶",
-          "close": 29.5,
-          "change": 0.5,
-          "change_percent": 1.72,
-          "volume": 4503,
-          "industry": "電腦及週邊設備業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "3576",
-          "name": "聯合再生",
-          "close": 15.4,
-          "change": -1.7,
-          "change_percent": -9.94,
-          "volume": 4448,
-          "industry": "光電業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "1313",
-          "name": "聯成",
-          "close": 13.2,
-          "change": 0.4,
-          "change_percent": 3.13,
-          "volume": 4431,
-          "industry": "塑膠工業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "3702",
-          "name": "大聯大",
-          "close": 96.5,
-          "change": -0.1,
-          "change_percent": -0.1,
-          "volume": 4427,
-          "industry": "電子通路業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "00637L",
-          "name": "元大滬深300正2",
-          "close": 20.18,
-          "change": 0.05,
-          "change_percent": 0.25,
-          "volume": 4282,
+          "id": "00878",
+          "name": "國泰永續高股息",
+          "close": 23.2,
+          "change": 0.19,
+          "change_percent": 0.83,
+          "volume": 26712,
           "industry": "其他",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2337",
+          "name": "旺宏",
+          "close": 155.5,
+          "change": 8.0,
+          "change_percent": 5.42,
+          "volume": 26657,
+          "industry": "半導體業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "00922",
+          "name": "國泰台灣領袖50",
+          "close": 30.7,
+          "change": 0.81,
+          "change_percent": 2.71,
+          "volume": 26555,
+          "industry": "其他",
+          "update_time": "2026-04-14"
         },
         {
           "id": "00940",
@@ -391,19 +151,99 @@
           "close": 9.96,
           "change": 0.06,
           "change_percent": 0.61,
-          "volume": 4216,
+          "volume": 25684,
           "industry": "其他",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
-          "id": "3045",
-          "name": "台灣大",
-          "close": 110.0,
-          "change": 0.0,
-          "change_percent": 0.0,
-          "volume": 4151,
-          "industry": "通信網路業",
-          "update_time": "2026-04-13"
+          "id": "2330",
+          "name": "台積電",
+          "close": 2055.0,
+          "change": 65.0,
+          "change_percent": 3.27,
+          "volume": 18955,
+          "industry": "半導體業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2317",
+          "name": "鴻海",
+          "close": 207.5,
+          "change": 7.5,
+          "change_percent": 3.75,
+          "volume": 17772,
+          "industry": "其他電子業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2887",
+          "name": "台新新光金",
+          "close": 24.45,
+          "change": 0.3,
+          "change_percent": 1.24,
+          "volume": 16134,
+          "industry": "上市其他",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2324",
+          "name": "仁寶",
+          "close": 29.5,
+          "change": 0.5,
+          "change_percent": 1.72,
+          "volume": 13706,
+          "industry": "電腦及週邊設備業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2890",
+          "name": "永豐金",
+          "close": 33.2,
+          "change": 0.5,
+          "change_percent": 1.53,
+          "volume": 13677,
+          "industry": "上市其他",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "1312",
+          "name": "國喬",
+          "close": 14.85,
+          "change": 1.35,
+          "change_percent": 10.0,
+          "volume": 13327,
+          "industry": "塑膠工業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2867",
+          "name": "三商壽",
+          "close": 7.89,
+          "change": 0.19,
+          "change_percent": 2.47,
+          "volume": 12894,
+          "industry": "上市其他",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2884",
+          "name": "玉山金",
+          "close": 32.7,
+          "change": 0.65,
+          "change_percent": 2.03,
+          "volume": 12433,
+          "industry": "上市其他",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "3231",
+          "name": "緯創",
+          "close": 136.5,
+          "change": 2.0,
+          "change_percent": 1.49,
+          "volume": 11633,
+          "industry": "電腦及週邊設備業",
+          "update_time": "2026-04-14"
         },
         {
           "id": "00900",
@@ -411,89 +251,39 @@
           "close": 14.77,
           "change": 0.33,
           "change_percent": 2.29,
-          "volume": 4070,
+          "volume": 10661,
           "industry": "其他",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
-          "id": "00918",
-          "name": "大華優利高填息30",
-          "close": 22.8,
-          "change": 0.18,
-          "change_percent": 0.8,
-          "volume": 3844,
-          "industry": "其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "6147",
-          "name": "Unknown(6147)",
-          "close": 0,
-          "change": 0,
-          "change_percent": 0,
-          "volume": 3635,
-          "industry": "電子零組件業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2027",
-          "name": "大成鋼",
-          "close": 38.45,
-          "change": 0.15,
-          "change_percent": 0.39,
-          "volume": 3301,
-          "industry": "造紙工業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2481",
-          "name": "強茂",
-          "close": 99.0,
-          "change": -2.0,
-          "change_percent": -1.98,
-          "volume": 3154,
-          "industry": "半導體業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "00982A",
-          "name": "主動群益台灣強棒",
-          "close": 18.5,
-          "change": 0.33,
-          "change_percent": 1.82,
-          "volume": 3090,
-          "industry": "其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "8358",
-          "name": "Unknown(8358)",
-          "close": 0,
-          "change": 0,
-          "change_percent": 0,
-          "volume": 3062,
+          "id": "6116",
+          "name": "彩晶",
+          "close": 8.86,
+          "change": 0.34,
+          "change_percent": 3.99,
+          "volume": 10539,
           "industry": "光電業",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
-          "id": "2105",
-          "name": "正新",
-          "close": 32.5,
-          "change": 0.05,
-          "change_percent": 0.15,
-          "volume": 2856,
-          "industry": "鋼鐵工業",
-          "update_time": "2026-04-13"
+          "id": "2327",
+          "name": "國巨*",
+          "close": 312.0,
+          "change": 8.5,
+          "change_percent": 2.8,
+          "volume": 10188,
+          "industry": "電子零組件業",
+          "update_time": "2026-04-14"
         },
         {
-          "id": "1304",
-          "name": "台聚",
-          "close": 16.25,
-          "change": -0.5,
-          "change_percent": -2.99,
-          "volume": 2844,
-          "industry": "塑膠工業",
-          "update_time": "2026-04-13"
+          "id": "2880",
+          "name": "華南金",
+          "close": 35.0,
+          "change": 1.0,
+          "change_percent": 2.94,
+          "volume": 9618,
+          "industry": "上市其他",
+          "update_time": "2026-04-14"
         },
         {
           "id": "00712",
@@ -501,19 +291,229 @@
           "close": 8.93,
           "change": 0.05,
           "change_percent": 0.56,
-          "volume": 2813,
+          "volume": 8616,
           "industry": "其他",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
-          "id": "5439",
-          "name": "Unknown(5439)",
+          "id": "2402",
+          "name": "毅嘉",
+          "close": 72.4,
+          "change": 5.0,
+          "change_percent": 7.42,
+          "volume": 8583,
+          "industry": "電子零組件業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2885",
+          "name": "元大金",
+          "close": 49.55,
+          "change": 2.1,
+          "change_percent": 4.43,
+          "volume": 8350,
+          "industry": "上市其他",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "00830",
+          "name": "國泰費城半導體",
+          "close": 63.6,
+          "change": 1.95,
+          "change_percent": 3.16,
+          "volume": 8256,
+          "industry": "其他",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "3702",
+          "name": "大聯大",
+          "close": 96.5,
+          "change": -0.1,
+          "change_percent": -0.1,
+          "volume": 7968,
+          "industry": "電子通路業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2492",
+          "name": "華新科",
+          "close": 143.0,
+          "change": 7.0,
+          "change_percent": 5.15,
+          "volume": 7323,
+          "industry": "電子零組件業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2356",
+          "name": "英業達",
+          "close": 44.6,
+          "change": 0.05,
+          "change_percent": 0.11,
+          "volume": 6802,
+          "industry": "電腦及週邊設備業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "1605",
+          "name": "華新",
+          "close": 32.2,
+          "change": 0.6,
+          "change_percent": 1.9,
+          "volume": 6682,
+          "industry": "電器電纜",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "6127",
+          "name": "Unknown(6127)",
           "close": 0,
           "change": 0,
           "change_percent": 0,
-          "volume": 2770,
+          "volume": 6374,
           "industry": "光電業",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "6505",
+          "name": "台塑化",
+          "close": 56.2,
+          "change": 1.1,
+          "change_percent": 2.0,
+          "volume": 6117,
+          "industry": "上市其他",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "4919",
+          "name": "新唐",
+          "close": 110.5,
+          "change": 10.0,
+          "change_percent": 9.95,
+          "volume": 6040,
+          "industry": "半導體業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "00918",
+          "name": "大華優利高填息30",
+          "close": 22.8,
+          "change": 0.18,
+          "change_percent": 0.8,
+          "volume": 5989,
+          "industry": "其他",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2301",
+          "name": "光寶科",
+          "close": 157.5,
+          "change": 4.0,
+          "change_percent": 2.61,
+          "volume": 5573,
+          "industry": "電腦及週邊設備業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "6278",
+          "name": "台表科",
+          "close": 125.0,
+          "change": 11.0,
+          "change_percent": 9.65,
+          "volume": 5561,
+          "industry": "光電業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "6443",
+          "name": "元晶",
+          "close": 37.0,
+          "change": 0.95,
+          "change_percent": 2.64,
+          "volume": 5435,
+          "industry": "光電業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "00923",
+          "name": "群益台ESG低碳50",
+          "close": 31.71,
+          "change": 0.8,
+          "change_percent": 2.59,
+          "volume": 5374,
+          "industry": "其他",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "6182",
+          "name": "Unknown(6182)",
+          "close": 0,
+          "change": 0,
+          "change_percent": 0,
+          "volume": 5360,
+          "industry": "電子零組件業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2834",
+          "name": "臺企銀",
+          "close": 15.35,
+          "change": 0.05,
+          "change_percent": 0.33,
+          "volume": 5195,
+          "industry": "上市其他",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "009815",
+          "name": "Unknown(009815)",
+          "close": 0,
+          "change": 0,
+          "change_percent": 0,
+          "volume": 4838,
+          "industry": "其他",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "0052",
+          "name": "富邦科技",
+          "close": 49.33,
+          "change": 1.47,
+          "change_percent": 3.07,
+          "volume": 4803,
+          "industry": "其他",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "1313",
+          "name": "聯成",
+          "close": 13.2,
+          "change": 0.4,
+          "change_percent": 3.13,
+          "volume": 4614,
+          "industry": "塑膠工業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "3045",
+          "name": "台灣大",
+          "close": 110.0,
+          "change": 0.0,
+          "change_percent": 0.0,
+          "volume": 4502,
+          "industry": "通信網路業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "6191",
+          "name": "精成科",
+          "close": 104.5,
+          "change": 9.1,
+          "change_percent": 9.54,
+          "volume": 4486,
+          "industry": "電子零組件業",
+          "update_time": "2026-04-14"
         }
       ],
       "3": [
@@ -523,39 +523,9 @@
           "close": 83.1,
           "change": 2.5,
           "change_percent": 3.1,
-          "volume": 134359,
+          "volume": 156222,
           "industry": "其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "009816",
-          "name": "凱基台灣TOP50",
-          "close": 11.67,
-          "change": 0.29,
-          "change_percent": 2.55,
-          "volume": 66655,
-          "industry": "其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "1326",
-          "name": "台化",
-          "close": 54.6,
-          "change": 4.65,
-          "change_percent": 9.31,
-          "volume": 65583,
-          "industry": "塑膠工業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2002",
-          "name": "中鋼",
-          "close": 20.5,
-          "change": 0.3,
-          "change_percent": 1.49,
-          "volume": 63275,
-          "industry": "造紙工業",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
           "id": "1301",
@@ -563,19 +533,29 @@
           "close": 54.3,
           "change": 2.9,
           "change_percent": 5.64,
-          "volume": 59059,
+          "volume": 118402,
           "industry": "塑膠工業",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
-          "id": "2327",
-          "name": "國巨*",
-          "close": 312.0,
-          "change": 8.5,
-          "change_percent": 2.8,
-          "volume": 56494,
-          "industry": "電子零組件業",
-          "update_time": "2026-04-13"
+          "id": "1326",
+          "name": "台化",
+          "close": 54.6,
+          "change": 4.65,
+          "change_percent": 9.31,
+          "volume": 111718,
+          "industry": "塑膠工業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "009816",
+          "name": "凱基台灣TOP50",
+          "close": 11.67,
+          "change": 0.29,
+          "change_percent": 2.55,
+          "volume": 78237,
+          "industry": "其他",
+          "update_time": "2026-04-14"
         },
         {
           "id": "00878",
@@ -583,309 +563,9 @@
           "close": 23.2,
           "change": 0.19,
           "change_percent": 0.83,
-          "volume": 50219,
+          "volume": 65004,
           "industry": "其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "00922",
-          "name": "國泰台灣領袖50",
-          "close": 30.7,
-          "change": 0.81,
-          "change_percent": 2.71,
-          "volume": 37030,
-          "industry": "其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2409",
-          "name": "友達",
-          "close": 19.8,
-          "change": 1.8,
-          "change_percent": 10.0,
-          "volume": 36957,
-          "industry": "光電業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "00830",
-          "name": "國泰費城半導體",
-          "close": 63.6,
-          "change": 1.95,
-          "change_percent": 3.16,
-          "volume": 32373,
-          "industry": "其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "3231",
-          "name": "緯創",
-          "close": 136.5,
-          "change": 2.0,
-          "change_percent": 1.49,
-          "volume": 30470,
-          "industry": "電腦及週邊設備業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "0052",
-          "name": "富邦科技",
-          "close": 49.33,
-          "change": 1.47,
-          "change_percent": 3.07,
-          "volume": 27908,
-          "industry": "其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2382",
-          "name": "廣達",
-          "close": 323.0,
-          "change": 4.0,
-          "change_percent": 1.25,
-          "volume": 25680,
-          "industry": "電腦及週邊設備業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "00712",
-          "name": "復華富時不動產",
-          "close": 8.93,
-          "change": 0.05,
-          "change_percent": 0.56,
-          "volume": 20562,
-          "industry": "其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2402",
-          "name": "毅嘉",
-          "close": 72.4,
-          "change": 5.0,
-          "change_percent": 7.42,
-          "volume": 19625,
-          "industry": "電子零組件業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2890",
-          "name": "永豐金",
-          "close": 33.2,
-          "change": 0.5,
-          "change_percent": 1.53,
-          "volume": 18408,
-          "industry": "上市其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "1303",
-          "name": "南亞",
-          "close": 89.0,
-          "change": 3.3,
-          "change_percent": 3.85,
-          "volume": 17995,
-          "industry": "塑膠工業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "1815",
-          "name": "Unknown(1815)",
-          "close": 0,
-          "change": 0,
-          "change_percent": 0,
-          "volume": 17006,
-          "industry": "光電業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "00891",
-          "name": "中信關鍵半導體",
-          "close": 26.79,
-          "change": 0.76,
-          "change_percent": 2.92,
-          "volume": 16600,
-          "industry": "其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2027",
-          "name": "大成鋼",
-          "close": 38.45,
-          "change": 0.15,
-          "change_percent": 0.39,
-          "volume": 16125,
-          "industry": "造紙工業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "00881",
-          "name": "國泰台灣科技龍頭",
-          "close": 41.2,
-          "change": 1.14,
-          "change_percent": 2.85,
-          "volume": 15208,
-          "industry": "其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2356",
-          "name": "英業達",
-          "close": 44.6,
-          "change": 0.05,
-          "change_percent": 0.11,
-          "volume": 15111,
-          "industry": "電腦及週邊設備業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "5880",
-          "name": "合庫金",
-          "close": 23.9,
-          "change": 0.0,
-          "change_percent": 0.0,
-          "volume": 13701,
-          "industry": "上市其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "3702",
-          "name": "大聯大",
-          "close": 96.5,
-          "change": -0.1,
-          "change_percent": -0.1,
-          "volume": 13220,
-          "industry": "電子通路業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "00940",
-          "name": "元大台灣價值高息",
-          "close": 9.96,
-          "change": 0.06,
-          "change_percent": 0.61,
-          "volume": 12788,
-          "industry": "其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "00929",
-          "name": "復華台灣科技優息",
-          "close": 20.42,
-          "change": 0.33,
-          "change_percent": 1.64,
-          "volume": 12549,
-          "industry": "其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "00918",
-          "name": "大華優利高填息30",
-          "close": 22.8,
-          "change": 0.18,
-          "change_percent": 0.8,
-          "volume": 12414,
-          "industry": "其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "3450",
-          "name": "聯鈞",
-          "close": 314.5,
-          "change": 5.0,
-          "change_percent": 1.62,
-          "volume": 12184,
-          "industry": "半導體業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "00985D",
-          "name": "Unknown(00985D)",
-          "close": 0,
-          "change": 0,
-          "change_percent": 0,
-          "volume": 11904,
-          "industry": "其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2886",
-          "name": "兆豐金",
-          "close": 39.35,
-          "change": 0.05,
-          "change_percent": 0.13,
-          "volume": 11798,
-          "industry": "上市其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "4989",
-          "name": "榮科",
-          "close": 89.4,
-          "change": 8.1,
-          "change_percent": 9.96,
-          "volume": 11453,
-          "industry": "電子零組件業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "1717",
-          "name": "長興",
-          "close": 81.0,
-          "change": 0.3,
-          "change_percent": 0.37,
-          "volume": 11292,
-          "industry": "化學工業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "3045",
-          "name": "台灣大",
-          "close": 110.0,
-          "change": 0.0,
-          "change_percent": 0.0,
-          "volume": 10939,
-          "industry": "通信網路業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2801",
-          "name": "彰銀",
-          "close": 21.2,
-          "change": 0.05,
-          "change_percent": 0.24,
-          "volume": 10639,
-          "industry": "上市其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "00993A",
-          "name": "主動安聯台灣",
-          "close": 11.58,
-          "change": 0.04,
-          "change_percent": 0.35,
-          "volume": 10453,
-          "industry": "其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "3576",
-          "name": "聯合再生",
-          "close": 15.4,
-          "change": -1.7,
-          "change_percent": -9.94,
-          "volume": 10050,
-          "industry": "光電業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "00900",
-          "name": "富邦特選高股息30",
-          "close": 14.77,
-          "change": 0.33,
-          "change_percent": 2.29,
-          "volume": 9955,
-          "industry": "其他",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
           "id": "1802",
@@ -893,29 +573,89 @@
           "close": 68.2,
           "change": 4.8,
           "change_percent": 7.57,
-          "volume": 8482,
+          "volume": 60120,
           "industry": "生技醫療業",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
-          "id": "1310",
-          "name": "台苯",
-          "close": 10.85,
-          "change": 0.45,
-          "change_percent": 4.33,
-          "volume": 8435,
+          "id": "2002",
+          "name": "中鋼",
+          "close": 20.5,
+          "change": 0.3,
+          "change_percent": 1.49,
+          "volume": 60049,
+          "industry": "造紙工業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "00922",
+          "name": "國泰台灣領袖50",
+          "close": 30.7,
+          "change": 0.81,
+          "change_percent": 2.71,
+          "volume": 55304,
+          "industry": "其他",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2327",
+          "name": "國巨*",
+          "close": 312.0,
+          "change": 8.5,
+          "change_percent": 2.8,
+          "volume": 47601,
+          "industry": "電子零組件業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "1303",
+          "name": "南亞",
+          "close": 89.0,
+          "change": 3.3,
+          "change_percent": 3.85,
+          "volume": 39430,
           "industry": "塑膠工業",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
-          "id": "2867",
-          "name": "三商壽",
-          "close": 7.89,
-          "change": 0.19,
-          "change_percent": 2.47,
-          "volume": 7798,
-          "industry": "上市其他",
-          "update_time": "2026-04-13"
+          "id": "00940",
+          "name": "元大台灣價值高息",
+          "close": 9.96,
+          "change": 0.06,
+          "change_percent": 0.61,
+          "volume": 36941,
+          "industry": "其他",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "00830",
+          "name": "國泰費城半導體",
+          "close": 63.6,
+          "change": 1.95,
+          "change_percent": 3.16,
+          "volume": 28351,
+          "industry": "其他",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2402",
+          "name": "毅嘉",
+          "close": 72.4,
+          "change": 5.0,
+          "change_percent": 7.42,
+          "volume": 27015,
+          "industry": "電子零組件業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "3231",
+          "name": "緯創",
+          "close": 136.5,
+          "change": 2.0,
+          "change_percent": 1.49,
+          "volume": 26762,
+          "industry": "電腦及週邊設備業",
+          "update_time": "2026-04-14"
         },
         {
           "id": "2330",
@@ -923,89 +663,199 @@
           "close": 2055.0,
           "change": 65.0,
           "change_percent": 3.27,
-          "volume": 7606,
+          "volume": 25839,
           "industry": "半導體業",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
-          "id": "00991A",
-          "name": "主動復華未來50",
-          "close": 14.1,
-          "change": 0.28,
-          "change_percent": 2.03,
-          "volume": 7484,
+          "id": "0052",
+          "name": "富邦科技",
+          "close": 49.33,
+          "change": 1.47,
+          "change_percent": 3.07,
+          "volume": 25059,
           "industry": "其他",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
-          "id": "2897",
-          "name": "王道銀行",
-          "close": 10.35,
-          "change": 0.0,
-          "change_percent": 0.0,
-          "volume": 7430,
+          "id": "2890",
+          "name": "永豐金",
+          "close": 33.2,
+          "change": 0.5,
+          "change_percent": 1.53,
+          "volume": 23957,
           "industry": "上市其他",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
-          "id": "2316",
-          "name": "楠梓電",
-          "close": 118.5,
-          "change": 5.5,
-          "change_percent": 4.87,
-          "volume": 7346,
-          "industry": "電子零組件業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "4927",
-          "name": "泰鼎-KY",
-          "close": 50.7,
-          "change": 2.5,
-          "change_percent": 5.19,
-          "volume": 7281,
-          "industry": "電子零組件業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "009811",
-          "name": "統一美國50",
-          "close": 11.55,
-          "change": 0.13,
-          "change_percent": 1.14,
-          "volume": 7194,
-          "industry": "其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "00923",
-          "name": "群益台ESG低碳50",
-          "close": 31.71,
-          "change": 0.8,
-          "change_percent": 2.59,
-          "volume": 7078,
-          "industry": "其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "3706",
-          "name": "神達",
-          "close": 82.4,
-          "change": 0.0,
-          "change_percent": 0.0,
-          "volume": 7002,
+          "id": "2324",
+          "name": "仁寶",
+          "close": 29.5,
+          "change": 0.5,
+          "change_percent": 1.72,
+          "volume": 22282,
           "industry": "電腦及週邊設備業",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
-          "id": "5347",
-          "name": "Unknown(5347)",
+          "id": "2317",
+          "name": "鴻海",
+          "close": 207.5,
+          "change": 7.5,
+          "change_percent": 3.75,
+          "volume": 20658,
+          "industry": "其他電子業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2344",
+          "name": "華邦電",
+          "close": 93.5,
+          "change": -0.9,
+          "change_percent": -0.95,
+          "volume": 20594,
+          "industry": "半導體業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2356",
+          "name": "英業達",
+          "close": 44.6,
+          "change": 0.05,
+          "change_percent": 0.11,
+          "volume": 20312,
+          "industry": "電腦及週邊設備業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "00900",
+          "name": "富邦特選高股息30",
+          "close": 14.77,
+          "change": 0.33,
+          "change_percent": 2.29,
+          "volume": 18564,
+          "industry": "其他",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "00712",
+          "name": "復華富時不動產",
+          "close": 8.93,
+          "change": 0.05,
+          "change_percent": 0.56,
+          "volume": 18326,
+          "industry": "其他",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "6443",
+          "name": "元晶",
+          "close": 37.0,
+          "change": 0.95,
+          "change_percent": 2.64,
+          "volume": 17645,
+          "industry": "光電業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2409",
+          "name": "友達",
+          "close": 19.8,
+          "change": 1.8,
+          "change_percent": 10.0,
+          "volume": 17534,
+          "industry": "光電業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "3702",
+          "name": "大聯大",
+          "close": 96.5,
+          "change": -0.1,
+          "change_percent": -0.1,
+          "volume": 17280,
+          "industry": "電子通路業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "1312",
+          "name": "國喬",
+          "close": 14.85,
+          "change": 1.35,
+          "change_percent": 10.0,
+          "volume": 17060,
+          "industry": "塑膠工業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "3576",
+          "name": "聯合再生",
+          "close": 15.4,
+          "change": -1.7,
+          "change_percent": -9.94,
+          "volume": 16362,
+          "industry": "光電業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "00918",
+          "name": "大華優利高填息30",
+          "close": 22.8,
+          "change": 0.18,
+          "change_percent": 0.8,
+          "volume": 15735,
+          "industry": "其他",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2867",
+          "name": "三商壽",
+          "close": 7.89,
+          "change": 0.19,
+          "change_percent": 2.47,
+          "volume": 14708,
+          "industry": "上市其他",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "00891",
+          "name": "中信關鍵半導體",
+          "close": 26.79,
+          "change": 0.76,
+          "change_percent": 2.92,
+          "volume": 13705,
+          "industry": "其他",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2382",
+          "name": "廣達",
+          "close": 323.0,
+          "change": 4.0,
+          "change_percent": 1.25,
+          "volume": 13640,
+          "industry": "電腦及週邊設備業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "6505",
+          "name": "台塑化",
+          "close": 56.2,
+          "change": 1.1,
+          "change_percent": 2.0,
+          "volume": 13497,
+          "industry": "上市其他",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "00937B",
+          "name": "Unknown(00937B)",
           "close": 0,
           "change": 0,
           "change_percent": 0,
-          "volume": 6991,
-          "industry": "電子零組件業",
-          "update_time": "2026-04-13"
+          "volume": 13357,
+          "industry": "其他",
+          "update_time": "2026-04-14"
         },
         {
           "id": "2880",
@@ -1013,9 +863,159 @@
           "close": 35.0,
           "change": 1.0,
           "change_percent": 2.94,
-          "volume": 6907,
+          "volume": 13244,
           "industry": "上市其他",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "00881",
+          "name": "國泰台灣科技龍頭",
+          "close": 41.2,
+          "change": 1.14,
+          "change_percent": 2.85,
+          "volume": 12295,
+          "industry": "其他",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "00923",
+          "name": "群益台ESG低碳50",
+          "close": 31.71,
+          "change": 0.8,
+          "change_percent": 2.59,
+          "volume": 10970,
+          "industry": "其他",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "3045",
+          "name": "台灣大",
+          "close": 110.0,
+          "change": 0.0,
+          "change_percent": 0.0,
+          "volume": 10928,
+          "industry": "通信網路業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2885",
+          "name": "元大金",
+          "close": 49.55,
+          "change": 2.1,
+          "change_percent": 4.43,
+          "volume": 10488,
+          "industry": "上市其他",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "1605",
+          "name": "華新",
+          "close": 32.2,
+          "change": 0.6,
+          "change_percent": 1.9,
+          "volume": 10414,
+          "industry": "電器電纜",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "3706",
+          "name": "神達",
+          "close": 82.4,
+          "change": 0.0,
+          "change_percent": 0.0,
+          "volume": 9904,
+          "industry": "電腦及週邊設備業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2329",
+          "name": "華泰",
+          "close": 59.0,
+          "change": 0.4,
+          "change_percent": 0.68,
+          "volume": 9860,
+          "industry": "半導體業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "1310",
+          "name": "台苯",
+          "close": 10.85,
+          "change": 0.45,
+          "change_percent": 4.33,
+          "volume": 9492,
+          "industry": "塑膠工業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "6182",
+          "name": "Unknown(6182)",
+          "close": 0,
+          "change": 0,
+          "change_percent": 0,
+          "volume": 9327,
+          "industry": "電子零組件業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2492",
+          "name": "華新科",
+          "close": 143.0,
+          "change": 7.0,
+          "change_percent": 5.15,
+          "volume": 8635,
+          "industry": "電子零組件業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "5483",
+          "name": "Unknown(5483)",
+          "close": 0,
+          "change": 0,
+          "change_percent": 0,
+          "volume": 8464,
+          "industry": "電子零組件業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "3481",
+          "name": "群創",
+          "close": 27.25,
+          "change": 0.95,
+          "change_percent": 3.61,
+          "volume": 8321,
+          "industry": "光電業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "1313",
+          "name": "聯成",
+          "close": 13.2,
+          "change": 0.4,
+          "change_percent": 3.13,
+          "volume": 8284,
+          "industry": "塑膠工業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "1714",
+          "name": "和桐",
+          "close": 10.1,
+          "change": -0.05,
+          "change_percent": -0.49,
+          "volume": 8131,
+          "industry": "化學工業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "00993A",
+          "name": "主動安聯台灣",
+          "close": 11.58,
+          "change": 0.04,
+          "change_percent": 0.35,
+          "volume": 8036,
+          "industry": "其他",
+          "update_time": "2026-04-14"
         }
       ],
       "5": [
@@ -1025,209 +1025,9 @@
           "close": 83.1,
           "change": 2.5,
           "change_percent": 3.1,
-          "volume": 228153,
+          "volume": 296726,
           "industry": "其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2002",
-          "name": "中鋼",
-          "close": 20.5,
-          "change": 0.3,
-          "change_percent": 1.49,
-          "volume": 101714,
-          "industry": "造紙工業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "009816",
-          "name": "凱基台灣TOP50",
-          "close": 11.67,
-          "change": 0.29,
-          "change_percent": 2.55,
-          "volume": 92845,
-          "industry": "其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "00937B",
-          "name": "Unknown(00937B)",
-          "close": 0,
-          "change": 0,
-          "change_percent": 0,
-          "volume": 92639,
-          "industry": "其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "00878",
-          "name": "國泰永續高股息",
-          "close": 23.2,
-          "change": 0.19,
-          "change_percent": 0.83,
-          "volume": 90118,
-          "industry": "其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "1326",
-          "name": "台化",
-          "close": 54.6,
-          "change": 4.65,
-          "change_percent": 9.31,
-          "volume": 77542,
-          "industry": "塑膠工業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "1301",
-          "name": "台塑",
-          "close": 54.3,
-          "change": 2.9,
-          "change_percent": 5.64,
-          "volume": 74186,
-          "industry": "塑膠工業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2327",
-          "name": "國巨*",
-          "close": 312.0,
-          "change": 8.5,
-          "change_percent": 2.8,
-          "volume": 72275,
-          "industry": "電子零組件業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2883",
-          "name": "凱基金",
-          "close": 20.85,
-          "change": -0.2,
-          "change_percent": -0.95,
-          "volume": 71852,
-          "industry": "上市其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "00922",
-          "name": "國泰台灣領袖50",
-          "close": 30.7,
-          "change": 0.81,
-          "change_percent": 2.71,
-          "volume": 60937,
-          "industry": "其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2382",
-          "name": "廣達",
-          "close": 323.0,
-          "change": 4.0,
-          "change_percent": 1.25,
-          "volume": 59760,
-          "industry": "電腦及週邊設備業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "00991A",
-          "name": "主動復華未來50",
-          "close": 14.1,
-          "change": 0.28,
-          "change_percent": 2.03,
-          "volume": 58226,
-          "industry": "其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "00830",
-          "name": "國泰費城半導體",
-          "close": 63.6,
-          "change": 1.95,
-          "change_percent": 3.16,
-          "volume": 56782,
-          "industry": "其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "0052",
-          "name": "富邦科技",
-          "close": 49.33,
-          "change": 1.47,
-          "change_percent": 3.07,
-          "volume": 53233,
-          "industry": "其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "00990A",
-          "name": "主動元大AI新經濟",
-          "close": 14.5,
-          "change": 0.58,
-          "change_percent": 4.17,
-          "volume": 48987,
-          "industry": "其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "3231",
-          "name": "緯創",
-          "close": 136.5,
-          "change": 2.0,
-          "change_percent": 1.49,
-          "volume": 46404,
-          "industry": "電腦及週邊設備業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2890",
-          "name": "永豐金",
-          "close": 33.2,
-          "change": 0.5,
-          "change_percent": 1.53,
-          "volume": 37237,
-          "industry": "上市其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "00881",
-          "name": "國泰台灣科技龍頭",
-          "close": 41.2,
-          "change": 1.14,
-          "change_percent": 2.85,
-          "volume": 37229,
-          "industry": "其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "1815",
-          "name": "Unknown(1815)",
-          "close": 0,
-          "change": 0,
-          "change_percent": 0,
-          "volume": 33827,
-          "industry": "光電業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "1303",
-          "name": "南亞",
-          "close": 89.0,
-          "change": 3.3,
-          "change_percent": 3.85,
-          "volume": 33687,
-          "industry": "塑膠工業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2330",
-          "name": "台積電",
-          "close": 2055.0,
-          "change": 65.0,
-          "change_percent": 3.27,
-          "volume": 31880,
-          "industry": "半導體業",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
           "id": "2409",
@@ -1235,463 +1035,9 @@
           "close": 19.8,
           "change": 1.8,
           "change_percent": 10.0,
-          "volume": 30174,
+          "volume": 225136,
           "industry": "光電業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "00982A",
-          "name": "主動群益台灣強棒",
-          "close": 18.5,
-          "change": 0.33,
-          "change_percent": 1.82,
-          "volume": 29722,
-          "industry": "其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "00948B",
-          "name": "Unknown(00948B)",
-          "close": 0,
-          "change": 0,
-          "change_percent": 0,
-          "volume": 28138,
-          "industry": "其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "00891",
-          "name": "中信關鍵半導體",
-          "close": 26.79,
-          "change": 0.76,
-          "change_percent": 2.92,
-          "volume": 26997,
-          "industry": "其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "3702",
-          "name": "大聯大",
-          "close": 96.5,
-          "change": -0.1,
-          "change_percent": -0.1,
-          "volume": 25738,
-          "industry": "電子通路業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "00993A",
-          "name": "主動安聯台灣",
-          "close": 11.58,
-          "change": 0.04,
-          "change_percent": 0.35,
-          "volume": 25116,
-          "industry": "其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "00712",
-          "name": "復華富時不動產",
-          "close": 8.93,
-          "change": 0.05,
-          "change_percent": 0.56,
-          "volume": 24427,
-          "industry": "其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "00940",
-          "name": "元大台灣價值高息",
-          "close": 9.96,
-          "change": 0.06,
-          "change_percent": 0.61,
-          "volume": 24336,
-          "industry": "其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "1802",
-          "name": "台玻",
-          "close": 68.2,
-          "change": 4.8,
-          "change_percent": 7.57,
-          "volume": 21852,
-          "industry": "生技醫療業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2886",
-          "name": "兆豐金",
-          "close": 39.35,
-          "change": 0.05,
-          "change_percent": 0.13,
-          "volume": 21755,
-          "industry": "上市其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "00929",
-          "name": "復華台灣科技優息",
-          "close": 20.42,
-          "change": 0.33,
-          "change_percent": 1.64,
-          "volume": 21409,
-          "industry": "其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "00918",
-          "name": "大華優利高填息30",
-          "close": 22.8,
-          "change": 0.18,
-          "change_percent": 0.8,
-          "volume": 20900,
-          "industry": "其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2356",
-          "name": "英業達",
-          "close": 44.6,
-          "change": 0.05,
-          "change_percent": 0.11,
-          "volume": 19784,
-          "industry": "電腦及週邊設備業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "5880",
-          "name": "合庫金",
-          "close": 23.9,
-          "change": 0.0,
-          "change_percent": 0.0,
-          "volume": 19654,
-          "industry": "上市其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2027",
-          "name": "大成鋼",
-          "close": 38.45,
-          "change": 0.15,
-          "change_percent": 0.39,
-          "volume": 19502,
-          "industry": "造紙工業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "00751B",
-          "name": "Unknown(00751B)",
-          "close": 0,
-          "change": 0,
-          "change_percent": 0,
-          "volume": 19222,
-          "industry": "其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2402",
-          "name": "毅嘉",
-          "close": 72.4,
-          "change": 5.0,
-          "change_percent": 7.42,
-          "volume": 19040,
-          "industry": "電子零組件業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "1605",
-          "name": "華新",
-          "close": 32.2,
-          "change": 0.6,
-          "change_percent": 1.9,
-          "volume": 18977,
-          "industry": "電器電纜",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2801",
-          "name": "彰銀",
-          "close": 21.2,
-          "change": 0.05,
-          "change_percent": 0.24,
-          "volume": 17638,
-          "industry": "上市其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "1717",
-          "name": "長興",
-          "close": 81.0,
-          "change": 0.3,
-          "change_percent": 0.37,
-          "volume": 17185,
-          "industry": "化學工業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "0056",
-          "name": "元大高股息",
-          "close": 39.97,
-          "change": 0.45,
-          "change_percent": 1.14,
-          "volume": 16660,
-          "industry": "其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "00919",
-          "name": "群益台灣精選高息",
-          "close": 22.91,
-          "change": 0.1,
-          "change_percent": 0.44,
-          "volume": 16514,
-          "industry": "其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "00981D",
-          "name": "Unknown(00981D)",
-          "close": 0,
-          "change": 0,
-          "change_percent": 0,
-          "volume": 15291,
-          "industry": "其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2303",
-          "name": "聯電",
-          "close": 59.7,
-          "change": -0.4,
-          "change_percent": -0.67,
-          "volume": 14990,
-          "industry": "半導體業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "00687B",
-          "name": "Unknown(00687B)",
-          "close": 0,
-          "change": 0,
-          "change_percent": 0,
-          "volume": 14669,
-          "industry": "其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "3450",
-          "name": "聯鈞",
-          "close": 314.5,
-          "change": 5.0,
-          "change_percent": 1.62,
-          "volume": 14543,
-          "industry": "半導體業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "00984B",
-          "name": "Unknown(00984B)",
-          "close": 0,
-          "change": 0,
-          "change_percent": 0,
-          "volume": 14490,
-          "industry": "其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "00953B",
-          "name": "群益優選非投等債",
-          "close": 9.64,
-          "change": -0.02,
-          "change_percent": -0.21,
-          "volume": 13913,
-          "industry": "其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "00923",
-          "name": "群益台ESG低碳50",
-          "close": 31.71,
-          "change": 0.8,
-          "change_percent": 2.59,
-          "volume": 13123,
-          "industry": "其他",
-          "update_time": "2026-04-13"
-        }
-      ]
-    },
-    "trust": {
-      "1": [
-        {
-          "id": "3037",
-          "name": "欣興",
-          "close": 597.0,
-          "change": -29.0,
-          "change_percent": -4.63,
-          "volume": 31395,
-          "industry": "電子零組件業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2303",
-          "name": "聯電",
-          "close": 59.7,
-          "change": -0.4,
-          "change_percent": -0.67,
-          "volume": 20375,
-          "industry": "半導體業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2887",
-          "name": "台新新光金",
-          "close": 24.45,
-          "change": 0.3,
-          "change_percent": 1.24,
-          "volume": 9550,
-          "industry": "上市其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2610",
-          "name": "華航",
-          "close": 18.25,
-          "change": 0.1,
-          "change_percent": 0.55,
-          "volume": 2945,
-          "industry": "上市其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "8358",
-          "name": "Unknown(8358)",
-          "close": 0,
-          "change": 0,
-          "change_percent": 0,
-          "volume": 2752,
-          "industry": "光電業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2327",
-          "name": "國巨*",
-          "close": 312.0,
-          "change": 8.5,
-          "change_percent": 2.8,
-          "volume": 2031,
-          "industry": "電子零組件業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "1303",
-          "name": "南亞",
-          "close": 89.0,
-          "change": 3.3,
-          "change_percent": 3.85,
-          "volume": 1984,
-          "industry": "塑膠工業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "6488",
-          "name": "Unknown(6488)",
-          "close": 0,
-          "change": 0,
-          "change_percent": 0,
-          "volume": 1886,
-          "industry": "電子零組件業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "1326",
-          "name": "台化",
-          "close": 54.6,
-          "change": 4.65,
-          "change_percent": 9.31,
-          "volume": 1797,
-          "industry": "塑膠工業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2402",
-          "name": "毅嘉",
-          "close": 72.4,
-          "change": 5.0,
-          "change_percent": 7.42,
-          "volume": 1226,
-          "industry": "電子零組件業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2449",
-          "name": "京元電子",
-          "close": 301.0,
-          "change": 6.0,
-          "change_percent": 2.03,
-          "volume": 1197,
-          "industry": "半導體業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "5439",
-          "name": "Unknown(5439)",
-          "close": 0,
-          "change": 0,
-          "change_percent": 0,
-          "volume": 964,
-          "industry": "光電業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "6005",
-          "name": "群益證",
-          "close": 27.95,
-          "change": -0.3,
-          "change_percent": -1.06,
-          "volume": 960,
-          "industry": "上市其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2360",
-          "name": "致茂",
-          "close": 1840.0,
-          "change": -40.0,
-          "change_percent": -2.13,
-          "volume": 844,
-          "industry": "其他電子業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2618",
-          "name": "長榮航",
-          "close": 35.15,
-          "change": 0.05,
-          "change_percent": 0.14,
-          "volume": 762,
-          "industry": "上市其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "6715",
-          "name": "嘉基",
-          "close": 391.0,
-          "change": -25.0,
-          "change_percent": -6.01,
-          "volume": 663,
-          "industry": "電子零組件業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "1102",
-          "name": "亞泥",
-          "close": 35.55,
-          "change": 0.0,
-          "change_percent": 0.0,
-          "volume": 610,
-          "industry": "水泥工業",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
           "id": "009816",
@@ -1699,119 +1045,119 @@
           "close": 11.67,
           "change": 0.29,
           "change_percent": 2.55,
-          "volume": 600,
+          "volume": 133492,
           "industry": "其他",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
-          "id": "2458",
-          "name": "義隆",
-          "close": 136.5,
-          "change": 2.0,
+          "id": "2002",
+          "name": "中鋼",
+          "close": 20.5,
+          "change": 0.3,
           "change_percent": 1.49,
-          "volume": 596,
-          "industry": "半導體業",
-          "update_time": "2026-04-13"
+          "volume": 130995,
+          "industry": "造紙工業",
+          "update_time": "2026-04-14"
         },
         {
-          "id": "2455",
-          "name": "全新",
-          "close": 280.5,
-          "change": -12.5,
-          "change_percent": -4.27,
-          "volume": 550,
-          "industry": "通信網路業",
-          "update_time": "2026-04-13"
+          "id": "1326",
+          "name": "台化",
+          "close": 54.6,
+          "change": 4.65,
+          "change_percent": 9.31,
+          "volume": 128091,
+          "industry": "塑膠工業",
+          "update_time": "2026-04-14"
         },
         {
-          "id": "2451",
-          "name": "創見",
-          "close": 249.5,
-          "change": 4.5,
-          "change_percent": 1.84,
-          "volume": 450,
-          "industry": "半導體業",
-          "update_time": "2026-04-13"
+          "id": "3481",
+          "name": "群創",
+          "close": 27.25,
+          "change": 0.95,
+          "change_percent": 3.61,
+          "volume": 125850,
+          "industry": "光電業",
+          "update_time": "2026-04-14"
         },
         {
-          "id": "2404",
-          "name": "漢唐",
-          "close": 915.0,
-          "change": -17.0,
-          "change_percent": -1.82,
-          "volume": 434,
-          "industry": "其他電子業",
-          "update_time": "2026-04-13"
+          "id": "1301",
+          "name": "台塑",
+          "close": 54.3,
+          "change": 2.9,
+          "change_percent": 5.64,
+          "volume": 124067,
+          "industry": "塑膠工業",
+          "update_time": "2026-04-14"
         },
         {
-          "id": "2385",
-          "name": "群光",
-          "close": 124.0,
-          "change": -1.0,
-          "change_percent": -0.8,
-          "volume": 427,
-          "industry": "電子零組件業",
-          "update_time": "2026-04-13"
+          "id": "00878",
+          "name": "國泰永續高股息",
+          "close": 23.2,
+          "change": 0.19,
+          "change_percent": 0.83,
+          "volume": 115460,
+          "industry": "其他",
+          "update_time": "2026-04-14"
         },
         {
-          "id": "2376",
-          "name": "技嘉",
-          "close": 263.5,
-          "change": -0.5,
-          "change_percent": -0.19,
-          "volume": 373,
-          "industry": "電腦及週邊設備業",
-          "update_time": "2026-04-13"
+          "id": "00922",
+          "name": "國泰台灣領袖50",
+          "close": 30.7,
+          "change": 0.81,
+          "change_percent": 2.71,
+          "volume": 85967,
+          "industry": "其他",
+          "update_time": "2026-04-14"
         },
         {
-          "id": "5289",
-          "name": "Unknown(5289)",
+          "id": "00937B",
+          "name": "Unknown(00937B)",
           "close": 0,
           "change": 0,
           "change_percent": 0,
-          "volume": 368,
-          "industry": "電子通路業",
-          "update_time": "2026-04-13"
+          "volume": 79357,
+          "industry": "其他",
+          "update_time": "2026-04-14"
         },
         {
-          "id": "4958",
-          "name": "臻鼎-KY",
-          "close": 251.5,
-          "change": -6.0,
-          "change_percent": -2.33,
-          "volume": 277,
+          "id": "2327",
+          "name": "國巨*",
+          "close": 312.0,
+          "change": 8.5,
+          "change_percent": 2.8,
+          "volume": 78070,
           "industry": "電子零組件業",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
-          "id": "1582",
-          "name": "信錦",
-          "close": 102.5,
-          "change": -4.0,
-          "change_percent": -3.76,
-          "volume": 269,
-          "industry": "電子零組件業",
-          "update_time": "2026-04-13"
+          "id": "1802",
+          "name": "台玻",
+          "close": 68.2,
+          "change": 4.8,
+          "change_percent": 7.57,
+          "volume": 72902,
+          "industry": "生技醫療業",
+          "update_time": "2026-04-14"
         },
         {
-          "id": "9904",
-          "name": "寶成",
-          "close": 28.05,
-          "change": 0.05,
-          "change_percent": 0.18,
-          "volume": 264,
-          "industry": "觀光餐旅",
-          "update_time": "2026-04-13"
+          "id": "3231",
+          "name": "緯創",
+          "close": 136.5,
+          "change": 2.0,
+          "change_percent": 1.49,
+          "volume": 64584,
+          "industry": "電腦及週邊設備業",
+          "update_time": "2026-04-14"
         },
         {
-          "id": "1717",
-          "name": "長興",
-          "close": 81.0,
-          "change": 0.3,
-          "change_percent": 0.37,
-          "volume": 254,
-          "industry": "化學工業",
-          "update_time": "2026-04-13"
+          "id": "1303",
+          "name": "南亞",
+          "close": 89.0,
+          "change": 3.3,
+          "change_percent": 3.85,
+          "volume": 64543,
+          "industry": "塑膠工業",
+          "update_time": "2026-04-14"
         },
         {
           "id": "2382",
@@ -1819,49 +1165,463 @@
           "close": 323.0,
           "change": 4.0,
           "change_percent": 1.25,
-          "volume": 250,
+          "volume": 62140,
           "industry": "電腦及週邊設備業",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
-          "id": "0050",
-          "name": "元大台灣50",
-          "close": 83.1,
-          "change": 2.5,
-          "change_percent": 3.1,
-          "volume": 242,
+          "id": "00830",
+          "name": "國泰費城半導體",
+          "close": 63.6,
+          "change": 1.95,
+          "change_percent": 3.16,
+          "volume": 57467,
           "industry": "其他",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
-          "id": "8046",
-          "name": "南電",
-          "close": 646.0,
-          "change": -9.0,
-          "change_percent": -1.37,
-          "volume": 199,
-          "industry": "電子零組件業",
-          "update_time": "2026-04-13"
+          "id": "00991A",
+          "name": "主動復華未來50",
+          "close": 14.1,
+          "change": 0.28,
+          "change_percent": 2.03,
+          "volume": 55717,
+          "industry": "其他",
+          "update_time": "2026-04-14"
         },
         {
-          "id": "6024",
-          "name": "群益期",
-          "close": 56.5,
-          "change": -0.1,
-          "change_percent": -0.18,
-          "volume": 195,
+          "id": "0052",
+          "name": "富邦科技",
+          "close": 49.33,
+          "change": 1.47,
+          "change_percent": 3.07,
+          "volume": 53831,
+          "industry": "其他",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "00940",
+          "name": "元大台灣價值高息",
+          "close": 9.96,
+          "change": 0.06,
+          "change_percent": 0.61,
+          "volume": 49907,
+          "industry": "其他",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2330",
+          "name": "台積電",
+          "close": 2055.0,
+          "change": 65.0,
+          "change_percent": 3.27,
+          "volume": 44955,
+          "industry": "半導體業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2890",
+          "name": "永豐金",
+          "close": 33.2,
+          "change": 0.5,
+          "change_percent": 1.53,
+          "volume": 41860,
           "industry": "上市其他",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
-          "id": "5388",
-          "name": "中磊",
-          "close": 81.7,
-          "change": -2.6,
-          "change_percent": -3.08,
-          "volume": 186,
+          "id": "00881",
+          "name": "國泰台灣科技龍頭",
+          "close": 41.2,
+          "change": 1.14,
+          "change_percent": 2.85,
+          "volume": 35232,
+          "industry": "其他",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "00712",
+          "name": "復華富時不動產",
+          "close": 8.93,
+          "change": 0.05,
+          "change_percent": 0.56,
+          "volume": 32994,
+          "industry": "其他",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2402",
+          "name": "毅嘉",
+          "close": 72.4,
+          "change": 5.0,
+          "change_percent": 7.42,
+          "volume": 30158,
+          "industry": "電子零組件業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2356",
+          "name": "英業達",
+          "close": 44.6,
+          "change": 0.05,
+          "change_percent": 0.11,
+          "volume": 28312,
+          "industry": "電腦及週邊設備業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "00891",
+          "name": "中信關鍵半導體",
+          "close": 26.79,
+          "change": 0.76,
+          "change_percent": 2.92,
+          "volume": 28290,
+          "industry": "其他",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "00982A",
+          "name": "主動群益台灣強棒",
+          "close": 18.5,
+          "change": 0.33,
+          "change_percent": 1.82,
+          "volume": 27958,
+          "industry": "其他",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "3702",
+          "name": "大聯大",
+          "close": 96.5,
+          "change": -0.1,
+          "change_percent": -0.1,
+          "volume": 27402,
+          "industry": "電子通路業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2317",
+          "name": "鴻海",
+          "close": 207.5,
+          "change": 7.5,
+          "change_percent": 3.75,
+          "volume": 26835,
+          "industry": "其他電子業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "1717",
+          "name": "長興",
+          "close": 81.0,
+          "change": 0.3,
+          "change_percent": 0.37,
+          "volume": 26438,
+          "industry": "化學工業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "00918",
+          "name": "大華優利高填息30",
+          "close": 22.8,
+          "change": 0.18,
+          "change_percent": 0.8,
+          "volume": 25494,
+          "industry": "其他",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "6116",
+          "name": "彩晶",
+          "close": 8.86,
+          "change": 0.34,
+          "change_percent": 3.99,
+          "volume": 24933,
+          "industry": "光電業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "00993A",
+          "name": "主動安聯台灣",
+          "close": 11.58,
+          "change": 0.04,
+          "change_percent": 0.35,
+          "volume": 24865,
+          "industry": "其他",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2883",
+          "name": "凱基金",
+          "close": 20.85,
+          "change": -0.2,
+          "change_percent": -0.95,
+          "volume": 24093,
+          "industry": "上市其他",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "1605",
+          "name": "華新",
+          "close": 32.2,
+          "change": 0.6,
+          "change_percent": 1.9,
+          "volume": 23971,
+          "industry": "電器電纜",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "00900",
+          "name": "富邦特選高股息30",
+          "close": 14.77,
+          "change": 0.33,
+          "change_percent": 2.29,
+          "volume": 23333,
+          "industry": "其他",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2867",
+          "name": "三商壽",
+          "close": 7.89,
+          "change": 0.19,
+          "change_percent": 2.47,
+          "volume": 21338,
+          "industry": "上市其他",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2027",
+          "name": "大成鋼",
+          "close": 38.45,
+          "change": 0.15,
+          "change_percent": 0.39,
+          "volume": 21228,
+          "industry": "造紙工業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2344",
+          "name": "華邦電",
+          "close": 93.5,
+          "change": -0.9,
+          "change_percent": -0.95,
+          "volume": 19782,
+          "industry": "半導體業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "1815",
+          "name": "Unknown(1815)",
+          "close": 0,
+          "change": 0,
+          "change_percent": 0,
+          "volume": 19304,
+          "industry": "光電業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "00948B",
+          "name": "Unknown(00948B)",
+          "close": 0,
+          "change": 0,
+          "change_percent": 0,
+          "volume": 18907,
+          "industry": "其他",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "00923",
+          "name": "群益台ESG低碳50",
+          "close": 31.71,
+          "change": 0.8,
+          "change_percent": 2.59,
+          "volume": 18240,
+          "industry": "其他",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "5880",
+          "name": "合庫金",
+          "close": 23.9,
+          "change": 0.0,
+          "change_percent": 0.0,
+          "volume": 18001,
+          "industry": "上市其他",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "00751B",
+          "name": "Unknown(00751B)",
+          "close": 0,
+          "change": 0,
+          "change_percent": 0,
+          "volume": 17755,
+          "industry": "其他",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2880",
+          "name": "華南金",
+          "close": 35.0,
+          "change": 1.0,
+          "change_percent": 2.94,
+          "volume": 16547,
+          "industry": "上市其他",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "3045",
+          "name": "台灣大",
+          "close": 110.0,
+          "change": 0.0,
+          "change_percent": 0.0,
+          "volume": 16456,
           "industry": "通信網路業",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "4989",
+          "name": "榮科",
+          "close": 89.4,
+          "change": 8.1,
+          "change_percent": 9.96,
+          "volume": 15959,
+          "industry": "電子零組件業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2324",
+          "name": "仁寶",
+          "close": 29.5,
+          "change": 0.5,
+          "change_percent": 1.72,
+          "volume": 15610,
+          "industry": "電腦及週邊設備業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "1312",
+          "name": "國喬",
+          "close": 14.85,
+          "change": 1.35,
+          "change_percent": 10.0,
+          "volume": 15380,
+          "industry": "塑膠工業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2885",
+          "name": "元大金",
+          "close": 49.55,
+          "change": 2.1,
+          "change_percent": 4.43,
+          "volume": 15256,
+          "industry": "上市其他",
+          "update_time": "2026-04-14"
+        }
+      ]
+    },
+    "trust": {
+      "1": [
+        {
+          "id": "2337",
+          "name": "旺宏",
+          "close": 155.5,
+          "change": 8.0,
+          "change_percent": 5.42,
+          "volume": 3874,
+          "industry": "半導體業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2327",
+          "name": "國巨*",
+          "close": 312.0,
+          "change": 8.5,
+          "change_percent": 2.8,
+          "volume": 3708,
+          "industry": "電子零組件業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "6147",
+          "name": "Unknown(6147)",
+          "close": 0,
+          "change": 0,
+          "change_percent": 0,
+          "volume": 2733,
+          "industry": "電子零組件業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "3481",
+          "name": "群創",
+          "close": 27.25,
+          "change": 0.95,
+          "change_percent": 3.61,
+          "volume": 2705,
+          "industry": "光電業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2402",
+          "name": "毅嘉",
+          "close": 72.4,
+          "change": 5.0,
+          "change_percent": 7.42,
+          "volume": 2337,
+          "industry": "電子零組件業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "5439",
+          "name": "Unknown(5439)",
+          "close": 0,
+          "change": 0,
+          "change_percent": 0,
+          "volume": 2106,
+          "industry": "光電業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "0056",
+          "name": "元大高股息",
+          "close": 39.97,
+          "change": 0.45,
+          "change_percent": 1.14,
+          "volume": 1800,
+          "industry": "其他",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "1303",
+          "name": "南亞",
+          "close": 89.0,
+          "change": 3.3,
+          "change_percent": 3.85,
+          "volume": 1006,
+          "industry": "塑膠工業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "3532",
+          "name": "台勝科",
+          "close": 179.0,
+          "change": -3.0,
+          "change_percent": -1.65,
+          "volume": 831,
+          "industry": "半導體業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "3450",
+          "name": "聯鈞",
+          "close": 314.5,
+          "change": 5.0,
+          "change_percent": 1.62,
+          "volume": 793,
+          "industry": "半導體業",
+          "update_time": "2026-04-14"
         },
         {
           "id": "00892",
@@ -1869,79 +1629,69 @@
           "close": 33.43,
           "change": 0.85,
           "change_percent": 2.61,
-          "volume": 174,
+          "volume": 759,
           "industry": "其他",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
-          "id": "9917",
-          "name": "中保科",
-          "close": 115.5,
-          "change": 0.5,
-          "change_percent": 0.43,
-          "volume": 156,
+          "id": "2610",
+          "name": "華航",
+          "close": 18.25,
+          "change": 0.1,
+          "change_percent": 0.55,
+          "volume": 750,
           "industry": "上市其他",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
-          "id": "6023",
-          "name": "Unknown(6023)",
-          "close": 0,
-          "change": 0,
-          "change_percent": 0,
-          "volume": 149,
-          "industry": "上櫃其他",
-          "update_time": "2026-04-13"
+          "id": "8210",
+          "name": "勤誠",
+          "close": 961.0,
+          "change": 61.0,
+          "change_percent": 6.78,
+          "volume": 742,
+          "industry": "電腦及週邊設備業",
+          "update_time": "2026-04-14"
         },
         {
-          "id": "1215",
-          "name": "卜蜂",
-          "close": 144.5,
-          "change": -0.5,
-          "change_percent": -0.34,
-          "volume": 143,
-          "industry": "食品工業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "5522",
-          "name": "遠雄",
-          "close": 71.0,
-          "change": -0.4,
-          "change_percent": -0.56,
-          "volume": 142,
-          "industry": "上市其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "6944",
-          "name": "兆聯實業",
-          "close": 912.0,
-          "change": 3.0,
-          "change_percent": 0.33,
-          "volume": 136,
-          "industry": "金融保險",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "6515",
-          "name": "穎崴",
-          "close": 8470.0,
-          "change": -90.0,
-          "change_percent": -1.05,
-          "volume": 135,
+          "id": "2330",
+          "name": "台積電",
+          "close": 2055.0,
+          "change": 65.0,
+          "change_percent": 3.27,
+          "volume": 615,
           "industry": "半導體業",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
-          "id": "3413",
-          "name": "京鼎",
-          "close": 322.0,
-          "change": 4.5,
-          "change_percent": 1.42,
-          "volume": 132,
-          "industry": "半導體業",
-          "update_time": "2026-04-13"
+          "id": "3406",
+          "name": "玉晶光",
+          "close": 518.0,
+          "change": 37.0,
+          "change_percent": 7.69,
+          "volume": 577,
+          "industry": "光電業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2368",
+          "name": "金像電",
+          "close": 1150.0,
+          "change": 95.0,
+          "change_percent": 9.0,
+          "volume": 452,
+          "industry": "電子零組件業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "1717",
+          "name": "長興",
+          "close": 81.0,
+          "change": 0.3,
+          "change_percent": 0.37,
+          "volume": 347,
+          "industry": "化學工業",
+          "update_time": "2026-04-14"
         },
         {
           "id": "3665",
@@ -1949,69 +1699,39 @@
           "close": 2295.0,
           "change": 70.0,
           "change_percent": 3.15,
-          "volume": 128,
+          "volume": 346,
           "industry": "其他電子業",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
-          "id": "6414",
-          "name": "樺漢",
-          "close": 294.0,
+          "id": "1326",
+          "name": "台化",
+          "close": 54.6,
+          "change": 4.65,
+          "change_percent": 9.31,
+          "volume": 314,
+          "industry": "塑膠工業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "3711",
+          "name": "日月光投控",
+          "close": 424.0,
           "change": 6.5,
-          "change_percent": 2.26,
-          "volume": 121,
-          "industry": "電腦及週邊設備業",
-          "update_time": "2026-04-13"
+          "change_percent": 1.56,
+          "volume": 289,
+          "industry": "半導體業",
+          "update_time": "2026-04-14"
         },
         {
-          "id": "2801",
-          "name": "彰銀",
-          "close": 21.2,
-          "change": 0.05,
-          "change_percent": 0.24,
-          "volume": 110,
-          "industry": "上市其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "6438",
-          "name": "迅得",
-          "close": 180.0,
-          "change": -1.0,
-          "change_percent": -0.55,
-          "volume": 109,
-          "industry": "其他電子業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2834",
-          "name": "臺企銀",
-          "close": 15.35,
-          "change": 0.05,
-          "change_percent": 0.33,
-          "volume": 107,
-          "industry": "上市其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2492",
-          "name": "華新科",
-          "close": 143.0,
-          "change": 7.0,
-          "change_percent": 5.15,
-          "volume": 101,
-          "industry": "電子零組件業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "00988A",
-          "name": "主動統一全球創新",
-          "close": 15.67,
-          "change": 0.84,
-          "change_percent": 5.66,
-          "volume": 100,
-          "industry": "其他",
-          "update_time": "2026-04-13"
+          "id": "8996",
+          "name": "高力",
+          "close": 1115.0,
+          "change": 20.0,
+          "change_percent": 1.83,
+          "volume": 273,
+          "industry": "電機機械",
+          "update_time": "2026-04-14"
         },
         {
           "id": "4991",
@@ -2019,9 +1739,289 @@
           "close": 0,
           "change": 0,
           "change_percent": 0,
-          "volume": 100,
+          "volume": 260,
           "industry": "電子零組件業",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "6274",
+          "name": "Unknown(6274)",
+          "close": 0,
+          "change": 0,
+          "change_percent": 0,
+          "volume": 256,
+          "industry": "光電業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "3529",
+          "name": "Unknown(3529)",
+          "close": 0,
+          "change": 0,
+          "change_percent": 0,
+          "volume": 255,
+          "industry": "電子零組件業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "3264",
+          "name": "Unknown(3264)",
+          "close": 0,
+          "change": 0,
+          "change_percent": 0,
+          "volume": 242,
+          "industry": "電子零組件業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "5289",
+          "name": "Unknown(5289)",
+          "close": 0,
+          "change": 0,
+          "change_percent": 0,
+          "volume": 241,
+          "industry": "電子通路業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "6531",
+          "name": "愛普*",
+          "close": 606.0,
+          "change": 39.0,
+          "change_percent": 6.88,
+          "volume": 209,
+          "industry": "半導體業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "8299",
+          "name": "Unknown(8299)",
+          "close": 0,
+          "change": 0,
+          "change_percent": 0,
+          "volume": 200,
+          "industry": "電子零組件業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2345",
+          "name": "智邦",
+          "close": 1890.0,
+          "change": 70.0,
+          "change_percent": 3.85,
+          "volume": 196,
+          "industry": "通信網路業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2441",
+          "name": "超豐",
+          "close": 90.8,
+          "change": -4.3,
+          "change_percent": -4.52,
+          "volume": 166,
+          "industry": "半導體業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2454",
+          "name": "聯發科",
+          "close": 1720.0,
+          "change": 100.0,
+          "change_percent": 6.17,
+          "volume": 143,
+          "industry": "半導體業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "3443",
+          "name": "創意",
+          "close": 3050.0,
+          "change": 275.0,
+          "change_percent": 9.91,
+          "volume": 135,
+          "industry": "半導體業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "5443",
+          "name": "Unknown(5443)",
+          "close": 0,
+          "change": 0,
+          "change_percent": 0,
+          "volume": 135,
+          "industry": "電子零組件業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "6669",
+          "name": "緯穎",
+          "close": 3755.0,
+          "change": 110.0,
+          "change_percent": 3.02,
+          "volume": 134,
+          "industry": "電腦及週邊設備業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "3105",
+          "name": "穩懋",
+          "close": 0,
+          "change": 0,
+          "change_percent": 0,
+          "volume": 125,
+          "industry": "電子零組件業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2408",
+          "name": "南亞科",
+          "close": 220.0,
+          "change": -5.5,
+          "change_percent": -2.44,
+          "volume": 120,
+          "industry": "半導體業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "00984D",
+          "name": "主動聯博全球非投",
+          "close": 10.05,
+          "change": -0.01,
+          "change_percent": -0.1,
+          "volume": 118,
+          "industry": "其他",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "8069",
+          "name": "Unknown(8069)",
+          "close": 0,
+          "change": 0,
+          "change_percent": 0,
+          "volume": 116,
+          "industry": "資訊服務業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2467",
+          "name": "志聖",
+          "close": 548.0,
+          "change": -1.0,
+          "change_percent": -0.18,
+          "volume": 111,
+          "industry": "電子零組件業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "6640",
+          "name": "Unknown(6640)",
+          "close": 0,
+          "change": 0,
+          "change_percent": 0,
+          "volume": 109,
+          "industry": "電子零組件業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "6143",
+          "name": "Unknown(6143)",
+          "close": 0,
+          "change": 0,
+          "change_percent": 0,
+          "volume": 94,
+          "industry": "其他電子業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2002",
+          "name": "中鋼",
+          "close": 20.5,
+          "change": 0.3,
+          "change_percent": 1.49,
+          "volume": 93,
+          "industry": "造紙工業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "3661",
+          "name": "世芯-KY",
+          "close": 3200.0,
+          "change": 110.0,
+          "change_percent": 3.56,
+          "volume": 85,
+          "industry": "半導體業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "6191",
+          "name": "精成科",
+          "close": 104.5,
+          "change": 9.1,
+          "change_percent": 9.54,
+          "volume": 82,
+          "industry": "電子零組件業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "6024",
+          "name": "群益期",
+          "close": 56.5,
+          "change": -0.1,
+          "change_percent": -0.18,
+          "volume": 81,
+          "industry": "上市其他",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "00980D",
+          "name": "Unknown(00980D)",
+          "close": 0,
+          "change": 0,
+          "change_percent": 0,
+          "volume": 81,
+          "industry": "其他",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "7751",
+          "name": "Unknown(7751)",
+          "close": 0,
+          "change": 0,
+          "change_percent": 0,
+          "volume": 73,
+          "industry": "電子零組件業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2360",
+          "name": "致茂",
+          "close": 1840.0,
+          "change": -40.0,
+          "change_percent": -2.13,
+          "volume": 72,
+          "industry": "其他電子業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "3260",
+          "name": "Unknown(3260)",
+          "close": 0,
+          "change": 0,
+          "change_percent": 0,
+          "volume": 65,
+          "industry": "電子零組件業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "3017",
+          "name": "奇鋐",
+          "close": 2310.0,
+          "change": 110.0,
+          "change_percent": 5.0,
+          "volume": 63,
+          "industry": "電腦及週邊設備業",
+          "update_time": "2026-04-14"
         }
       ],
       "3": [
@@ -2031,9 +2031,9 @@
           "close": 597.0,
           "change": -29.0,
           "change_percent": -4.63,
-          "volume": 31841,
+          "volume": 29680,
           "industry": "電子零組件業",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
           "id": "2303",
@@ -2041,9 +2041,9 @@
           "close": 59.7,
           "change": -0.4,
           "change_percent": -0.67,
-          "volume": 23190,
+          "volume": 16240,
           "industry": "半導體業",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
           "id": "2489",
@@ -2051,119 +2051,9 @@
           "close": 45.7,
           "change": -2.0,
           "change_percent": -4.19,
-          "volume": 7199,
+          "volume": 6611,
           "industry": "光電業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2887",
-          "name": "台新新光金",
-          "close": 24.45,
-          "change": 0.3,
-          "change_percent": 1.24,
-          "volume": 6249,
-          "industry": "上市其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "6285",
-          "name": "啟碁",
-          "close": 224.0,
-          "change": -24.0,
-          "change_percent": -9.68,
-          "volume": 4643,
-          "industry": "通信網路業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "6147",
-          "name": "Unknown(6147)",
-          "close": 0,
-          "change": 0,
-          "change_percent": 0,
-          "volume": 4534,
-          "industry": "電子零組件業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "6488",
-          "name": "Unknown(6488)",
-          "close": 0,
-          "change": 0,
-          "change_percent": 0,
-          "volume": 4040,
-          "industry": "電子零組件業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "8358",
-          "name": "Unknown(8358)",
-          "close": 0,
-          "change": 0,
-          "change_percent": 0,
-          "volume": 2642,
-          "industry": "光電業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2337",
-          "name": "旺宏",
-          "close": 155.5,
-          "change": 8.0,
-          "change_percent": 5.42,
-          "volume": 2522,
-          "industry": "半導體業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "8046",
-          "name": "南電",
-          "close": 646.0,
-          "change": -9.0,
-          "change_percent": -1.37,
-          "volume": 2203,
-          "industry": "電子零組件業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2382",
-          "name": "廣達",
-          "close": 323.0,
-          "change": 4.0,
-          "change_percent": 1.25,
-          "volume": 2014,
-          "industry": "電腦及週邊設備業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "5439",
-          "name": "Unknown(5439)",
-          "close": 0,
-          "change": 0,
-          "change_percent": 0,
-          "volume": 1994,
-          "industry": "光電業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "3163",
-          "name": "Unknown(3163)",
-          "close": 0,
-          "change": 0,
-          "change_percent": 0,
-          "volume": 1846,
-          "industry": "其他電子業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "1326",
-          "name": "台化",
-          "close": 54.6,
-          "change": 4.65,
-          "change_percent": 9.31,
-          "volume": 1822,
-          "industry": "塑膠工業",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
           "id": "2327",
@@ -2171,59 +2061,19 @@
           "close": 312.0,
           "change": 8.5,
           "change_percent": 2.8,
-          "volume": 1768,
+          "volume": 5614,
           "industry": "電子零組件業",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
-          "id": "2376",
-          "name": "技嘉",
-          "close": 263.5,
-          "change": -0.5,
-          "change_percent": -0.19,
-          "volume": 1625,
-          "industry": "電腦及週邊設備業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "4958",
-          "name": "臻鼎-KY",
-          "close": 251.5,
-          "change": -6.0,
-          "change_percent": -2.33,
-          "volume": 1619,
-          "industry": "電子零組件業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2486",
-          "name": "一詮",
-          "close": 191.5,
-          "change": -2.5,
-          "change_percent": -1.29,
-          "volume": 1523,
-          "industry": "光電業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "5289",
-          "name": "Unknown(5289)",
-          "close": 0,
-          "change": 0,
-          "change_percent": 0,
-          "volume": 1370,
-          "industry": "電子通路業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2360",
-          "name": "致茂",
-          "close": 1840.0,
-          "change": -40.0,
-          "change_percent": -2.13,
-          "volume": 1227,
-          "industry": "其他電子業",
-          "update_time": "2026-04-13"
+          "id": "2337",
+          "name": "旺宏",
+          "close": 155.5,
+          "change": 8.0,
+          "change_percent": 5.42,
+          "volume": 4586,
+          "industry": "半導體業",
+          "update_time": "2026-04-14"
         },
         {
           "id": "2402",
@@ -2231,39 +2081,69 @@
           "close": 72.4,
           "change": 5.0,
           "change_percent": 7.42,
-          "volume": 1194,
+          "volume": 3557,
           "industry": "電子零組件業",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
-          "id": "0050",
-          "name": "元大台灣50",
-          "close": 83.1,
-          "change": 2.5,
-          "change_percent": 3.1,
-          "volume": 1132,
+          "id": "5439",
+          "name": "Unknown(5439)",
+          "close": 0,
+          "change": 0,
+          "change_percent": 0,
+          "volume": 3454,
+          "industry": "光電業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "6488",
+          "name": "Unknown(6488)",
+          "close": 0,
+          "change": 0,
+          "change_percent": 0,
+          "volume": 3435,
+          "industry": "電子零組件業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2887",
+          "name": "台新新光金",
+          "close": 24.45,
+          "change": 0.3,
+          "change_percent": 1.24,
+          "volume": 2689,
+          "industry": "上市其他",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "8358",
+          "name": "Unknown(8358)",
+          "close": 0,
+          "change": 0,
+          "change_percent": 0,
+          "volume": 2402,
+          "industry": "光電業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "1326",
+          "name": "台化",
+          "close": 54.6,
+          "change": 4.65,
+          "change_percent": 9.31,
+          "volume": 2123,
+          "industry": "塑膠工業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "0056",
+          "name": "元大高股息",
+          "close": 39.97,
+          "change": 0.45,
+          "change_percent": 1.14,
+          "volume": 1800,
           "industry": "其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "6715",
-          "name": "嘉基",
-          "close": 391.0,
-          "change": -25.0,
-          "change_percent": -6.01,
-          "volume": 946,
-          "industry": "電子零組件業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2027",
-          "name": "大成鋼",
-          "close": 38.45,
-          "change": 0.15,
-          "change_percent": 0.39,
-          "volume": 940,
-          "industry": "造紙工業",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
           "id": "2610",
@@ -2271,29 +2151,29 @@
           "close": 18.25,
           "change": 0.1,
           "change_percent": 0.55,
-          "volume": 862,
+          "volume": 1613,
           "industry": "上市其他",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
-          "id": "3045",
-          "name": "台灣大",
-          "close": 110.0,
-          "change": 0.0,
-          "change_percent": 0.0,
-          "volume": 692,
-          "industry": "通信網路業",
-          "update_time": "2026-04-13"
+          "id": "6147",
+          "name": "Unknown(6147)",
+          "close": 0,
+          "change": 0,
+          "change_percent": 0,
+          "volume": 1469,
+          "industry": "電子零組件業",
+          "update_time": "2026-04-14"
         },
         {
-          "id": "2455",
-          "name": "全新",
-          "close": 280.5,
-          "change": -12.5,
-          "change_percent": -4.27,
-          "volume": 619,
-          "industry": "通信網路業",
-          "update_time": "2026-04-13"
+          "id": "8046",
+          "name": "南電",
+          "close": 646.0,
+          "change": -9.0,
+          "change_percent": -1.37,
+          "volume": 1352,
+          "industry": "電子零組件業",
+          "update_time": "2026-04-14"
         },
         {
           "id": "3532",
@@ -2301,9 +2181,129 @@
           "close": 179.0,
           "change": -3.0,
           "change_percent": -1.65,
-          "volume": 617,
+          "volume": 1347,
           "industry": "半導體業",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "5289",
+          "name": "Unknown(5289)",
+          "close": 0,
+          "change": 0,
+          "change_percent": 0,
+          "volume": 1338,
+          "industry": "電子通路業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "3481",
+          "name": "群創",
+          "close": 27.25,
+          "change": 0.95,
+          "change_percent": 3.61,
+          "volume": 1052,
+          "industry": "光電業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "00892",
+          "name": "富邦台灣半導體",
+          "close": 33.43,
+          "change": 0.85,
+          "change_percent": 2.61,
+          "volume": 1033,
+          "industry": "其他",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2027",
+          "name": "大成鋼",
+          "close": 38.45,
+          "change": 0.15,
+          "change_percent": 0.39,
+          "volume": 938,
+          "industry": "造紙工業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2360",
+          "name": "致茂",
+          "close": 1840.0,
+          "change": -40.0,
+          "change_percent": -2.13,
+          "volume": 920,
+          "industry": "其他電子業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2382",
+          "name": "廣達",
+          "close": 323.0,
+          "change": 4.0,
+          "change_percent": 1.25,
+          "volume": 885,
+          "industry": "電腦及週邊設備業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2376",
+          "name": "技嘉",
+          "close": 263.5,
+          "change": -0.5,
+          "change_percent": -0.19,
+          "volume": 839,
+          "industry": "電腦及週邊設備業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "3450",
+          "name": "聯鈞",
+          "close": 314.5,
+          "change": 5.0,
+          "change_percent": 1.62,
+          "volume": 792,
+          "industry": "半導體業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "6285",
+          "name": "啟碁",
+          "close": 224.0,
+          "change": -24.0,
+          "change_percent": -9.68,
+          "volume": 750,
+          "industry": "通信網路業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "6715",
+          "name": "嘉基",
+          "close": 391.0,
+          "change": -25.0,
+          "change_percent": -6.01,
+          "volume": 709,
+          "industry": "電子零組件業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "8210",
+          "name": "勤誠",
+          "close": 961.0,
+          "change": 61.0,
+          "change_percent": 6.78,
+          "volume": 691,
+          "industry": "電腦及週邊設備業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2455",
+          "name": "全新",
+          "close": 280.5,
+          "change": -12.5,
+          "change_percent": -4.27,
+          "volume": 617,
+          "industry": "通信網路業",
+          "update_time": "2026-04-14"
         },
         {
           "id": "009816",
@@ -2313,57 +2313,37 @@
           "change_percent": 2.55,
           "volume": 600,
           "industry": "其他",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
-          "id": "2385",
-          "name": "群光",
-          "close": 124.0,
-          "change": -1.0,
-          "change_percent": -0.8,
-          "volume": 524,
+          "id": "3406",
+          "name": "玉晶光",
+          "close": 518.0,
+          "change": 37.0,
+          "change_percent": 7.69,
+          "volume": 578,
+          "industry": "光電業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2486",
+          "name": "一詮",
+          "close": 191.5,
+          "change": -2.5,
+          "change_percent": -1.29,
+          "volume": 558,
+          "industry": "光電業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "4958",
+          "name": "臻鼎-KY",
+          "close": 251.5,
+          "change": -6.0,
+          "change_percent": -2.33,
+          "volume": 542,
           "industry": "電子零組件業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "3583",
-          "name": "辛耘",
-          "close": 683.0,
-          "change": -19.0,
-          "change_percent": -2.71,
-          "volume": 489,
-          "industry": "半導體業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "6005",
-          "name": "群益證",
-          "close": 27.95,
-          "change": -0.3,
-          "change_percent": -1.06,
-          "volume": 487,
-          "industry": "上市其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "00892",
-          "name": "富邦台灣半導體",
-          "close": 33.43,
-          "change": 0.85,
-          "change_percent": 2.61,
-          "volume": 404,
-          "industry": "其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2379",
-          "name": "瑞昱",
-          "close": 524.0,
-          "change": -1.0,
-          "change_percent": -0.19,
-          "volume": 362,
-          "industry": "半導體業",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
           "id": "2345",
@@ -2371,19 +2351,59 @@
           "close": 1890.0,
           "change": 70.0,
           "change_percent": 3.85,
-          "volume": 360,
+          "volume": 490,
           "industry": "通信網路業",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
-          "id": "1102",
-          "name": "亞泥",
-          "close": 35.55,
-          "change": 0.0,
-          "change_percent": 0.0,
-          "volume": 353,
-          "industry": "水泥工業",
-          "update_time": "2026-04-13"
+          "id": "3665",
+          "name": "貿聯-KY",
+          "close": 2295.0,
+          "change": 70.0,
+          "change_percent": 3.15,
+          "volume": 437,
+          "industry": "其他電子業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "8996",
+          "name": "高力",
+          "close": 1115.0,
+          "change": 20.0,
+          "change_percent": 1.83,
+          "volume": 364,
+          "industry": "電機機械",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "4991",
+          "name": "Unknown(4991)",
+          "close": 0,
+          "change": 0,
+          "change_percent": 0,
+          "volume": 360,
+          "industry": "電子零組件業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "6505",
+          "name": "台塑化",
+          "close": 56.2,
+          "change": 1.1,
+          "change_percent": 2.0,
+          "volume": 338,
+          "industry": "上市其他",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "3529",
+          "name": "Unknown(3529)",
+          "close": 0,
+          "change": 0,
+          "change_percent": 0,
+          "volume": 334,
+          "industry": "電子零組件業",
+          "update_time": "2026-04-14"
         },
         {
           "id": "2458",
@@ -2391,9 +2411,19 @@
           "close": 136.5,
           "change": 2.0,
           "change_percent": 1.49,
-          "volume": 351,
+          "volume": 328,
           "industry": "半導體業",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2385",
+          "name": "群光",
+          "close": 124.0,
+          "change": -1.0,
+          "change_percent": -0.8,
+          "volume": 323,
+          "industry": "電子零組件業",
+          "update_time": "2026-04-14"
         },
         {
           "id": "6683",
@@ -2401,9 +2431,19 @@
           "close": 0,
           "change": 0,
           "change_percent": 0,
-          "volume": 308,
+          "volume": 288,
           "industry": "電子零組件業",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "3105",
+          "name": "穩懋",
+          "close": 0,
+          "change": 0,
+          "change_percent": 0,
+          "volume": 283,
+          "industry": "電子零組件業",
+          "update_time": "2026-04-14"
         },
         {
           "id": "00988A",
@@ -2413,7 +2453,17 @@
           "change_percent": 5.66,
           "volume": 280,
           "industry": "其他",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "6024",
+          "name": "群益期",
+          "close": 56.5,
+          "change": -0.1,
+          "change_percent": -0.18,
+          "volume": 276,
+          "industry": "上市其他",
+          "update_time": "2026-04-14"
         },
         {
           "id": "1582",
@@ -2423,57 +2473,7 @@
           "change_percent": -3.76,
           "volume": 268,
           "industry": "電子零組件業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2467",
-          "name": "志聖",
-          "close": 548.0,
-          "change": -1.0,
-          "change_percent": -0.18,
-          "volume": 196,
-          "industry": "電子零組件業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "6024",
-          "name": "群益期",
-          "close": 56.5,
-          "change": -0.1,
-          "change_percent": -0.18,
-          "volume": 195,
-          "industry": "上市其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "5388",
-          "name": "中磊",
-          "close": 81.7,
-          "change": -2.6,
-          "change_percent": -3.08,
-          "volume": 187,
-          "industry": "通信網路業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2404",
-          "name": "漢唐",
-          "close": 915.0,
-          "change": -17.0,
-          "change_percent": -1.82,
-          "volume": 178,
-          "industry": "其他電子業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "3665",
-          "name": "貿聯-KY",
-          "close": 2295.0,
-          "change": 70.0,
-          "change_percent": 3.15,
-          "volume": 178,
-          "industry": "其他電子業",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
           "id": "3443",
@@ -2481,49 +2481,49 @@
           "close": 3050.0,
           "change": 275.0,
           "change_percent": 9.91,
-          "volume": 165,
+          "volume": 257,
           "industry": "半導體業",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
-          "id": "9917",
-          "name": "中保科",
-          "close": 115.5,
-          "change": 0.5,
-          "change_percent": 0.43,
-          "volume": 157,
-          "industry": "上市其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "6023",
-          "name": "Unknown(6023)",
+          "id": "3264",
+          "name": "Unknown(3264)",
           "close": 0,
           "change": 0,
           "change_percent": 0,
-          "volume": 156,
-          "industry": "上櫃其他",
-          "update_time": "2026-04-13"
+          "volume": 257,
+          "industry": "電子零組件業",
+          "update_time": "2026-04-14"
         },
         {
-          "id": "6944",
-          "name": "兆聯實業",
-          "close": 912.0,
-          "change": 3.0,
-          "change_percent": 0.33,
-          "volume": 146,
-          "industry": "金融保險",
-          "update_time": "2026-04-13"
+          "id": "0050",
+          "name": "元大台灣50",
+          "close": 83.1,
+          "change": 2.5,
+          "change_percent": 3.1,
+          "volume": 242,
+          "industry": "其他",
+          "update_time": "2026-04-14"
         },
         {
-          "id": "5522",
-          "name": "遠雄",
-          "close": 71.0,
-          "change": -0.4,
-          "change_percent": -0.56,
-          "volume": 142,
+          "id": "6005",
+          "name": "群益證",
+          "close": 27.95,
+          "change": -0.3,
+          "change_percent": -1.06,
+          "volume": 229,
           "industry": "上市其他",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "6531",
+          "name": "愛普*",
+          "close": 606.0,
+          "change": 39.0,
+          "change_percent": 6.88,
+          "volume": 194,
+          "industry": "半導體業",
+          "update_time": "2026-04-14"
         }
       ],
       "5": [
@@ -2533,9 +2533,9 @@
           "close": 59.7,
           "change": -0.4,
           "change_percent": -0.67,
-          "volume": 50179,
+          "volume": 43131,
           "industry": "半導體業",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
           "id": "3037",
@@ -2543,39 +2543,9 @@
           "close": 597.0,
           "change": -29.0,
           "change_percent": -4.63,
-          "volume": 34469,
+          "volume": 30375,
           "industry": "電子零組件業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "6147",
-          "name": "Unknown(6147)",
-          "close": 0,
-          "change": 0,
-          "change_percent": 0,
-          "volume": 14238,
-          "industry": "電子零組件業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2887",
-          "name": "台新新光金",
-          "close": 24.45,
-          "change": 0.3,
-          "change_percent": 1.24,
-          "volume": 12144,
-          "industry": "上市其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2891",
-          "name": "中信金",
-          "close": 53.1,
-          "change": -0.2,
-          "change_percent": -0.38,
-          "volume": 8571,
-          "industry": "上市其他",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
           "id": "6285",
@@ -2583,9 +2553,19 @@
           "close": 224.0,
           "change": -24.0,
           "change_percent": -9.68,
-          "volume": 8394,
+          "volume": 7759,
           "industry": "通信網路業",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "6147",
+          "name": "Unknown(6147)",
+          "close": 0,
+          "change": 0,
+          "change_percent": 0,
+          "volume": 7257,
+          "industry": "電子零組件業",
+          "update_time": "2026-04-14"
         },
         {
           "id": "2489",
@@ -2595,47 +2575,27 @@
           "change_percent": -4.19,
           "volume": 7198,
           "industry": "光電業",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
-          "id": "2882",
-          "name": "國泰金",
-          "close": 72.7,
-          "change": 0.7,
-          "change_percent": 0.97,
-          "volume": 7015,
-          "industry": "上市其他",
-          "update_time": "2026-04-13"
+          "id": "2337",
+          "name": "旺宏",
+          "close": 155.5,
+          "change": 8.0,
+          "change_percent": 5.42,
+          "volume": 6276,
+          "industry": "半導體業",
+          "update_time": "2026-04-14"
         },
         {
-          "id": "1303",
-          "name": "南亞",
-          "close": 89.0,
-          "change": 3.3,
-          "change_percent": 3.85,
-          "volume": 5277,
-          "industry": "塑膠工業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2885",
-          "name": "元大金",
-          "close": 49.55,
-          "change": 2.1,
-          "change_percent": 4.43,
-          "volume": 5197,
-          "industry": "上市其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "8046",
-          "name": "南電",
-          "close": 646.0,
-          "change": -9.0,
-          "change_percent": -1.37,
-          "volume": 4770,
+          "id": "2327",
+          "name": "國巨*",
+          "close": 312.0,
+          "change": 8.5,
+          "change_percent": 2.8,
+          "volume": 5295,
           "industry": "電子零組件業",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
           "id": "6488",
@@ -2643,19 +2603,39 @@
           "close": 0,
           "change": 0,
           "change_percent": 0,
-          "volume": 4328,
+          "volume": 4512,
           "industry": "電子零組件業",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
-          "id": "2886",
-          "name": "兆豐金",
-          "close": 39.35,
-          "change": 0.05,
-          "change_percent": 0.13,
-          "volume": 4180,
-          "industry": "上市其他",
-          "update_time": "2026-04-13"
+          "id": "5439",
+          "name": "Unknown(5439)",
+          "close": 0,
+          "change": 0,
+          "change_percent": 0,
+          "volume": 3546,
+          "industry": "光電業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2402",
+          "name": "毅嘉",
+          "close": 72.4,
+          "change": 5.0,
+          "change_percent": 7.42,
+          "volume": 3529,
+          "industry": "電子零組件業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "1303",
+          "name": "南亞",
+          "close": 89.0,
+          "change": 3.3,
+          "change_percent": 3.85,
+          "volume": 3190,
+          "industry": "塑膠工業",
+          "update_time": "2026-04-14"
         },
         {
           "id": "8358",
@@ -2663,19 +2643,9 @@
           "close": 0,
           "change": 0,
           "change_percent": 0,
-          "volume": 3416,
+          "volume": 3125,
           "industry": "光電業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "3163",
-          "name": "Unknown(3163)",
-          "close": 0,
-          "change": 0,
-          "change_percent": 0,
-          "volume": 3277,
-          "industry": "其他電子業",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
           "id": "00900",
@@ -2685,67 +2655,47 @@
           "change_percent": 2.29,
           "volume": 3000,
           "industry": "其他",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
-          "id": "2347",
-          "name": "聯強",
-          "close": 82.2,
-          "change": 0.2,
-          "change_percent": 0.24,
-          "volume": 2999,
-          "industry": "電子通路業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2382",
-          "name": "廣達",
-          "close": 323.0,
-          "change": 4.0,
-          "change_percent": 1.25,
-          "volume": 2654,
-          "industry": "電腦及週邊設備業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2881",
-          "name": "富邦金",
-          "close": 87.6,
-          "change": 0.9,
-          "change_percent": 1.04,
-          "volume": 2022,
-          "industry": "上市其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "3045",
-          "name": "台灣大",
-          "close": 110.0,
-          "change": 0.0,
-          "change_percent": 0.0,
-          "volume": 1891,
-          "industry": "通信網路業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "4958",
-          "name": "臻鼎-KY",
-          "close": 251.5,
-          "change": -6.0,
-          "change_percent": -2.33,
-          "volume": 1809,
+          "id": "8046",
+          "name": "南電",
+          "close": 646.0,
+          "change": -9.0,
+          "change_percent": -1.37,
+          "volume": 2473,
           "industry": "電子零組件業",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
-          "id": "0050",
-          "name": "元大台灣50",
-          "close": 83.1,
-          "change": 2.5,
-          "change_percent": 3.1,
-          "volume": 1716,
+          "id": "3163",
+          "name": "Unknown(3163)",
+          "close": 0,
+          "change": 0,
+          "change_percent": 0,
+          "volume": 1963,
+          "industry": "其他電子業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "0056",
+          "name": "元大高股息",
+          "close": 39.97,
+          "change": 0.45,
+          "change_percent": 1.14,
+          "volume": 1930,
           "industry": "其他",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "3532",
+          "name": "台勝科",
+          "close": 179.0,
+          "change": -3.0,
+          "change_percent": -1.65,
+          "volume": 1874,
+          "industry": "半導體業",
+          "update_time": "2026-04-14"
         },
         {
           "id": "2486",
@@ -2753,19 +2703,9 @@
           "close": 191.5,
           "change": -2.5,
           "change_percent": -1.29,
-          "volume": 1668,
+          "volume": 1690,
           "industry": "光電業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "5289",
-          "name": "Unknown(5289)",
-          "close": 0,
-          "change": 0,
-          "change_percent": 0,
-          "volume": 1657,
-          "industry": "電子通路業",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
           "id": "2376",
@@ -2773,29 +2713,39 @@
           "close": 263.5,
           "change": -0.5,
           "change_percent": -0.19,
-          "volume": 1634,
+          "volume": 1636,
           "industry": "電腦及週邊設備業",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
-          "id": "2455",
-          "name": "全新",
-          "close": 280.5,
-          "change": -12.5,
-          "change_percent": -4.27,
-          "volume": 1597,
-          "industry": "通信網路業",
-          "update_time": "2026-04-13"
+          "id": "5289",
+          "name": "Unknown(5289)",
+          "close": 0,
+          "change": 0,
+          "change_percent": 0,
+          "volume": 1611,
+          "industry": "電子通路業",
+          "update_time": "2026-04-14"
         },
         {
-          "id": "2356",
-          "name": "英業達",
-          "close": 44.6,
-          "change": 0.05,
-          "change_percent": 0.11,
-          "volume": 1596,
+          "id": "2610",
+          "name": "華航",
+          "close": 18.25,
+          "change": 0.1,
+          "change_percent": 0.55,
+          "volume": 1606,
+          "industry": "上市其他",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2382",
+          "name": "廣達",
+          "close": 323.0,
+          "change": 4.0,
+          "change_percent": 1.25,
+          "volume": 1524,
           "industry": "電腦及週邊設備業",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
           "id": "6213",
@@ -2803,39 +2753,19 @@
           "close": 224.0,
           "change": 20.0,
           "change_percent": 9.8,
-          "volume": 1588,
+          "volume": 1395,
           "industry": "電子零組件業",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
-          "id": "6715",
-          "name": "嘉基",
-          "close": 391.0,
-          "change": -25.0,
-          "change_percent": -6.01,
-          "volume": 1554,
-          "industry": "電子零組件業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "3105",
-          "name": "穩懋",
-          "close": 0,
-          "change": 0,
-          "change_percent": 0,
-          "volume": 1526,
-          "industry": "電子零組件業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2327",
-          "name": "國巨*",
-          "close": 312.0,
-          "change": 8.5,
-          "change_percent": 2.8,
-          "volume": 1502,
-          "industry": "電子零組件業",
-          "update_time": "2026-04-13"
+          "id": "3045",
+          "name": "台灣大",
+          "close": 110.0,
+          "change": 0.0,
+          "change_percent": 0.0,
+          "volume": 1357,
+          "industry": "通信網路業",
+          "update_time": "2026-04-14"
         },
         {
           "id": "2360",
@@ -2843,29 +2773,29 @@
           "close": 1840.0,
           "change": -40.0,
           "change_percent": -2.13,
-          "volume": 1307,
+          "volume": 1290,
           "industry": "其他電子業",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
-          "id": "2458",
-          "name": "義隆",
-          "close": 136.5,
-          "change": 2.0,
-          "change_percent": 1.49,
-          "volume": 1268,
-          "industry": "半導體業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2412",
-          "name": "中華電",
-          "close": 135.0,
-          "change": 0.5,
-          "change_percent": 0.37,
-          "volume": 1206,
+          "id": "2455",
+          "name": "全新",
+          "close": 280.5,
+          "change": -12.5,
+          "change_percent": -4.27,
+          "volume": 1249,
           "industry": "通信網路業",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "4958",
+          "name": "臻鼎-KY",
+          "close": 251.5,
+          "change": -6.0,
+          "change_percent": -2.33,
+          "volume": 1244,
+          "industry": "電子零組件業",
+          "update_time": "2026-04-14"
         },
         {
           "id": "00988A",
@@ -2875,17 +2805,47 @@
           "change_percent": 5.66,
           "volume": 1196,
           "industry": "其他",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
-          "id": "2402",
-          "name": "毅嘉",
-          "close": 72.4,
-          "change": 5.0,
-          "change_percent": 7.42,
-          "volume": 1192,
+          "id": "00892",
+          "name": "富邦台灣半導體",
+          "close": 33.43,
+          "change": 0.85,
+          "change_percent": 2.61,
+          "volume": 1163,
+          "industry": "其他",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2347",
+          "name": "聯強",
+          "close": 82.2,
+          "change": 0.2,
+          "change_percent": 0.24,
+          "volume": 1132,
+          "industry": "電子通路業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "6715",
+          "name": "嘉基",
+          "close": 391.0,
+          "change": -25.0,
+          "change_percent": -6.01,
+          "volume": 1119,
           "industry": "電子零組件業",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "3105",
+          "name": "穩懋",
+          "close": 0,
+          "change": 0,
+          "change_percent": 0,
+          "volume": 1012,
+          "industry": "電子零組件業",
+          "update_time": "2026-04-14"
         },
         {
           "id": "2027",
@@ -2893,89 +2853,9 @@
           "close": 38.45,
           "change": 0.15,
           "change_percent": 0.39,
-          "volume": 1140,
+          "volume": 940,
           "industry": "造紙工業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "3532",
-          "name": "台勝科",
-          "close": 179.0,
-          "change": -3.0,
-          "change_percent": -1.65,
-          "volume": 1043,
-          "industry": "半導體業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2610",
-          "name": "華航",
-          "close": 18.25,
-          "change": 0.1,
-          "change_percent": 0.55,
-          "volume": 1011,
-          "industry": "上市其他",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2385",
-          "name": "群光",
-          "close": 124.0,
-          "change": -1.0,
-          "change_percent": -0.8,
-          "volume": 984,
-          "industry": "電子零組件業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2467",
-          "name": "志聖",
-          "close": 548.0,
-          "change": -1.0,
-          "change_percent": -0.18,
-          "volume": 829,
-          "industry": "電子零組件業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "2379",
-          "name": "瑞昱",
-          "close": 524.0,
-          "change": -1.0,
-          "change_percent": -0.19,
-          "volume": 820,
-          "industry": "半導體業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "5475",
-          "name": "Unknown(5475)",
-          "close": 0,
-          "change": 0,
-          "change_percent": 0,
-          "volume": 786,
-          "industry": "光電業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "3583",
-          "name": "辛耘",
-          "close": 683.0,
-          "change": -19.0,
-          "change_percent": -2.71,
-          "volume": 708,
-          "industry": "半導體業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "3030",
-          "name": "德律",
-          "close": 303.0,
-          "change": -7.5,
-          "change_percent": -2.42,
-          "volume": 699,
-          "industry": "其他電子業",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
           "id": "2345",
@@ -2983,29 +2863,39 @@
           "close": 1890.0,
           "change": 70.0,
           "change_percent": 3.85,
-          "volume": 672,
+          "volume": 893,
           "industry": "通信網路業",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
-          "id": "5439",
-          "name": "Unknown(5439)",
-          "close": 0,
-          "change": 0,
-          "change_percent": 0,
-          "volume": 671,
-          "industry": "光電業",
-          "update_time": "2026-04-13"
-        },
-        {
-          "id": "6005",
-          "name": "群益證",
-          "close": 27.95,
-          "change": -0.3,
-          "change_percent": -1.06,
-          "volume": 609,
+          "id": "2887",
+          "name": "台新新光金",
+          "close": 24.45,
+          "change": 0.3,
+          "change_percent": 1.24,
+          "volume": 869,
           "industry": "上市其他",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2368",
+          "name": "金像電",
+          "close": 1150.0,
+          "change": 95.0,
+          "change_percent": 9.0,
+          "volume": 813,
+          "industry": "電子零組件業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "3450",
+          "name": "聯鈞",
+          "close": 314.5,
+          "change": 5.0,
+          "change_percent": 1.62,
+          "volume": 792,
+          "industry": "半導體業",
+          "update_time": "2026-04-14"
         },
         {
           "id": "009816",
@@ -3015,7 +2905,7 @@
           "change_percent": 2.55,
           "volume": 600,
           "industry": "其他",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
         },
         {
           "id": "3665",
@@ -3023,9 +2913,119 @@
           "close": 2295.0,
           "change": 70.0,
           "change_percent": 3.15,
-          "volume": 586,
+          "volume": 595,
           "industry": "其他電子業",
-          "update_time": "2026-04-13"
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "3030",
+          "name": "德律",
+          "close": 303.0,
+          "change": -7.5,
+          "change_percent": -2.42,
+          "volume": 590,
+          "industry": "其他電子業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "3406",
+          "name": "玉晶光",
+          "close": 518.0,
+          "change": 37.0,
+          "change_percent": 7.69,
+          "volume": 572,
+          "industry": "光電業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "3583",
+          "name": "辛耘",
+          "close": 683.0,
+          "change": -19.0,
+          "change_percent": -2.71,
+          "volume": 529,
+          "industry": "半導體業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2467",
+          "name": "志聖",
+          "close": 548.0,
+          "change": -1.0,
+          "change_percent": -0.18,
+          "volume": 513,
+          "industry": "電子零組件業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "6683",
+          "name": "Unknown(6683)",
+          "close": 0,
+          "change": 0,
+          "change_percent": 0,
+          "volume": 507,
+          "industry": "電子零組件業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "2385",
+          "name": "群光",
+          "close": 124.0,
+          "change": -1.0,
+          "change_percent": -0.8,
+          "volume": 491,
+          "industry": "電子零組件業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "1326",
+          "name": "台化",
+          "close": 54.6,
+          "change": 4.65,
+          "change_percent": 9.31,
+          "volume": 418,
+          "industry": "塑膠工業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "7751",
+          "name": "Unknown(7751)",
+          "close": 0,
+          "change": 0,
+          "change_percent": 0,
+          "volume": 412,
+          "industry": "電子零組件業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "3529",
+          "name": "Unknown(3529)",
+          "close": 0,
+          "change": 0,
+          "change_percent": 0,
+          "volume": 342,
+          "industry": "電子零組件業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "1785",
+          "name": "Unknown(1785)",
+          "close": 0,
+          "change": 0,
+          "change_percent": 0,
+          "volume": 324,
+          "industry": "其他電子業",
+          "update_time": "2026-04-14"
+        },
+        {
+          "id": "6024",
+          "name": "群益期",
+          "close": 56.5,
+          "change": -0.1,
+          "change_percent": -0.18,
+          "volume": 276,
+          "industry": "上市其他",
+          "update_time": "2026-04-14"
         }
       ]
     }
@@ -3033,9 +3033,44 @@
   "ai_context": {
     "super_strong": [
       {
-        "id": "0050",
-        "name": "元大台灣50",
+        "id": "00940",
+        "name": "元大台灣價值高息",
         "industry": "其他"
+      },
+      {
+        "id": "2880",
+        "name": "華南金",
+        "industry": "上市其他"
+      },
+      {
+        "id": "3702",
+        "name": "大聯大",
+        "industry": "電子通路業"
+      },
+      {
+        "id": "2324",
+        "name": "仁寶",
+        "industry": "電腦及週邊設備業"
+      },
+      {
+        "id": "2402",
+        "name": "毅嘉",
+        "industry": "電子零組件業"
+      },
+      {
+        "id": "3231",
+        "name": "緯創",
+        "industry": "電腦及週邊設備業"
+      },
+      {
+        "id": "1312",
+        "name": "國喬",
+        "industry": "塑膠工業"
+      },
+      {
+        "id": "2890",
+        "name": "永豐金",
+        "industry": "上市其他"
       },
       {
         "id": "2356",
@@ -3043,13 +3078,43 @@
         "industry": "電腦及週邊設備業"
       },
       {
-        "id": "2002",
-        "name": "中鋼",
-        "industry": "造紙工業"
+        "id": "1605",
+        "name": "華新",
+        "industry": "電器電纜"
+      },
+      {
+        "id": "3481",
+        "name": "群創",
+        "industry": "光電業"
+      },
+      {
+        "id": "1326",
+        "name": "台化",
+        "industry": "塑膠工業"
+      },
+      {
+        "id": "00918",
+        "name": "大華優利高填息30",
+        "industry": "其他"
       },
       {
         "id": "00922",
         "name": "國泰台灣領袖50",
+        "industry": "其他"
+      },
+      {
+        "id": "2409",
+        "name": "友達",
+        "industry": "光電業"
+      },
+      {
+        "id": "00900",
+        "name": "富邦特選高股息30",
+        "industry": "其他"
+      },
+      {
+        "id": "009816",
+        "name": "凱基台灣TOP50",
         "industry": "其他"
       },
       {
@@ -3058,28 +3123,8 @@
         "industry": "生技醫療業"
       },
       {
-        "id": "00918",
-        "name": "大華優利高填息30",
-        "industry": "其他"
-      },
-      {
-        "id": "2883",
-        "name": "凱基金",
-        "industry": "上市其他"
-      },
-      {
-        "id": "2327",
-        "name": "國巨*",
-        "industry": "電子零組件業"
-      },
-      {
-        "id": "00891",
-        "name": "中信關鍵半導體",
-        "industry": "其他"
-      },
-      {
-        "id": "00881",
-        "name": "國泰台灣科技龍頭",
+        "id": "00878",
+        "name": "國泰永續高股息",
         "industry": "其他"
       },
       {
@@ -3088,59 +3133,29 @@
         "industry": "塑膠工業"
       },
       {
-        "id": "2402",
-        "name": "毅嘉",
-        "industry": "電子零組件業"
-      },
-      {
-        "id": "3702",
-        "name": "大聯大",
-        "industry": "電子通路業"
-      },
-      {
         "id": "00830",
         "name": "國泰費城半導體",
         "industry": "其他"
       },
       {
-        "id": "00982A",
-        "name": "主動群益台灣強棒",
-        "industry": "其他"
+        "id": "2330",
+        "name": "台積電",
+        "industry": "半導體業"
       },
       {
-        "id": "00940",
-        "name": "元大台灣價值高息",
-        "industry": "其他"
+        "id": "6116",
+        "name": "彩晶",
+        "industry": "光電業"
       },
       {
-        "id": "00878",
-        "name": "國泰永續高股息",
-        "industry": "其他"
+        "id": "2317",
+        "name": "鴻海",
+        "industry": "其他電子業"
       },
       {
-        "id": "3231",
-        "name": "緯創",
-        "industry": "電腦及週邊設備業"
-      },
-      {
-        "id": "2890",
-        "name": "永豐金",
+        "id": "2885",
+        "name": "元大金",
         "industry": "上市其他"
-      },
-      {
-        "id": "1326",
-        "name": "台化",
-        "industry": "塑膠工業"
-      },
-      {
-        "id": "1303",
-        "name": "南亞",
-        "industry": "塑膠工業"
-      },
-      {
-        "id": "009816",
-        "name": "凱基台灣TOP50",
-        "industry": "其他"
       },
       {
         "id": "00712",
@@ -3148,28 +3163,58 @@
         "industry": "其他"
       },
       {
-        "id": "00929",
-        "name": "復華台灣科技優息",
+        "id": "00923",
+        "name": "群益台ESG低碳50",
         "industry": "其他"
       },
       {
-        "id": "2027",
-        "name": "大成鋼",
+        "id": "2327",
+        "name": "國巨*",
+        "industry": "電子零組件業"
+      },
+      {
+        "id": "1303",
+        "name": "南亞",
+        "industry": "塑膠工業"
+      },
+      {
+        "id": "0052",
+        "name": "富邦科技",
+        "industry": "其他"
+      },
+      {
+        "id": "2002",
+        "name": "中鋼",
         "industry": "造紙工業"
+      },
+      {
+        "id": "3045",
+        "name": "台灣大",
+        "industry": "通信網路業"
+      },
+      {
+        "id": "0050",
+        "name": "元大台灣50",
+        "industry": "其他"
+      },
+      {
+        "id": "2867",
+        "name": "三商壽",
+        "industry": "上市其他"
       }
     ],
     "top_industries": [
       {
         "name": "其他",
-        "count": 26
+        "count": 19
       },
       {
         "name": "上市其他",
-        "count": 5
+        "count": 6
       },
       {
-        "name": "塑膠工業",
-        "count": 3
+        "name": "光電業",
+        "count": 4
       }
     ],
     "market_summary": {
@@ -3179,25 +3224,14 @@
   "consecutive_buys": {
     "foreign": [
       {
-        "id": "2851",
-        "name": "中再保",
-        "days": 24,
-        "close": 31.8,
-        "change": 0.25,
-        "change_percent": 0.79,
-        "volume": 563,
-        "amount": 17903,
-        "industry": "上市其他"
-      },
-      {
         "id": "00686R",
         "name": "群益臺灣加權反1",
         "days": 23,
         "close": 1.27,
         "change": -0.03,
         "change_percent": -2.31,
-        "volume": 10,
-        "amount": 13,
+        "volume": 5,
+        "amount": 6,
         "industry": "其他"
       },
       {
@@ -3207,8 +3241,8 @@
         "close": 110.0,
         "change": 0.0,
         "change_percent": 0.0,
-        "volume": 4151,
-        "amount": 456590,
+        "volume": 4502,
+        "amount": 495238,
         "industry": "通信網路業"
       },
       {
@@ -3218,7 +3252,7 @@
         "close": 0,
         "change": 0,
         "change_percent": 0,
-        "volume": 1006,
+        "volume": 90,
         "amount": 0,
         "industry": "其他"
       },
@@ -3229,8 +3263,8 @@
         "close": 129.0,
         "change": 3.0,
         "change_percent": 2.38,
-        "volume": 697,
-        "amount": 89921,
+        "volume": 580,
+        "amount": 74820,
         "industry": "上市其他"
       },
       {
@@ -3240,8 +3274,8 @@
         "close": 12.65,
         "change": 0.05,
         "change_percent": 0.4,
-        "volume": 495,
-        "amount": 6262,
+        "volume": 2971,
+        "amount": 37583,
         "industry": "上市其他"
       },
       {
@@ -3251,8 +3285,8 @@
         "close": 17.15,
         "change": 0.2,
         "change_percent": 1.18,
-        "volume": 35,
-        "amount": 600,
+        "volume": 496,
+        "amount": 8515,
         "industry": "上市其他"
       },
       {
@@ -3262,8 +3296,19 @@
         "close": 0,
         "change": 0,
         "change_percent": 0,
-        "volume": 18,
+        "volume": 1327,
         "amount": 0,
+        "industry": "其他"
+      },
+      {
+        "id": "00763U",
+        "name": "期街口道瓊銅",
+        "days": 13,
+        "close": 32.5,
+        "change": 0.95,
+        "change_percent": 3.01,
+        "volume": 108,
+        "amount": 3510,
         "industry": "其他"
       },
       {
@@ -3273,31 +3318,9 @@
         "close": 10.35,
         "change": 0.0,
         "change_percent": 0.0,
-        "volume": 5356,
-        "amount": 55435,
+        "volume": 912,
+        "amount": 9439,
         "industry": "上市其他"
-      },
-      {
-        "id": "00763U",
-        "name": "期街口道瓊銅",
-        "days": 13,
-        "close": 32.5,
-        "change": 0.95,
-        "change_percent": 3.01,
-        "volume": 127,
-        "amount": 4128,
-        "industry": "其他"
-      },
-      {
-        "id": "00795B",
-        "name": "Unknown(00795B)",
-        "days": 13,
-        "close": 0,
-        "change": 0,
-        "change_percent": 0,
-        "volume": 770,
-        "amount": 0,
-        "industry": "其他"
       },
       {
         "id": "00931B",
@@ -3306,7 +3329,7 @@
         "close": 0,
         "change": 0,
         "change_percent": 0,
-        "volume": 1627,
+        "volume": 731,
         "amount": 0,
         "industry": "其他"
       },
@@ -3317,30 +3340,8 @@
         "close": 377.0,
         "change": 7.0,
         "change_percent": 1.89,
-        "volume": 65,
-        "amount": 24397,
-        "industry": "其他"
-      },
-      {
-        "id": "009805",
-        "name": "新光美國電力基建",
-        "days": 12,
-        "close": 15.97,
-        "change": 0.09,
-        "change_percent": 0.57,
-        "volume": 232,
-        "amount": 3705,
-        "industry": "其他"
-      },
-      {
-        "id": "00687B",
-        "name": "Unknown(00687B)",
-        "days": 12,
-        "close": 0,
-        "change": 0,
-        "change_percent": 0,
-        "volume": 614,
-        "amount": 0,
+        "volume": 214,
+        "amount": 80838,
         "industry": "其他"
       },
       {
@@ -3350,7 +3351,7 @@
         "close": 0,
         "change": 0,
         "change_percent": 0,
-        "volume": 360,
+        "volume": 939,
         "amount": 0,
         "industry": "其他"
       },
@@ -3361,7 +3362,7 @@
         "close": 0,
         "change": 0,
         "change_percent": 0,
-        "volume": 485,
+        "volume": 944,
         "amount": 0,
         "industry": "其他"
       },
@@ -3372,8 +3373,8 @@
         "close": 76.1,
         "change": -1.6,
         "change_percent": -2.06,
-        "volume": 69,
-        "amount": 5251,
+        "volume": 11,
+        "amount": 837,
         "industry": "電機機械"
       },
       {
@@ -3383,20 +3384,9 @@
         "close": 51.5,
         "change": -0.1,
         "change_percent": -0.19,
-        "volume": 20,
-        "amount": 1030,
+        "volume": 9,
+        "amount": 464,
         "industry": "其他"
-      },
-      {
-        "id": "3533",
-        "name": "嘉澤",
-        "days": 10,
-        "close": 2225.0,
-        "change": -25.0,
-        "change_percent": -1.11,
-        "volume": 128,
-        "amount": 285214,
-        "industry": "電子零組件業"
       },
       {
         "id": "2002",
@@ -3405,8 +3395,8 @@
         "close": 20.5,
         "change": 0.3,
         "change_percent": 1.49,
-        "volume": 16655,
-        "amount": 341425,
+        "volume": 34918,
+        "amount": 715825,
         "industry": "造紙工業"
       },
       {
@@ -3416,20 +3406,9 @@
         "close": 52.85,
         "change": 0.35,
         "change_percent": 0.67,
-        "volume": 1176,
-        "amount": 62131,
+        "volume": 3974,
+        "amount": 210019,
         "industry": "其他"
-      },
-      {
-        "id": "1909",
-        "name": "榮成",
-        "days": 9,
-        "close": 9.79,
-        "change": -0.07,
-        "change_percent": -0.71,
-        "volume": 1297,
-        "amount": 12698,
-        "industry": "玻璃陶瓷"
       },
       {
         "id": "6196",
@@ -3438,31 +3417,9 @@
         "close": 331.0,
         "change": 10.5,
         "change_percent": 3.28,
-        "volume": 587,
-        "amount": 194169,
+        "volume": 645,
+        "amount": 213525,
         "industry": "其他電子業"
-      },
-      {
-        "id": "00943",
-        "name": "兆豐電子高息等權",
-        "days": 9,
-        "close": 16.54,
-        "change": 0.0,
-        "change_percent": 0.0,
-        "volume": 924,
-        "amount": 15283,
-        "industry": "其他"
-      },
-      {
-        "id": "00962",
-        "name": "台新AI優息動能",
-        "days": 9,
-        "close": 11.53,
-        "change": 0.06,
-        "change_percent": 0.52,
-        "volume": 116,
-        "amount": 1337,
-        "industry": "其他"
       },
       {
         "id": "1907",
@@ -3471,8 +3428,8 @@
         "close": 26.1,
         "change": 0.2,
         "change_percent": 0.77,
-        "volume": 147,
-        "amount": 3837,
+        "volume": 391,
+        "amount": 10205,
         "industry": "玻璃陶瓷"
       },
       {
@@ -3482,9 +3439,20 @@
         "close": 90.5,
         "change": 2.8,
         "change_percent": 3.19,
-        "volume": 19,
-        "amount": 1721,
+        "volume": 221,
+        "amount": 19975,
         "industry": "電子零組件業"
+      },
+      {
+        "id": "00943",
+        "name": "兆豐電子高息等權",
+        "days": 9,
+        "close": 16.54,
+        "change": 0.0,
+        "change_percent": 0.0,
+        "volume": 49,
+        "amount": 810,
+        "industry": "其他"
       },
       {
         "id": "9942",
@@ -3493,8 +3461,8 @@
         "close": 116.5,
         "change": 1.0,
         "change_percent": 0.87,
-        "volume": 30,
-        "amount": 3495,
+        "volume": 38,
+        "amount": 4465,
         "industry": "上市其他"
       },
       {
@@ -3504,8 +3472,8 @@
         "close": 119.0,
         "change": 1.0,
         "change_percent": 0.85,
-        "volume": 72,
-        "amount": 8568,
+        "volume": 28,
+        "amount": 3332,
         "industry": "生技醫療業"
       },
       {
@@ -3515,18 +3483,7 @@
         "close": 0,
         "change": 0,
         "change_percent": 0,
-        "volume": 68,
-        "amount": 0,
-        "industry": "其他電子業"
-      },
-      {
-        "id": "6146",
-        "name": "Unknown(6146)",
-        "days": 9,
-        "close": 0,
-        "change": 0,
-        "change_percent": 0,
-        "volume": 426,
+        "volume": 94,
         "amount": 0,
         "industry": "其他電子業"
       },
@@ -3537,30 +3494,8 @@
         "close": 9.96,
         "change": 0.06,
         "change_percent": 0.61,
-        "volume": 4216,
-        "amount": 41993,
-        "industry": "其他"
-      },
-      {
-        "id": "00830",
-        "name": "國泰費城半導體",
-        "days": 8,
-        "close": 63.6,
-        "change": 1.95,
-        "change_percent": 3.16,
-        "volume": 7282,
-        "amount": 463117,
-        "industry": "其他"
-      },
-      {
-        "id": "00993A",
-        "name": "主動安聯台灣",
-        "days": 8,
-        "close": 11.58,
-        "change": 0.04,
-        "change_percent": 0.35,
-        "volume": 1230,
-        "amount": 14243,
+        "volume": 25684,
+        "amount": 255808,
         "industry": "其他"
       },
       {
@@ -3570,30 +3505,19 @@
         "close": 31.71,
         "change": 0.8,
         "change_percent": 2.59,
-        "volume": 2237,
-        "amount": 70935,
+        "volume": 5374,
+        "amount": 170413,
         "industry": "其他"
       },
       {
-        "id": "00980A",
-        "name": "主動野村臺灣優選",
+        "id": "00830",
+        "name": "國泰費城半導體",
         "days": 8,
-        "close": 19.33,
-        "change": 0.48,
-        "change_percent": 2.55,
-        "volume": 648,
-        "amount": 12528,
-        "industry": "其他"
-      },
-      {
-        "id": "00947",
-        "name": "台新臺灣IC設計",
-        "days": 8,
-        "close": 26.02,
-        "change": 0.9,
-        "change_percent": 3.58,
-        "volume": 2093,
-        "amount": 54462,
+        "close": 63.6,
+        "change": 1.95,
+        "change_percent": 3.16,
+        "volume": 8256,
+        "amount": 525092,
         "industry": "其他"
       },
       {
@@ -3603,9 +3527,42 @@
         "close": 33.2,
         "change": 0.5,
         "change_percent": 1.53,
-        "volume": 6595,
-        "amount": 218939,
+        "volume": 13677,
+        "amount": 454067,
         "industry": "上市其他"
+      },
+      {
+        "id": "00663L",
+        "name": "國泰臺灣加權正2",
+        "days": 8,
+        "close": 71.2,
+        "change": 3.4,
+        "change_percent": 5.01,
+        "volume": 1695,
+        "amount": 120684,
+        "industry": "其他"
+      },
+      {
+        "id": "00993A",
+        "name": "主動安聯台灣",
+        "days": 8,
+        "close": 11.58,
+        "change": 0.04,
+        "change_percent": 0.35,
+        "volume": 3441,
+        "amount": 39847,
+        "industry": "其他"
+      },
+      {
+        "id": "00947",
+        "name": "台新臺灣IC設計",
+        "days": 8,
+        "close": 26.02,
+        "change": 0.9,
+        "change_percent": 3.58,
+        "volume": 1637,
+        "amount": 42592,
+        "industry": "其他"
       },
       {
         "id": "00896",
@@ -3614,8 +3571,8 @@
         "close": 22.73,
         "change": 0.33,
         "change_percent": 1.47,
-        "volume": 1302,
-        "amount": 29594,
+        "volume": 1007,
+        "amount": 22889,
         "industry": "其他"
       },
       {
@@ -3625,19 +3582,8 @@
         "close": 13.71,
         "change": 0.28,
         "change_percent": 2.08,
-        "volume": 1036,
-        "amount": 14204,
-        "industry": "其他"
-      },
-      {
-        "id": "00663L",
-        "name": "國泰臺灣加權正2",
-        "days": 8,
-        "close": 71.2,
-        "change": 3.4,
-        "change_percent": 5.01,
-        "volume": 496,
-        "amount": 35319,
+        "volume": 1493,
+        "amount": 20469,
         "industry": "其他"
       },
       {
@@ -3647,74 +3593,8 @@
         "close": 10.13,
         "change": 0.05,
         "change_percent": 0.5,
-        "volume": 58,
-        "amount": 588,
-        "industry": "其他"
-      },
-      {
-        "id": "009817",
-        "name": "國泰日本不動產",
-        "days": 8,
-        "close": 9.53,
-        "change": 0.13,
-        "change_percent": 1.38,
-        "volume": 1091,
-        "amount": 10397,
-        "industry": "其他"
-      },
-      {
-        "id": "00913",
-        "name": "兆豐台灣晶圓製造",
-        "days": 8,
-        "close": 33.33,
-        "change": 0.78,
-        "change_percent": 2.4,
-        "volume": 506,
-        "amount": 16865,
-        "industry": "其他"
-      },
-      {
-        "id": "00733",
-        "name": "富邦臺灣中小",
-        "days": 8,
-        "close": 61.15,
-        "change": -0.5,
-        "change_percent": -0.81,
-        "volume": 468,
-        "amount": 28622,
-        "industry": "其他"
-      },
-      {
-        "id": "00675L",
-        "name": "富邦臺灣加權正2",
-        "days": 8,
-        "close": 215.95,
-        "change": 10.55,
-        "change_percent": 5.14,
-        "volume": 47,
-        "amount": 10150,
-        "industry": "其他"
-      },
-      {
-        "id": "1444",
-        "name": "力麗",
-        "days": 8,
-        "close": 6.72,
-        "change": 0.09,
-        "change_percent": 1.36,
-        "volume": 841,
-        "amount": 5650,
-        "industry": "紡織纖維"
-      },
-      {
-        "id": "009803",
-        "name": "保德信市值動能50",
-        "days": 8,
-        "close": 17.07,
-        "change": 0.44,
-        "change_percent": 2.65,
-        "volume": 638,
-        "amount": 10891,
+        "volume": 288,
+        "amount": 2917,
         "industry": "其他"
       },
       {
@@ -3724,45 +3604,177 @@
         "close": 17.99,
         "change": 0.06,
         "change_percent": 0.33,
-        "volume": 574,
-        "amount": 10326,
+        "volume": 1053,
+        "amount": 18943,
+        "industry": "其他"
+      },
+      {
+        "id": "00930",
+        "name": "永豐ESG低碳高息",
+        "days": 8,
+        "close": 17.85,
+        "change": 0.17,
+        "change_percent": 0.96,
+        "volume": 277,
+        "amount": 4944,
+        "industry": "其他"
+      },
+      {
+        "id": "009817",
+        "name": "國泰日本不動產",
+        "days": 8,
+        "close": 9.53,
+        "change": 0.13,
+        "change_percent": 1.38,
+        "volume": 652,
+        "amount": 6214,
+        "industry": "其他"
+      },
+      {
+        "id": "00913",
+        "name": "兆豐台灣晶圓製造",
+        "days": 8,
+        "close": 33.33,
+        "change": 0.78,
+        "change_percent": 2.4,
+        "volume": 541,
+        "amount": 18032,
+        "industry": "其他"
+      },
+      {
+        "id": "00675L",
+        "name": "富邦臺灣加權正2",
+        "days": 8,
+        "close": 215.95,
+        "change": 10.55,
+        "change_percent": 5.14,
+        "volume": 24,
+        "amount": 5183,
+        "industry": "其他"
+      },
+      {
+        "id": "1444",
+        "name": "力麗",
+        "days": 8,
+        "close": 6.72,
+        "change": 0.09,
+        "change_percent": 1.36,
+        "volume": 445,
+        "amount": 2990,
+        "industry": "紡織纖維"
+      },
+      {
+        "id": "009803",
+        "name": "保德信市值動能50",
+        "days": 8,
+        "close": 17.07,
+        "change": 0.44,
+        "change_percent": 2.65,
+        "volume": 505,
+        "amount": 8620,
+        "industry": "其他"
+      },
+      {
+        "id": "6670",
+        "name": "復盛應用",
+        "days": 8,
+        "close": 263.5,
+        "change": 0.0,
+        "change_percent": 0.0,
+        "volume": 49,
+        "amount": 12912,
+        "industry": "觀光餐旅"
+      },
+      {
+        "id": "1108",
+        "name": "幸福",
+        "days": 8,
+        "close": 14.85,
+        "change": 0.0,
+        "change_percent": 0.0,
+        "volume": 57,
+        "amount": 846,
+        "industry": "水泥工業"
+      },
+      {
+        "id": "00952",
+        "name": "凱基台灣AI50",
+        "days": 8,
+        "close": 14.47,
+        "change": 0.29,
+        "change_percent": 2.05,
+        "volume": 139,
+        "amount": 2011,
+        "industry": "其他"
+      },
+      {
+        "id": "2524",
+        "name": "京城",
+        "days": 8,
+        "close": 38.95,
+        "change": 0.25,
+        "change_percent": 0.65,
+        "volume": 48,
+        "amount": 1870,
+        "industry": "上市其他"
+      },
+      {
+        "id": "9937",
+        "name": "全國",
+        "days": 8,
+        "close": 57.0,
+        "change": 0.3,
+        "change_percent": 0.53,
+        "volume": 42,
+        "amount": 2394,
+        "industry": "上市其他"
+      },
+      {
+        "id": "1568",
+        "name": "倉佑",
+        "days": 8,
+        "close": 25.15,
+        "change": 0.05,
+        "change_percent": 0.2,
+        "volume": 41,
+        "amount": 1031,
+        "industry": "橡膠工業"
+      },
+      {
+        "id": "1737",
+        "name": "臺鹽",
+        "days": 8,
+        "close": 32.2,
+        "change": 0.15,
+        "change_percent": 0.47,
+        "volume": 33,
+        "amount": 1063,
+        "industry": "食品工業"
+      },
+      {
+        "id": "00985A",
+        "name": "主動野村台灣50",
+        "days": 8,
+        "close": 17.42,
+        "change": 0.29,
+        "change_percent": 1.69,
+        "volume": 623,
+        "amount": 10853,
+        "industry": "其他"
+      },
+      {
+        "id": "00980A",
+        "name": "主動野村臺灣優選",
+        "days": 8,
+        "close": 19.33,
+        "change": 0.48,
+        "change_percent": 2.55,
+        "volume": 23,
+        "amount": 445,
         "industry": "其他"
       }
     ],
     "trust": [
-      {
-        "id": "8046",
-        "name": "南電",
-        "days": 20,
-        "close": 646.0,
-        "change": -9.0,
-        "change_percent": -1.37,
-        "volume": 199,
-        "amount": 128554,
-        "industry": "電子零組件業"
-      },
-      {
-        "id": "4958",
-        "name": "臻鼎-KY",
-        "days": 14,
-        "close": 251.5,
-        "change": -6.0,
-        "change_percent": -2.33,
-        "volume": 277,
-        "amount": 69649,
-        "industry": "電子零組件業"
-      },
-      {
-        "id": "2379",
-        "name": "瑞昱",
-        "days": 11,
-        "close": 524.0,
-        "change": -1.0,
-        "change_percent": -0.19,
-        "volume": 87,
-        "amount": 45449,
-        "industry": "半導體業"
-      },
       {
         "id": "2376",
         "name": "技嘉",
@@ -3770,19 +3782,8 @@
         "close": 263.5,
         "change": -0.5,
         "change_percent": -0.19,
-        "volume": 373,
-        "amount": 98239,
-        "industry": "電腦及週邊設備業"
-      },
-      {
-        "id": "2382",
-        "name": "廣達",
-        "days": 11,
-        "close": 323.0,
-        "change": 4.0,
-        "change_percent": 1.25,
-        "volume": 250,
-        "amount": 80650,
+        "volume": 8,
+        "amount": 1989,
         "industry": "電腦及週邊設備業"
       },
       {
@@ -3792,53 +3793,9 @@
         "close": 48.0,
         "change": 0.3,
         "change_percent": 0.63,
-        "volume": 6,
-        "amount": 288,
+        "volume": 12,
+        "amount": 576,
         "industry": "電子通路業"
-      },
-      {
-        "id": "2455",
-        "name": "全新",
-        "days": 9,
-        "close": 280.5,
-        "change": -12.5,
-        "change_percent": -4.27,
-        "volume": 550,
-        "amount": 154275,
-        "industry": "通信網路業"
-      },
-      {
-        "id": "8150",
-        "name": "南茂",
-        "days": 8,
-        "close": 63.0,
-        "change": 0.1,
-        "change_percent": 0.16,
-        "volume": 2,
-        "amount": 126,
-        "industry": "半導體業"
-      },
-      {
-        "id": "2501",
-        "name": "國建",
-        "days": 8,
-        "close": 24.5,
-        "change": 0.45,
-        "change_percent": 1.87,
-        "volume": 8,
-        "amount": 196,
-        "industry": "上市其他"
-      },
-      {
-        "id": "1434",
-        "name": "福懋",
-        "days": 8,
-        "close": 17.05,
-        "change": 0.35,
-        "change_percent": 2.1,
-        "volume": 13,
-        "amount": 222,
-        "industry": "紡織纖維"
       },
       {
         "id": "2492",
@@ -3847,9 +3804,53 @@
         "close": 143.0,
         "change": 7.0,
         "change_percent": 5.15,
-        "volume": 101,
-        "amount": 14443,
+        "volume": 8,
+        "amount": 1144,
         "industry": "電子零組件業"
+      },
+      {
+        "id": "2501",
+        "name": "國建",
+        "days": 8,
+        "close": 24.5,
+        "change": 0.45,
+        "change_percent": 1.87,
+        "volume": 24,
+        "amount": 588,
+        "industry": "上市其他"
+      },
+      {
+        "id": "8150",
+        "name": "南茂",
+        "days": 8,
+        "close": 63.0,
+        "change": 0.1,
+        "change_percent": 0.16,
+        "volume": 15,
+        "amount": 945,
+        "industry": "半導體業"
+      },
+      {
+        "id": "1434",
+        "name": "福懋",
+        "days": 8,
+        "close": 17.05,
+        "change": 0.35,
+        "change_percent": 2.1,
+        "volume": 32,
+        "amount": 546,
+        "industry": "紡織纖維"
+      },
+      {
+        "id": "2820",
+        "name": "華票",
+        "days": 8,
+        "close": 17.15,
+        "change": 0.2,
+        "change_percent": 1.18,
+        "volume": 32,
+        "amount": 549,
+        "industry": "上市其他"
       },
       {
         "id": "9910",
@@ -3859,19 +3860,8 @@
         "change": -2.0,
         "change_percent": -2.56,
         "volume": 9,
-        "amount": 674,
+        "amount": 684,
         "industry": "觀光餐旅"
-      },
-      {
-        "id": "2820",
-        "name": "華票",
-        "days": 8,
-        "close": 17.15,
-        "change": 0.2,
-        "change_percent": 1.18,
-        "volume": 12,
-        "amount": 206,
-        "industry": "上市其他"
       },
       {
         "id": "4123",
@@ -3880,7 +3870,7 @@
         "close": 0,
         "change": 0,
         "change_percent": 0,
-        "volume": 2,
+        "volume": 5,
         "amount": 0,
         "industry": "電腦及週邊設備業"
       },
@@ -3891,7 +3881,7 @@
         "close": 0,
         "change": 0,
         "change_percent": 0,
-        "volume": 149,
+        "volume": 6,
         "amount": 0,
         "industry": "上櫃其他"
       },
@@ -3902,20 +3892,9 @@
         "close": 0,
         "change": 0,
         "change_percent": 0,
-        "volume": 35,
+        "volume": 116,
         "amount": 0,
         "industry": "資訊服務業"
-      },
-      {
-        "id": "6715",
-        "name": "嘉基",
-        "days": 7,
-        "close": 391.0,
-        "change": -25.0,
-        "change_percent": -6.01,
-        "volume": 663,
-        "amount": 259233,
-        "industry": "電子零組件業"
       },
       {
         "id": "8454",
@@ -3924,9 +3903,20 @@
         "close": 182.0,
         "change": 1.5,
         "change_percent": 0.83,
-        "volume": 3,
-        "amount": 455,
+        "volume": 1,
+        "amount": 101,
         "industry": "貿易百貨"
+      },
+      {
+        "id": "2486",
+        "name": "一詮",
+        "days": 6,
+        "close": 191.5,
+        "change": -2.5,
+        "change_percent": -1.29,
+        "volume": 38,
+        "amount": 7277,
+        "industry": "光電業"
       },
       {
         "id": "2897",
@@ -3935,8 +3925,8 @@
         "close": 10.35,
         "change": 0.0,
         "change_percent": 0.0,
-        "volume": 20,
-        "amount": 207,
+        "volume": 53,
+        "amount": 549,
         "industry": "上市其他"
       },
       {
@@ -3946,8 +3936,8 @@
         "close": 31.8,
         "change": 0.25,
         "change_percent": 0.79,
-        "volume": 5,
-        "amount": 159,
+        "volume": 16,
+        "amount": 509,
         "industry": "上市其他"
       },
       {
@@ -3957,20 +3947,9 @@
         "close": 30.0,
         "change": -0.15,
         "change_percent": -0.5,
-        "volume": 6,
-        "amount": 180,
+        "volume": 18,
+        "amount": 540,
         "industry": "食品工業"
-      },
-      {
-        "id": "3583",
-        "name": "辛耘",
-        "days": 6,
-        "close": 683.0,
-        "change": -19.0,
-        "change_percent": -2.71,
-        "volume": 41,
-        "amount": 28003,
-        "industry": "半導體業"
       },
       {
         "id": "2485",
@@ -3979,30 +3958,8 @@
         "close": 78.3,
         "change": -2.5,
         "change_percent": -3.09,
-        "volume": 2,
-        "amount": 157,
-        "industry": "通信網路業"
-      },
-      {
-        "id": "2486",
-        "name": "一詮",
-        "days": 6,
-        "close": 191.5,
-        "change": -2.5,
-        "change_percent": -1.29,
-        "volume": 36,
-        "amount": 6894,
-        "industry": "光電業"
-      },
-      {
-        "id": "2345",
-        "name": "智邦",
-        "days": 5,
-        "close": 1890.0,
-        "change": 70.0,
-        "change_percent": 3.85,
-        "volume": 68,
-        "amount": 129112,
+        "volume": 12,
+        "amount": 940,
         "industry": "通信網路業"
       },
       {
@@ -4017,13 +3974,24 @@
         "industry": "上市其他"
       },
       {
+        "id": "2345",
+        "name": "智邦",
+        "days": 5,
+        "close": 1890.0,
+        "change": 70.0,
+        "change_percent": 3.85,
+        "volume": 196,
+        "amount": 369576,
+        "industry": "通信網路業"
+      },
+      {
         "id": "6488",
         "name": "Unknown(6488)",
         "days": 5,
         "close": 0,
         "change": 0,
         "change_percent": 0,
-        "volume": 1886,
+        "volume": 39,
         "amount": 0,
         "industry": "電子零組件業"
       },
@@ -4034,7 +4002,7 @@
         "close": 0,
         "change": 0,
         "change_percent": 0,
-        "volume": 8,
+        "volume": 73,
         "amount": 0,
         "industry": "電子零組件業"
       },
@@ -4045,7 +4013,7 @@
         "close": 0,
         "change": 0,
         "change_percent": 0,
-        "volume": 3,
+        "volume": 6,
         "amount": 0,
         "industry": "建材營造"
       },
@@ -4056,20 +4024,9 @@
         "close": 54.6,
         "change": 4.65,
         "change_percent": 9.31,
-        "volume": 1797,
-        "amount": 98116,
+        "volume": 314,
+        "amount": 17144,
         "industry": "塑膠工業"
-      },
-      {
-        "id": "2027",
-        "name": "大成鋼",
-        "days": 4,
-        "close": 38.45,
-        "change": 0.15,
-        "change_percent": 0.39,
-        "volume": 44,
-        "amount": 1692,
-        "industry": "造紙工業"
       },
       {
         "id": "9939",
@@ -4078,20 +4035,9 @@
         "close": 110.0,
         "change": -1.0,
         "change_percent": -0.9,
-        "volume": 3,
-        "amount": 330,
+        "volume": 2,
+        "amount": 220,
         "industry": "上市其他"
-      },
-      {
-        "id": "00892",
-        "name": "富邦台灣半導體",
-        "days": 4,
-        "close": 33.43,
-        "change": 0.85,
-        "change_percent": 2.61,
-        "volume": 174,
-        "amount": 5817,
-        "industry": "其他"
       },
       {
         "id": "3443",
@@ -4100,19 +4046,19 @@
         "close": 3050.0,
         "change": 275.0,
         "change_percent": 9.91,
-        "volume": 64,
-        "amount": 195301,
+        "volume": 135,
+        "amount": 412967,
         "industry": "半導體業"
       },
       {
-        "id": "8464",
-        "name": "億豐",
+        "id": "00892",
+        "name": "富邦台灣半導體",
         "days": 4,
-        "close": 377.0,
-        "change": 7.0,
-        "change_percent": 1.89,
-        "volume": 0,
-        "amount": 120,
+        "close": 33.43,
+        "change": 0.85,
+        "change_percent": 2.61,
+        "volume": 759,
+        "amount": 25373,
         "industry": "其他"
       },
       {
@@ -4122,8 +4068,8 @@
         "close": 1840.0,
         "change": -40.0,
         "change_percent": -2.13,
-        "volume": 844,
-        "amount": 1552905,
+        "volume": 72,
+        "amount": 132975,
         "industry": "其他電子業"
       },
       {
@@ -4133,7 +4079,7 @@
         "close": 0,
         "change": 0,
         "change_percent": 0,
-        "volume": 368,
+        "volume": 241,
         "amount": 0,
         "industry": "電子通路業"
       },
@@ -4144,31 +4090,9 @@
         "close": 0,
         "change": 0,
         "change_percent": 0,
-        "volume": 964,
+        "volume": 2106,
         "amount": 0,
         "industry": "光電業"
-      },
-      {
-        "id": "3714",
-        "name": "富采",
-        "days": 3,
-        "close": 62.9,
-        "change": 5.7,
-        "change_percent": 9.97,
-        "volume": 7,
-        "amount": 440,
-        "industry": "光電業"
-      },
-      {
-        "id": "2049",
-        "name": "上銀",
-        "days": 3,
-        "close": 275.0,
-        "change": 25.0,
-        "change_percent": 10.0,
-        "volume": 21,
-        "amount": 5775,
-        "industry": "電機機械"
       },
       {
         "id": "8996",
@@ -4177,97 +4101,20 @@
         "close": 1115.0,
         "change": 20.0,
         "change_percent": 1.83,
-        "volume": 34,
-        "amount": 37910,
+        "volume": 273,
+        "amount": 304395,
         "industry": "電機機械"
       },
       {
-        "id": "5388",
-        "name": "中磊",
+        "id": "2049",
+        "name": "上銀",
         "days": 3,
-        "close": 81.7,
-        "change": -2.6,
-        "change_percent": -3.08,
-        "volume": 186,
-        "amount": 15196,
-        "industry": "通信網路業"
-      },
-      {
-        "id": "3037",
-        "name": "欣興",
-        "days": 3,
-        "close": 597.0,
-        "change": -29.0,
-        "change_percent": -4.63,
-        "volume": 31395,
-        "amount": 18742815,
-        "industry": "電子零組件業"
-      },
-      {
-        "id": "6409",
-        "name": "旭隼",
-        "days": 3,
-        "close": 729.0,
-        "change": 12.0,
-        "change_percent": 1.67,
-        "volume": 0,
-        "amount": 66,
-        "industry": "其他電子業"
-      },
-      {
-        "id": "2633",
-        "name": "台灣高鐵",
-        "days": 3,
-        "close": 26.85,
-        "change": -0.05,
-        "change_percent": -0.19,
-        "volume": 23,
-        "amount": 618,
-        "industry": "上市其他"
-      },
-      {
-        "id": "1513",
-        "name": "中興電",
-        "days": 3,
-        "close": 151.5,
-        "change": 0.0,
-        "change_percent": 0.0,
-        "volume": 7,
-        "amount": 1060,
+        "close": 275.0,
+        "change": 25.0,
+        "change_percent": 10.0,
+        "volume": 6,
+        "amount": 1650,
         "industry": "電機機械"
-      },
-      {
-        "id": "1476",
-        "name": "儒鴻",
-        "days": 3,
-        "close": 342.0,
-        "change": 17.0,
-        "change_percent": 5.23,
-        "volume": 2,
-        "amount": 844,
-        "industry": "紡織纖維"
-      },
-      {
-        "id": "00988A",
-        "name": "主動統一全球創新",
-        "days": 3,
-        "close": 15.67,
-        "change": 0.84,
-        "change_percent": 5.66,
-        "volume": 100,
-        "amount": 1567,
-        "industry": "其他"
-      },
-      {
-        "id": "3491",
-        "name": "Unknown(3491)",
-        "days": 3,
-        "close": 0,
-        "change": 0,
-        "change_percent": 0,
-        "volume": 13,
-        "amount": 0,
-        "industry": "其他電子業"
       },
       {
         "id": "3529",
@@ -4276,9 +4123,207 @@
         "close": 0,
         "change": 0,
         "change_percent": 0,
-        "volume": 54,
+        "volume": 255,
         "amount": 0,
         "industry": "電子零組件業"
+      },
+      {
+        "id": "1303",
+        "name": "南亞",
+        "days": 2,
+        "close": 89.0,
+        "change": 3.3,
+        "change_percent": 3.85,
+        "volume": 1006,
+        "amount": 89572,
+        "industry": "塑膠工業"
+      },
+      {
+        "id": "2327",
+        "name": "國巨*",
+        "days": 2,
+        "close": 312.0,
+        "change": 8.5,
+        "change_percent": 2.8,
+        "volume": 3708,
+        "amount": 1156842,
+        "industry": "電子零組件業"
+      },
+      {
+        "id": "2402",
+        "name": "毅嘉",
+        "days": 2,
+        "close": 72.4,
+        "change": 5.0,
+        "change_percent": 7.42,
+        "volume": 2337,
+        "amount": 169199,
+        "industry": "電子零組件業"
+      },
+      {
+        "id": "1605",
+        "name": "華新",
+        "days": 2,
+        "close": 32.2,
+        "change": 0.6,
+        "change_percent": 1.9,
+        "volume": 2,
+        "amount": 72,
+        "industry": "電器電纜"
+      },
+      {
+        "id": "3406",
+        "name": "玉晶光",
+        "days": 2,
+        "close": 518.0,
+        "change": 37.0,
+        "change_percent": 7.69,
+        "volume": 577,
+        "amount": 298886,
+        "industry": "光電業"
+      },
+      {
+        "id": "3017",
+        "name": "奇鋐",
+        "days": 2,
+        "close": 2310.0,
+        "change": 110.0,
+        "change_percent": 5.0,
+        "volume": 63,
+        "amount": 146322,
+        "industry": "電腦及週邊設備業"
+      },
+      {
+        "id": "5434",
+        "name": "崇越",
+        "days": 2,
+        "close": 401.0,
+        "change": 1.5,
+        "change_percent": 0.38,
+        "volume": 3,
+        "amount": 1203,
+        "industry": "電子通路業"
+      },
+      {
+        "id": "2610",
+        "name": "華航",
+        "days": 2,
+        "close": 18.25,
+        "change": 0.1,
+        "change_percent": 0.55,
+        "volume": 750,
+        "amount": 13688,
+        "industry": "上市其他"
+      },
+      {
+        "id": "9917",
+        "name": "中保科",
+        "days": 2,
+        "close": 115.5,
+        "change": 0.5,
+        "change_percent": 0.43,
+        "volume": 1,
+        "amount": 116,
+        "industry": "上市其他"
+      },
+      {
+        "id": "7750",
+        "name": "新代",
+        "days": 2,
+        "close": 1655.0,
+        "change": 75.0,
+        "change_percent": 4.75,
+        "volume": 14,
+        "amount": 23170,
+        "industry": "電機機械"
+      },
+      {
+        "id": "6024",
+        "name": "群益期",
+        "days": 2,
+        "close": 56.5,
+        "change": -0.1,
+        "change_percent": -0.18,
+        "volume": 81,
+        "amount": 4576,
+        "industry": "上市其他"
+      },
+      {
+        "id": "6515",
+        "name": "穎崴",
+        "days": 2,
+        "close": 8470.0,
+        "change": -90.0,
+        "change_percent": -1.05,
+        "volume": 9,
+        "amount": 76230,
+        "industry": "半導體業"
+      },
+      {
+        "id": "3665",
+        "name": "貿聯-KY",
+        "days": 2,
+        "close": 2295.0,
+        "change": 70.0,
+        "change_percent": 3.15,
+        "volume": 346,
+        "amount": 794233,
+        "industry": "其他電子業"
+      },
+      {
+        "id": "2006",
+        "name": "東和鋼鐵",
+        "days": 2,
+        "close": 70.7,
+        "change": -0.5,
+        "change_percent": -0.7,
+        "volume": 1,
+        "amount": 71,
+        "industry": "造紙工業"
+      },
+      {
+        "id": "1717",
+        "name": "長興",
+        "days": 2,
+        "close": 81.0,
+        "change": 0.3,
+        "change_percent": 0.37,
+        "volume": 347,
+        "amount": 28107,
+        "industry": "化學工業"
+      },
+      {
+        "id": "3376",
+        "name": "新日興",
+        "days": 2,
+        "close": 198.5,
+        "change": 0.5,
+        "change_percent": 0.25,
+        "volume": 35,
+        "amount": 6948,
+        "industry": "電子零組件業"
+      },
+      {
+        "id": "1402",
+        "name": "遠東新",
+        "days": 2,
+        "close": 26.4,
+        "change": -0.05,
+        "change_percent": -0.19,
+        "volume": 49,
+        "amount": 1281,
+        "industry": "紡織纖維"
+      },
+      {
+        "id": "3217",
+        "name": "Unknown(3217)",
+        "days": 2,
+        "close": 0,
+        "change": 0,
+        "change_percent": 0,
+        "volume": 8,
+        "amount": 0,
+        "industry": "光電業"
       }
     ]
   },
@@ -4291,20 +4336,20 @@
     },
     {
       "name": "自營商(避險)",
-      "buy": "33,636,779,313",
-      "sell": "27,916,711,248",
+      "buy": "33,637,084,335",
+      "sell": "27,917,016,270",
       "net": "5,720,068,065"
     },
     {
       "name": "投信",
-      "buy": "14,365,475,943",
-      "sell": "20,031,470,046",
-      "net": "-5,665,994,103"
+      "buy": "15,339,325,493",
+      "sell": "21,337,218,393",
+      "net": "-5,997,892,900"
     },
     {
       "name": "外資及陸資(不含外資自營商)",
-      "buy": "380,755,710,746",
-      "sell": "311,847,807,348",
+      "buy": "389,676,870,130",
+      "sell": "320,768,966,732",
       "net": "68,907,903,398"
     },
     {
@@ -4315,9 +4360,9 @@
     },
     {
       "name": "合計",
-      "buy": "437,771,851,013",
-      "sell": "369,009,243,967",
-      "net": "68,762,607,046"
+      "buy": "447,667,164,969",
+      "sell": "379,236,456,720",
+      "net": "68,430,708,249"
     }
   ],
   "us_markets": []
