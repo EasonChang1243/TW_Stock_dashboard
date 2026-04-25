@@ -2296,6 +2296,16 @@
           "update_time": "2026-04-24"
         },
         {
+          "id": "2368",
+          "name": "金像電",
+          "close": 1390.0,
+          "change": 125.0,
+          "change_percent": 9.88,
+          "volume": 1783,
+          "industry": "電子零組件業",
+          "update_time": "2026-04-24"
+        },
+        {
           "id": "6415",
           "name": "矽力*-KY",
           "close": 436.0,
@@ -2303,16 +2313,6 @@
           "change_percent": 4.93,
           "volume": 1755,
           "industry": "半導體業",
-          "update_time": "2026-04-24"
-        },
-        {
-          "id": "2368",
-          "name": "金像電",
-          "close": 1390.0,
-          "change": 125.0,
-          "change_percent": 9.88,
-          "volume": 1691,
-          "industry": "電子零組件業",
           "update_time": "2026-04-24"
         },
         {
@@ -2883,7 +2883,7 @@
           "close": 1390.0,
           "change": 125.0,
           "change_percent": 9.88,
-          "volume": 2031,
+          "volume": 2122,
           "industry": "電子零組件業",
           "update_time": "2026-04-24"
         },
@@ -3033,9 +3033,9 @@
   "ai_context": {
     "super_strong": [
       {
-        "id": "2356",
-        "name": "英業達",
-        "industry": "電腦及週邊設備業"
+        "id": "00997A",
+        "name": "主動群益美國增長",
+        "industry": "其他"
       },
       {
         "id": "3189",
@@ -3043,48 +3043,8 @@
         "industry": "半導體業"
       },
       {
-        "id": "00997A",
-        "name": "主動群益美國增長",
-        "industry": "其他"
-      },
-      {
-        "id": "2382",
-        "name": "廣達",
-        "industry": "電腦及週邊設備業"
-      },
-      {
-        "id": "3702",
-        "name": "大聯大",
-        "industry": "電子通路業"
-      },
-      {
-        "id": "2887",
-        "name": "台新新光金",
-        "industry": "上市其他"
-      },
-      {
-        "id": "00988A",
-        "name": "主動統一全球創新",
-        "industry": "其他"
-      },
-      {
-        "id": "2890",
-        "name": "永豐金",
-        "industry": "上市其他"
-      },
-      {
-        "id": "00922",
-        "name": "國泰台灣領袖50",
-        "industry": "其他"
-      },
-      {
-        "id": "2367",
-        "name": "燿華",
-        "industry": "電子零組件業"
-      },
-      {
-        "id": "00993A",
-        "name": "主動安聯台灣",
+        "id": "0052",
+        "name": "富邦科技",
         "industry": "其他"
       },
       {
@@ -3093,34 +3053,9 @@
         "industry": "上市其他"
       },
       {
-        "id": "3231",
-        "name": "緯創",
-        "industry": "電腦及週邊設備業"
-      },
-      {
         "id": "009813",
         "name": "貝萊德標普卓越50",
         "industry": "其他"
-      },
-      {
-        "id": "2891",
-        "name": "中信金",
-        "industry": "上市其他"
-      },
-      {
-        "id": "0050",
-        "name": "元大台灣50",
-        "industry": "其他"
-      },
-      {
-        "id": "0052",
-        "name": "富邦科技",
-        "industry": "其他"
-      },
-      {
-        "id": "2301",
-        "name": "光寶科",
-        "industry": "電腦及週邊設備業"
       },
       {
         "id": "00909",
@@ -3128,8 +3063,13 @@
         "industry": "其他"
       },
       {
-        "id": "5871",
-        "name": "中租-KY",
+        "id": "2367",
+        "name": "燿華",
+        "industry": "電子零組件業"
+      },
+      {
+        "id": "2891",
+        "name": "中信金",
         "industry": "上市其他"
       },
       {
@@ -3138,14 +3078,74 @@
         "industry": "其他電子業"
       },
       {
+        "id": "2884",
+        "name": "玉山金",
+        "industry": "上市其他"
+      },
+      {
+        "id": "5871",
+        "name": "中租-KY",
+        "industry": "上市其他"
+      },
+      {
+        "id": "2382",
+        "name": "廣達",
+        "industry": "電腦及週邊設備業"
+      },
+      {
+        "id": "2356",
+        "name": "英業達",
+        "industry": "電腦及週邊設備業"
+      },
+      {
+        "id": "2890",
+        "name": "永豐金",
+        "industry": "上市其他"
+      },
+      {
+        "id": "0050",
+        "name": "元大台灣50",
+        "industry": "其他"
+      },
+      {
+        "id": "3702",
+        "name": "大聯大",
+        "industry": "電子通路業"
+      },
+      {
+        "id": "00988A",
+        "name": "主動統一全球創新",
+        "industry": "其他"
+      },
+      {
+        "id": "00993A",
+        "name": "主動安聯台灣",
+        "industry": "其他"
+      },
+      {
+        "id": "2301",
+        "name": "光寶科",
+        "industry": "電腦及週邊設備業"
+      },
+      {
+        "id": "00922",
+        "name": "國泰台灣領袖50",
+        "industry": "其他"
+      },
+      {
+        "id": "2887",
+        "name": "台新新光金",
+        "industry": "上市其他"
+      },
+      {
         "id": "00878",
         "name": "國泰永續高股息",
         "industry": "其他"
       },
       {
-        "id": "2884",
-        "name": "玉山金",
-        "industry": "上市其他"
+        "id": "3231",
+        "name": "緯創",
+        "industry": "電腦及週邊設備業"
       }
     ],
     "top_industries": [
@@ -3919,6 +3919,17 @@
         "industry": "電子零組件業"
       },
       {
+        "id": "2368",
+        "name": "金像電",
+        "days": 5,
+        "close": 1390.0,
+        "change": 125.0,
+        "change_percent": 9.88,
+        "volume": 1008,
+        "amount": 1400766,
+        "industry": "電子零組件業"
+      },
+      {
         "id": "2455",
         "name": "全新",
         "days": 5,
@@ -4257,17 +4268,6 @@
         "change_percent": -0.5,
         "volume": 3146,
         "amount": 157130,
-        "industry": "上市其他"
-      },
-      {
-        "id": "2812",
-        "name": "台中銀",
-        "days": 5,
-        "close": 19.95,
-        "change": -0.2,
-        "change_percent": -0.99,
-        "volume": 7,
-        "amount": 144,
         "industry": "上市其他"
       }
     ]
