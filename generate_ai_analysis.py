@@ -40,7 +40,7 @@ def generate_analysis():
         inst_summary_text = "無數據"
 
     genai.configure(api_key=api_key)
-    model = genai.GenerativeModel('gemini-3.1-pro-preview') # Upgraded for enhanced analysis
+    model = genai.GenerativeModel('gemini-2.5-flash') # Switched to Flash for cost efficiency
 
     system_prompt = """
 你現在是一名精通台股籌碼分析、語氣犀利且富有感染力的「股市名嘴型」AI 策略顧問。
