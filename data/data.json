@@ -2236,6 +2236,16 @@
           "update_time": "2026-05-27"
         },
         {
+          "id": "3189",
+          "name": "景碩",
+          "close": 702.0,
+          "change": 6.0,
+          "change_percent": 0.86,
+          "volume": 4335,
+          "industry": "半導體業",
+          "update_time": "2026-05-27"
+        },
+        {
           "id": "2633",
           "name": "台灣高鐵",
           "close": 25.25,
@@ -2326,16 +2336,6 @@
           "update_time": "2026-05-27"
         },
         {
-          "id": "3189",
-          "name": "景碩",
-          "close": 702.0,
-          "change": 6.0,
-          "change_percent": 0.86,
-          "volume": 3250,
-          "industry": "半導體業",
-          "update_time": "2026-05-27"
-        },
-        {
           "id": "2327",
           "name": "國巨*",
           "close": 701.0,
@@ -2343,6 +2343,16 @@
           "change_percent": 6.05,
           "volume": 3123,
           "industry": "電子零組件業",
+          "update_time": "2026-05-27"
+        },
+        {
+          "id": "2801",
+          "name": "彰銀",
+          "close": 20.15,
+          "change": 0.0,
+          "change_percent": 0.0,
+          "volume": 2975,
+          "industry": "上市其他",
           "update_time": "2026-05-27"
         },
         {
@@ -2513,16 +2523,6 @@
           "change_percent": 0,
           "volume": 1435,
           "industry": "其他電子業",
-          "update_time": "2026-05-27"
-        },
-        {
-          "id": "2379",
-          "name": "瑞昱",
-          "close": 605.0,
-          "change": 15.0,
-          "change_percent": 2.54,
-          "volume": 1426,
-          "industry": "半導體業",
           "update_time": "2026-05-27"
         }
       ],
@@ -2768,6 +2768,26 @@
           "update_time": "2026-05-27"
         },
         {
+          "id": "3189",
+          "name": "景碩",
+          "close": 702.0,
+          "change": 6.0,
+          "change_percent": 0.86,
+          "volume": 4919,
+          "industry": "半導體業",
+          "update_time": "2026-05-27"
+        },
+        {
+          "id": "2801",
+          "name": "彰銀",
+          "close": 20.15,
+          "change": 0.0,
+          "change_percent": 0.0,
+          "volume": 4473,
+          "industry": "上市其他",
+          "update_time": "2026-05-27"
+        },
+        {
           "id": "6488",
           "name": "Unknown(6488)",
           "close": 0,
@@ -2805,16 +2825,6 @@
           "change_percent": 2.45,
           "volume": 4110,
           "industry": "其他",
-          "update_time": "2026-05-27"
-        },
-        {
-          "id": "3189",
-          "name": "景碩",
-          "close": 702.0,
-          "change": 6.0,
-          "change_percent": 0.86,
-          "volume": 3834,
-          "industry": "半導體業",
           "update_time": "2026-05-27"
         },
         {
@@ -3016,16 +3026,6 @@
           "volume": 1754,
           "industry": "生技醫療業",
           "update_time": "2026-05-27"
-        },
-        {
-          "id": "3711",
-          "name": "日月光投控",
-          "close": 642.0,
-          "change": 31.0,
-          "change_percent": 5.07,
-          "volume": 1663,
-          "industry": "半導體業",
-          "update_time": "2026-05-27"
         }
       ]
     }
@@ -3033,9 +3033,14 @@
   "ai_context": {
     "super_strong": [
       {
-        "id": "2324",
-        "name": "仁寶",
-        "industry": "電腦及週邊設備業"
+        "id": "00982A",
+        "name": "主動群益台灣強棒",
+        "industry": "其他"
+      },
+      {
+        "id": "00919",
+        "name": "群益台灣精選高息",
+        "industry": "其他"
       },
       {
         "id": "3576",
@@ -3048,58 +3053,8 @@
         "industry": "其他"
       },
       {
-        "id": "2317",
-        "name": "鴻海",
-        "industry": "其他電子業"
-      },
-      {
-        "id": "00981A",
-        "name": "主動統一台股增長",
-        "industry": "其他"
-      },
-      {
-        "id": "00919",
-        "name": "群益台灣精選高息",
-        "industry": "其他"
-      },
-      {
         "id": "00878",
         "name": "國泰永續高股息",
-        "industry": "其他"
-      },
-      {
-        "id": "1717",
-        "name": "長興",
-        "industry": "化學工業"
-      },
-      {
-        "id": "00891",
-        "name": "中信關鍵半導體",
-        "industry": "其他"
-      },
-      {
-        "id": "2881",
-        "name": "富邦金",
-        "industry": "上市其他"
-      },
-      {
-        "id": "6770",
-        "name": "力積電",
-        "industry": "半導體業"
-      },
-      {
-        "id": "1605",
-        "name": "華新",
-        "industry": "電器電纜"
-      },
-      {
-        "id": "2609",
-        "name": "陽明",
-        "industry": "上市其他"
-      },
-      {
-        "id": "0056",
-        "name": "元大高股息",
         "industry": "其他"
       },
       {
@@ -3108,13 +3063,93 @@
         "industry": "其他"
       },
       {
+        "id": "9105",
+        "name": "泰金寶-DR",
+        "industry": "上市其他"
+      },
+      {
+        "id": "2027",
+        "name": "大成鋼",
+        "industry": "造紙工業"
+      },
+      {
+        "id": "00403A",
+        "name": "主動統一升級50",
+        "industry": "其他"
+      },
+      {
+        "id": "6005",
+        "name": "群益證",
+        "industry": "上市其他"
+      },
+      {
+        "id": "0056",
+        "name": "元大高股息",
+        "industry": "其他"
+      },
+      {
+        "id": "2317",
+        "name": "鴻海",
+        "industry": "其他電子業"
+      },
+      {
+        "id": "2881",
+        "name": "富邦金",
+        "industry": "上市其他"
+      },
+      {
+        "id": "00891",
+        "name": "中信關鍵半導體",
+        "industry": "其他"
+      },
+      {
+        "id": "6770",
+        "name": "力積電",
+        "industry": "半導體業"
+      },
+      {
+        "id": "2609",
+        "name": "陽明",
+        "industry": "上市其他"
+      },
+      {
+        "id": "2324",
+        "name": "仁寶",
+        "industry": "電腦及週邊設備業"
+      },
+      {
+        "id": "00981A",
+        "name": "主動統一台股增長",
+        "industry": "其他"
+      },
+      {
+        "id": "1605",
+        "name": "華新",
+        "industry": "電器電纜"
+      },
+      {
         "id": "2882",
         "name": "國泰金",
         "industry": "上市其他"
       },
       {
-        "id": "00403A",
-        "name": "主動統一升級50",
+        "id": "2885",
+        "name": "元大金",
+        "industry": "上市其他"
+      },
+      {
+        "id": "1717",
+        "name": "長興",
+        "industry": "化學工業"
+      },
+      {
+        "id": "009816",
+        "name": "凱基台灣TOP50",
+        "industry": "其他"
+      },
+      {
+        "id": "00631L",
+        "name": "元大台灣50正2",
         "industry": "其他"
       },
       {
@@ -3128,44 +3163,9 @@
         "industry": "半導體業"
       },
       {
-        "id": "6005",
-        "name": "群益證",
-        "industry": "上市其他"
-      },
-      {
-        "id": "2027",
-        "name": "大成鋼",
-        "industry": "造紙工業"
-      },
-      {
-        "id": "9105",
-        "name": "泰金寶-DR",
-        "industry": "上市其他"
-      },
-      {
         "id": "2303",
         "name": "聯電",
         "industry": "半導體業"
-      },
-      {
-        "id": "2885",
-        "name": "元大金",
-        "industry": "上市其他"
-      },
-      {
-        "id": "00631L",
-        "name": "元大台灣50正2",
-        "industry": "其他"
-      },
-      {
-        "id": "00982A",
-        "name": "主動群益台灣強棒",
-        "industry": "其他"
-      },
-      {
-        "id": "009816",
-        "name": "凱基台灣TOP50",
-        "industry": "其他"
       }
     ],
     "top_industries": [
@@ -4312,10 +4312,16 @@
       "net": "-4,219,051,039"
     },
     {
-      "name": "外資",
+      "name": "外資及陸資(不含外資自營商)",
       "buy": "579,417,406,287",
       "sell": "541,289,502,983",
       "net": "38,127,903,304"
+    },
+    {
+      "name": "外資自營商",
+      "buy": "0",
+      "sell": "0",
+      "net": "0"
     },
     {
       "name": "合計",
