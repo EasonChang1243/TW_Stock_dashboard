@@ -95,8 +95,9 @@ def fetch_json(url, method='GET', payload=None, referer=None):
 
     for attempt in range(5):
         try:
-            delay = (attempt + 1) * 3  # Increase initial delay
-            time.sleep(delay)
+            if attempt > 0:
+                delay = attempt * 3  # Sleep only on retries
+                time.sleep(delay)
             
             if method == 'POST':
                 res = requests.post(url, headers=headers, data=payload, timeout=25)
@@ -132,7 +133,7 @@ def get_trading_days(count=5):
         if data and data.get("stat") == "OK" and data.get("data"):
             dates.append(d_dash)
             # Re-fetch both markets to populate cache (this is efficient as it replaces later fetches)
-            fetch_institutional_all(d_dash)
+            fetch_institutional_all(d_dash, twse_data=data)
             
         current -= timedelta(days=1)
         if (datetime.now() - current).days > 35: break
@@ -160,7 +161,7 @@ def fetch_institutional_summary(date_str):
 # Global Cache to avoid redundant network requests
 DATA_CACHE = {}
 
-def fetch_institutional_all(date_str):
+def fetch_institutional_all(date_str, twse_data=None):
     """Fetch both TWSE and TPEx institutional investor data for a specific date."""
     if date_str in DATA_CACHE:
         return DATA_CACHE[date_str]
@@ -172,8 +173,9 @@ def fetch_institutional_all(date_str):
     daily_map = {}
     
     # 1. TWSE (Stocks & ETFs)
-    twse_url = f"https://www.twse.com.tw/rwd/zh/fund/T86?date={d_compact}&selectType=ALL&response=json"
-    twse_data = fetch_json(twse_url)
+    if twse_data is None:
+        twse_url = f"https://www.twse.com.tw/rwd/zh/fund/T86?date={d_compact}&selectType=ALL&response=json"
+        twse_data = fetch_json(twse_url)
     if twse_data and twse_data.get("stat") == "OK":
         for row in twse_data.get("data", []):
             sid = row[0].strip()
@@ -293,50 +295,60 @@ def fetch_latest_quotes():
     return quotes
 
 def fetch_us_market():
-    """Fetch latest quotes and history for specific US indices and stocks via Stooq."""
-    symbols = {
-        "^SPX": "標普500指數",
-        "^NDX": "納斯達克100指數",
-        "SOXX.US": "費城半導體 (SOXX)",
-        "NVDA.US": "英偉達",
-        "MU.US": "美光科技",
-        "SNDK.US": "閃迪",
-        "TSM.US": "台積電",
-        "AAPL.US": "蘋果"
+    """Fetch latest quotes and history for specific US indices and stocks via yfinance."""
+    import yfinance as yf
+    
+    # Map from display ID to Yahoo Finance symbol and display name
+    symbols_mapping = {
+        "^SPX": ("^SPX", "標普500指數"),
+        "^NDX": ("^NDX", "納斯達克100指數"),
+        "SOXX": ("SOXX", "費城半導體 (SOXX)"),
+        "NVDA": ("NVDA", "英偉達"),
+        "MU": ("MU", "美光科技"),
+        "AMD": ("AMD", "超微半導體 (AMD)"), # Replaced delisted SNDK.US with AMD
+        "TSM": ("TSM", "台積電"),
+        "AAPL": ("AAPL", "蘋果")
     }
+    
     results = []
     
-    for sym, name in symbols.items():
-        # Stooq Daily History CSV format: Date,Open,High,Low,Close,Volume
-        url = f"https://stooq.com/q/d/l/?s={sym}&i=d"
+    for sym_id, (yf_symbol, name) in symbols_mapping.items():
         try:
-            res = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=15)
-            if res.status_code == 200:
-                df = pd.read_csv(io.StringIO(res.text))
-                if not df.empty and len(df) >= 2:
-                    # Get the last 30 entries for the sparkline
+            ticker = yf.Ticker(yf_symbol)
+            # Fetch 2 months of daily history (plenty to cover last 30 trading days)
+            df = ticker.history(period="2mo")
+            if not df.empty and len(df) >= 2:
+                # Drop rows with NaN in Close
+                df = df.dropna(subset=['Close'])
+                if len(df) >= 2:
+                    # Get last 30 close prices
                     history_df = df.tail(30)
                     close_prices = history_df['Close'].tolist()
                     
-                    # Latest and previous for change calculation
-                    latest_close = float(df.iloc[-1]['Close'])
-                    prev_close = float(df.iloc[-2]['Close'])
-                    change_percent = ((latest_close - prev_close) / prev_close) * 100
+                    latest_close = float(df['Close'].iloc[-1])
+                    prev_close = float(df['Close'].iloc[-2])
+                    change = latest_close - prev_close
+                    change_percent = (change / prev_close) * 100
+                    
+                    latest_date = df.index[-1].strftime('%Y-%m-%d')
                     
                     results.append({
-                        "id": sym,
+                        "id": sym_id,
                         "name": name,
                         "close": round(latest_close, 2),
-                        "change": round(latest_close - prev_close, 2),
+                        "change": round(change, 2),
                         "change_percent": round(change_percent, 2),
                         "history": [round(p, 2) for p in close_prices],
-                        "update_time": str(df.iloc[-1]['Date'])
+                        "update_time": latest_date
                     })
-            time.sleep(1)
+                    print(f"Successfully fetched {sym_id} via yfinance ({latest_date}): close={latest_close:.2f}")
+            else:
+                print(f"No data returned for {yf_symbol}")
         except Exception as e:
-            print(f"Error fetching {sym}: {e}")
+            print(f"Error fetching {yf_symbol} ({sym_id}) via yfinance: {e}")
             continue
     return results
+
 
 def calculate_streaks(history_dates, investor_type, industry_mapping, latest_quotes, latest_institutional, local_cache_names=None, local_cache_inds=None):
     """Calculate consecutive net buy days with enriched data."""
