@@ -272,7 +272,7 @@
           "change": 0,
           "change_percent": 0,
           "volume": 7582,
-          "industry": "其他",
+          "industry": "光電業",
           "update_time": "2026-08-28"
         },
         {
@@ -352,7 +352,7 @@
           "change": 0,
           "change_percent": 0,
           "volume": 4911,
-          "industry": "其他",
+          "industry": "電子零組件業",
           "update_time": "2026-08-28"
         },
         {
@@ -422,7 +422,7 @@
           "change": 0,
           "change_percent": 0,
           "volume": 3897,
-          "industry": "其他",
+          "industry": "電子零組件業",
           "update_time": "2026-08-28"
         },
         {
@@ -452,7 +452,7 @@
           "change": 0,
           "change_percent": 0,
           "volume": 3534,
-          "industry": "其他",
+          "industry": "光電業",
           "update_time": "2026-08-28"
         },
         {
@@ -984,7 +984,7 @@
           "change": 0,
           "change_percent": 0,
           "volume": 8294,
-          "industry": "其他",
+          "industry": "電子零組件業",
           "update_time": "2026-08-28"
         },
         {
@@ -1550,7 +1550,7 @@
           "change": 0,
           "change_percent": 0,
           "volume": 3336,
-          "industry": "其他",
+          "industry": "電子零組件業",
           "update_time": "2026-08-28"
         },
         {
@@ -2152,7 +2152,7 @@
           "change": 0,
           "change_percent": 0,
           "volume": 3335,
-          "industry": "其他",
+          "industry": "電子零組件業",
           "update_time": "2026-08-28"
         },
         {
@@ -2704,7 +2704,7 @@
           "change": 0,
           "change_percent": 0,
           "volume": 3335,
-          "industry": "其他",
+          "industry": "電子零組件業",
           "update_time": "2026-08-28"
         },
         {
@@ -3033,8 +3033,18 @@
   "ai_context": {
     "super_strong": [
       {
-        "id": "2883",
-        "name": "凱基金",
+        "id": "00881",
+        "name": "國泰台灣科技龍頭",
+        "industry": "其他"
+      },
+      {
+        "id": "0050",
+        "name": "元大台灣50",
+        "industry": "成分股 ETF"
+      },
+      {
+        "id": "2886",
+        "name": "兆豐金",
         "industry": "上市其他"
       },
       {
@@ -3048,14 +3058,19 @@
         "industry": "塑膠工業"
       },
       {
-        "id": "2481",
-        "name": "強茂",
-        "industry": "半導體業"
+        "id": "3037",
+        "name": "欣興",
+        "industry": "電子零組件業"
       },
       {
-        "id": "2303",
-        "name": "聯電",
-        "industry": "半導體業"
+        "id": "2892",
+        "name": "第一金",
+        "industry": "上市其他"
+      },
+      {
+        "id": "00992A",
+        "name": "主動群益科技創新",
+        "industry": "其他"
       },
       {
         "id": "00878",
@@ -3063,14 +3078,34 @@
         "industry": "其他"
       },
       {
-        "id": "00982A",
-        "name": "主動群益台灣強棒",
-        "industry": "其他"
+        "id": "2882",
+        "name": "國泰金",
+        "industry": "上市其他"
       },
       {
-        "id": "0050",
-        "name": "元大台灣50",
-        "industry": "成分股 ETF"
+        "id": "1802",
+        "name": "台玻",
+        "industry": "生技醫療業"
+      },
+      {
+        "id": "5880",
+        "name": "合庫金",
+        "industry": "上市其他"
+      },
+      {
+        "id": "2303",
+        "name": "聯電",
+        "industry": "半導體業"
+      },
+      {
+        "id": "2883",
+        "name": "凱基金",
+        "industry": "上市其他"
+      },
+      {
+        "id": "00403A",
+        "name": "主動統一升級50",
+        "industry": "其他"
       },
       {
         "id": "2330",
@@ -3083,64 +3118,9 @@
         "industry": "其他"
       },
       {
-        "id": "5880",
-        "name": "合庫金",
-        "industry": "上市其他"
-      },
-      {
-        "id": "1802",
-        "name": "台玻",
-        "industry": "生技醫療業"
-      },
-      {
-        "id": "00991A",
-        "name": "主動復華未來50",
-        "industry": "其他"
-      },
-      {
-        "id": "2892",
-        "name": "第一金",
-        "industry": "上市其他"
-      },
-      {
-        "id": "3037",
-        "name": "欣興",
-        "industry": "電子零組件業"
-      },
-      {
-        "id": "00403A",
-        "name": "主動統一升級50",
-        "industry": "其他"
-      },
-      {
-        "id": "00992A",
-        "name": "主動群益科技創新",
-        "industry": "其他"
-      },
-      {
-        "id": "1605",
-        "name": "華新",
-        "industry": "電器電纜"
-      },
-      {
-        "id": "2886",
-        "name": "兆豐金",
-        "industry": "上市其他"
-      },
-      {
-        "id": "2882",
-        "name": "國泰金",
-        "industry": "上市其他"
-      },
-      {
         "id": "2880",
         "name": "華南金",
         "industry": "上市其他"
-      },
-      {
-        "id": "00881",
-        "name": "國泰台灣科技龍頭",
-        "industry": "其他"
       },
       {
         "id": "2409",
@@ -3150,6 +3130,26 @@
       {
         "id": "2449",
         "name": "京元電子",
+        "industry": "半導體業"
+      },
+      {
+        "id": "00982A",
+        "name": "主動群益台灣強棒",
+        "industry": "其他"
+      },
+      {
+        "id": "1605",
+        "name": "華新",
+        "industry": "電器電纜"
+      },
+      {
+        "id": "00991A",
+        "name": "主動復華未來50",
+        "industry": "其他"
+      },
+      {
+        "id": "2481",
+        "name": "強茂",
         "industry": "半導體業"
       }
     ],
@@ -3217,7 +3217,7 @@
         "change_percent": 0,
         "volume": 9,
         "amount": 0,
-        "industry": "其他"
+        "industry": "光電業"
       },
       {
         "id": "6423",
@@ -3228,7 +3228,7 @@
         "change_percent": 0,
         "volume": 9,
         "amount": 0,
-        "industry": "其他"
+        "industry": "電子零組件業"
       },
       {
         "id": "3037",
@@ -3261,7 +3261,7 @@
         "change_percent": 0,
         "volume": 9,
         "amount": 0,
-        "industry": "其他"
+        "industry": "貿易百貨"
       },
       {
         "id": "5903",
@@ -3283,7 +3283,7 @@
         "change_percent": 0,
         "volume": 19,
         "amount": 0,
-        "industry": "其他"
+        "industry": "其他電子業"
       },
       {
         "id": "2886",
@@ -3338,7 +3338,7 @@
         "change_percent": 0,
         "volume": 107,
         "amount": 0,
-        "industry": "其他"
+        "industry": "其他電子業"
       },
       {
         "id": "3045",
@@ -3426,7 +3426,7 @@
         "change_percent": 0,
         "volume": 16,
         "amount": 0,
-        "industry": "其他"
+        "industry": "文化創意業"
       },
       {
         "id": "6752",
@@ -3437,7 +3437,7 @@
         "change_percent": 0,
         "volume": 1,
         "amount": 0,
-        "industry": "其他"
+        "industry": "文化創意業"
       },
       {
         "id": "8929",
@@ -3448,7 +3448,7 @@
         "change_percent": 0,
         "volume": 2,
         "amount": 0,
-        "industry": "其他"
+        "industry": "上櫃其他"
       },
       {
         "id": "00885",
@@ -3492,7 +3492,7 @@
         "change_percent": 0,
         "volume": 16,
         "amount": 0,
-        "industry": "其他"
+        "industry": "電腦及週邊設備業"
       },
       {
         "id": "6026",
@@ -3503,7 +3503,7 @@
         "change_percent": 0,
         "volume": 516,
         "amount": 0,
-        "industry": "其他"
+        "industry": "上櫃其他"
       },
       {
         "id": "8446",
@@ -3514,7 +3514,7 @@
         "change_percent": 0,
         "volume": 12,
         "amount": 0,
-        "industry": "其他"
+        "industry": "電子商務"
       },
       {
         "id": "2892",
@@ -3646,7 +3646,7 @@
         "change_percent": 0,
         "volume": 10,
         "amount": 0,
-        "industry": "其他"
+        "industry": "貿易百貨"
       },
       {
         "id": "5530",
@@ -3657,7 +3657,7 @@
         "change_percent": 0,
         "volume": 197,
         "amount": 0,
-        "industry": "其他"
+        "industry": "上櫃其他"
       },
       {
         "id": "6561",
@@ -3668,7 +3668,7 @@
         "change_percent": 0,
         "volume": 4,
         "amount": 0,
-        "industry": "其他"
+        "industry": "其他電子業"
       },
       {
         "id": "00878",
@@ -3901,7 +3901,7 @@
         "change_percent": 0,
         "volume": 53,
         "amount": 0,
-        "industry": "其他"
+        "industry": "電腦及週邊設備業"
       },
       {
         "id": "2449",
@@ -4121,7 +4121,7 @@
         "change_percent": 0,
         "volume": 8,
         "amount": 0,
-        "industry": "其他"
+        "industry": "電子零組件業"
       },
       {
         "id": "2881",
@@ -4198,7 +4198,7 @@
         "change_percent": 0,
         "volume": 10,
         "amount": 0,
-        "industry": "其他"
+        "industry": "電子零組件業"
       },
       {
         "id": "6727",
