@@ -3038,14 +3038,29 @@
         "industry": "上市其他"
       },
       {
-        "id": "3231",
-        "name": "緯創",
+        "id": "2356",
+        "name": "英業達",
         "industry": "電腦及週邊設備業"
       },
       {
-        "id": "2344",
-        "name": "華邦電",
+        "id": "2317",
+        "name": "鴻海",
+        "industry": "其他電子業"
+      },
+      {
+        "id": "2882",
+        "name": "國泰金",
+        "industry": "上市其他"
+      },
+      {
+        "id": "2408",
+        "name": "南亞科",
         "industry": "半導體業"
+      },
+      {
+        "id": "4938",
+        "name": "和碩",
+        "industry": "電腦及週邊設備業"
       },
       {
         "id": "2002",
@@ -3058,28 +3073,8 @@
         "industry": "半導體業"
       },
       {
-        "id": "4938",
-        "name": "和碩",
-        "industry": "電腦及週邊設備業"
-      },
-      {
-        "id": "4526",
-        "name": "東台",
-        "industry": "電機機械"
-      },
-      {
-        "id": "2356",
-        "name": "英業達",
-        "industry": "電腦及週邊設備業"
-      },
-      {
-        "id": "2317",
-        "name": "鴻海",
-        "industry": "其他電子業"
-      },
-      {
-        "id": "2408",
-        "name": "南亞科",
+        "id": "2344",
+        "name": "華邦電",
         "industry": "半導體業"
       },
       {
@@ -3088,14 +3083,9 @@
         "industry": "電腦及週邊設備業"
       },
       {
-        "id": "2882",
-        "name": "國泰金",
-        "industry": "上市其他"
-      },
-      {
-        "id": "1316",
-        "name": "上曜",
-        "industry": "上市其他"
+        "id": "3481",
+        "name": "群創",
+        "industry": "光電業"
       },
       {
         "id": "009829",
@@ -3103,14 +3093,24 @@
         "industry": "其他"
       },
       {
-        "id": "3481",
-        "name": "群創",
-        "industry": "光電業"
+        "id": "3231",
+        "name": "緯創",
+        "industry": "電腦及週邊設備業"
+      },
+      {
+        "id": "1316",
+        "name": "上曜",
+        "industry": "上市其他"
       },
       {
         "id": "6505",
         "name": "台塑化",
         "industry": "上市其他"
+      },
+      {
+        "id": "4526",
+        "name": "東台",
+        "industry": "電機機械"
       }
     ],
     "top_industries": [
@@ -3131,15 +3131,15 @@
       "us_indices": [
         {
           "id": "^SPX",
-          "change": 0.14
+          "change": 0.28
         },
         {
           "id": "^NDX",
-          "change": 0.11
+          "change": 0.55
         },
         {
           "id": "SOXX",
-          "change": 0.97
+          "change": 3.91
         }
       ]
     }
@@ -3188,7 +3188,7 @@
         "change_percent": 0.34,
         "volume": 6,
         "amount": 90,
-        "industry": "觀光餐旅"
+        "industry": "其他"
       },
       {
         "id": "2912",
@@ -3199,7 +3199,7 @@
         "change_percent": -0.67,
         "volume": 344,
         "amount": 77156,
-        "industry": "上市其他"
+        "industry": "其他"
       },
       {
         "id": "2027",
@@ -3221,7 +3221,7 @@
         "change_percent": 0.0,
         "volume": 35,
         "amount": 6621,
-        "industry": "資訊服務業"
+        "industry": "其他"
       },
       {
         "id": "009817",
@@ -3287,7 +3287,7 @@
         "change_percent": -0.47,
         "volume": 66,
         "amount": 703,
-        "industry": "上市其他"
+        "industry": "其他"
       },
       {
         "id": "2017",
@@ -3298,7 +3298,7 @@
         "change_percent": -0.23,
         "volume": 15,
         "amount": 134,
-        "industry": "造紙工業"
+        "industry": "其他"
       },
       {
         "id": "00695B",
@@ -3342,7 +3342,7 @@
         "change_percent": -1.19,
         "volume": 19,
         "amount": 2315,
-        "industry": "電腦及週邊設備業"
+        "industry": "其他"
       },
       {
         "id": "1103",
@@ -3353,7 +3353,7 @@
         "change_percent": 0.0,
         "volume": 122,
         "amount": 1682,
-        "industry": "水泥工業"
+        "industry": "其他"
       },
       {
         "id": "4766",
@@ -3364,7 +3364,7 @@
         "change_percent": -0.28,
         "volume": 90,
         "amount": 32235,
-        "industry": "化學工業"
+        "industry": "其他"
       },
       {
         "id": "8454",
@@ -3375,7 +3375,7 @@
         "change_percent": -1.2,
         "volume": 42,
         "amount": 10341,
-        "industry": "貿易百貨"
+        "industry": "其他"
       },
       {
         "id": "3557",
@@ -3441,7 +3441,7 @@
         "change_percent": 1.62,
         "volume": 1462,
         "amount": 100874,
-        "industry": "光電業"
+        "industry": "其他"
       },
       {
         "id": "7786",
@@ -3452,7 +3452,7 @@
         "change_percent": 2.41,
         "volume": 91,
         "amount": 11616,
-        "industry": "金融保險"
+        "industry": "其他"
       },
       {
         "id": "5225",
@@ -3463,7 +3463,7 @@
         "change_percent": 1.5,
         "volume": 53,
         "amount": 2878,
-        "industry": "其他電子業"
+        "industry": "其他"
       },
       {
         "id": "1449",
@@ -3474,7 +3474,7 @@
         "change_percent": 0.84,
         "volume": 47,
         "amount": 567,
-        "industry": "紡織纖維"
+        "industry": "其他"
       },
       {
         "id": "00864B",
@@ -3529,7 +3529,7 @@
         "change_percent": 0.31,
         "volume": 184,
         "amount": 5933,
-        "industry": "通信網路業"
+        "industry": "其他"
       },
       {
         "id": "1219",
@@ -3540,7 +3540,7 @@
         "change_percent": -0.45,
         "volume": 42,
         "amount": 468,
-        "industry": "食品工業"
+        "industry": "其他"
       },
       {
         "id": "6928",
@@ -3551,7 +3551,7 @@
         "change_percent": 1.4,
         "volume": 16,
         "amount": 751,
-        "industry": "電腦及週邊設備業"
+        "industry": "其他"
       },
       {
         "id": "1445",
@@ -3562,7 +3562,7 @@
         "change_percent": -0.5,
         "volume": 6,
         "amount": 60,
-        "industry": "紡織纖維"
+        "industry": "其他"
       },
       {
         "id": "6186",
@@ -3595,7 +3595,7 @@
         "change_percent": 1.41,
         "volume": 63,
         "amount": 26907,
-        "industry": "生技醫療業"
+        "industry": "其他"
       },
       {
         "id": "9930",
@@ -3606,7 +3606,7 @@
         "change_percent": -0.34,
         "volume": 24,
         "amount": 1414,
-        "industry": "金融保險"
+        "industry": "其他"
       },
       {
         "id": "6625",
@@ -3617,7 +3617,7 @@
         "change_percent": 0.41,
         "volume": 21,
         "amount": 1531,
-        "industry": "上市其他"
+        "industry": "其他"
       },
       {
         "id": "00694B",
@@ -3718,7 +3718,7 @@
         "change_percent": 8.73,
         "volume": 3,
         "amount": 11750,
-        "industry": "半導體業"
+        "industry": "其他"
       },
       {
         "id": "6531",
@@ -3729,7 +3729,7 @@
         "change_percent": 3.56,
         "volume": 4,
         "amount": 3372,
-        "industry": "半導體業"
+        "industry": "其他"
       },
       {
         "id": "2368",
@@ -3762,7 +3762,7 @@
         "change_percent": 1.37,
         "volume": 4,
         "amount": 2368,
-        "industry": "其他電子業"
+        "industry": "其他"
       },
       {
         "id": "6446",
@@ -3773,7 +3773,7 @@
         "change_percent": 0.84,
         "volume": 13,
         "amount": 15600,
-        "industry": "生技醫療業"
+        "industry": "其他"
       },
       {
         "id": "2439",
@@ -3784,7 +3784,7 @@
         "change_percent": 1.77,
         "volume": 11,
         "amount": 920,
-        "industry": "通信網路業"
+        "industry": "其他"
       },
       {
         "id": "2454",
@@ -3828,7 +3828,7 @@
         "change_percent": 3.42,
         "volume": 6,
         "amount": 544,
-        "industry": "電子零組件業"
+        "industry": "其他"
       },
       {
         "id": "3017",
@@ -3850,7 +3850,7 @@
         "change_percent": 0.64,
         "volume": 9,
         "amount": 562,
-        "industry": "其他電子業"
+        "industry": "其他"
       },
       {
         "id": "5880",
@@ -3949,7 +3949,7 @@
         "change_percent": 4.09,
         "volume": 3,
         "amount": 6960,
-        "industry": "其他電子業"
+        "industry": "其他"
       },
       {
         "id": "1560",
@@ -3971,7 +3971,7 @@
         "change_percent": 0.31,
         "volume": 5,
         "amount": 161,
-        "industry": "通信網路業"
+        "industry": "其他"
       },
       {
         "id": "6805",
@@ -3993,7 +3993,7 @@
         "change_percent": 3.47,
         "volume": 17,
         "amount": 173403,
-        "industry": "電子零組件業"
+        "industry": "其他"
       },
       {
         "id": "8996",
@@ -4004,7 +4004,7 @@
         "change_percent": 8.19,
         "volume": 76,
         "amount": 120460,
-        "industry": "電機機械"
+        "industry": "其他"
       },
       {
         "id": "2455",
@@ -4070,7 +4070,7 @@
         "change_percent": 2.38,
         "volume": 22,
         "amount": 1258,
-        "industry": "上市其他"
+        "industry": "其他"
       },
       {
         "id": "2449",
@@ -4092,7 +4092,7 @@
         "change_percent": 5.26,
         "volume": 2,
         "amount": 96,
-        "industry": "生技醫療業"
+        "industry": "其他"
       },
       {
         "id": "2030",
@@ -4103,7 +4103,7 @@
         "change_percent": 3.36,
         "volume": 3,
         "amount": 88,
-        "industry": "造紙工業"
+        "industry": "其他"
       },
       {
         "id": "8039",
@@ -4114,7 +4114,7 @@
         "change_percent": 6.46,
         "volume": 15,
         "amount": 4080,
-        "industry": "電子零組件業"
+        "industry": "其他"
       },
       {
         "id": "3717",
@@ -4125,7 +4125,7 @@
         "change_percent": 4.96,
         "volume": 3,
         "amount": 82,
-        "industry": "橡膠工業"
+        "industry": "其他"
       },
       {
         "id": "4566",
@@ -4136,7 +4136,7 @@
         "change_percent": 2.41,
         "volume": 2,
         "amount": 179,
-        "industry": "電機機械"
+        "industry": "其他"
       },
       {
         "id": "6405",
@@ -4147,7 +4147,7 @@
         "change_percent": 4.54,
         "volume": 1,
         "amount": 40,
-        "industry": "光電業"
+        "industry": "其他"
       },
       {
         "id": "3591",
@@ -4158,7 +4158,7 @@
         "change_percent": 3.93,
         "volume": 2,
         "amount": 56,
-        "industry": "光電業"
+        "industry": "其他"
       },
       {
         "id": "4770",
@@ -4169,7 +4169,7 @@
         "change_percent": 5.15,
         "volume": 1,
         "amount": 306,
-        "industry": "化學工業"
+        "industry": "其他"
       },
       {
         "id": "5285",
@@ -4180,7 +4180,7 @@
         "change_percent": 4.42,
         "volume": 1,
         "amount": 90,
-        "industry": "半導體業"
+        "industry": "其他"
       },
       {
         "id": "6166",
@@ -4191,7 +4191,7 @@
         "change_percent": 5.58,
         "volume": 2,
         "amount": 227,
-        "industry": "電腦及週邊設備業"
+        "industry": "其他"
       },
       {
         "id": "2404",
@@ -4202,7 +4202,7 @@
         "change_percent": 1.38,
         "volume": 3,
         "amount": 3300,
-        "industry": "其他電子業"
+        "industry": "其他"
       },
       {
         "id": "3021",
@@ -4213,7 +4213,7 @@
         "change_percent": 2.81,
         "volume": 1,
         "amount": 26,
-        "industry": "電子零組件業"
+        "industry": "其他"
       },
       {
         "id": "1617",
@@ -4224,7 +4224,7 @@
         "change_percent": 0.46,
         "volume": 1,
         "amount": 22,
-        "industry": "電器電纜"
+        "industry": "其他"
       },
       {
         "id": "6426",
@@ -4235,7 +4235,7 @@
         "change_percent": 1.9,
         "volume": 1,
         "amount": 322,
-        "industry": "通信網路業"
+        "industry": "其他"
       },
       {
         "id": "3031",
@@ -4246,7 +4246,7 @@
         "change_percent": 3.67,
         "volume": 1,
         "amount": 34,
-        "industry": "光電業"
+        "industry": "其他"
       }
     ]
   },
@@ -4292,9 +4292,9 @@
     {
       "id": "^SPX",
       "name": "標普500指數",
-      "close": 7733.17,
-      "change": 10.57,
-      "change_percent": 0.14,
+      "close": 7743.98,
+      "change": 21.38,
+      "change_percent": 0.28,
       "history": [
         7637.76,
         7650.5,
@@ -4325,16 +4325,16 @@
         7623.68,
         7676.77,
         7722.6,
-        7733.17
+        7743.98
       ],
       "update_time": "2026-10-28"
     },
     {
       "id": "^NDX",
       "name": "納斯達克100指數",
-      "close": 29684.05,
-      "change": 32.61,
-      "change_percent": 0.11,
+      "close": 29813.16,
+      "change": 161.72,
+      "change_percent": 0.55,
       "history": [
         29446.98,
         29644.17,
@@ -4365,17 +4365,18 @@
         28957.53,
         29273.4,
         29651.44,
-        29684.05
+        29813.16
       ],
       "update_time": "2026-10-28"
     },
     {
       "id": "SOXX",
       "name": "費城半導體 (SOXX)",
-      "close": 516.03,
-      "change": 4.97,
-      "change_percent": 0.97,
+      "close": 511.06,
+      "change": 19.23,
+      "change_percent": 3.91,
       "history": [
+        502.06,
         519.1,
         533.07,
         559.34,
@@ -4404,18 +4405,18 @@
         475.69,
         478.2,
         491.83,
-        511.06,
-        516.03
+        511.06
       ],
-      "update_time": "2026-10-28"
+      "update_time": "2026-10-27"
     },
     {
       "id": "NVDA",
       "name": "英偉達",
-      "close": 217.71,
-      "change": -0.24,
-      "change_percent": -0.11,
+      "close": 217.94,
+      "change": 1.94,
+      "change_percent": 0.9,
       "history": [
+        213.9,
         219.34,
         222.27,
         227.38,
@@ -4444,18 +4445,18 @@
         212.21,
         210.96,
         216.0,
-        217.94,
-        217.71
+        217.94
       ],
-      "update_time": "2026-10-28"
+      "update_time": "2026-10-27"
     },
     {
       "id": "MU",
       "name": "美光科技",
-      "close": 972.86,
-      "change": 44.1,
-      "change_percent": 4.75,
+      "close": 928.76,
+      "change": 25.06,
+      "change_percent": 2.77,
       "history": [
+        926.4,
         977.35,
         1015.64,
         1043.8,
@@ -4484,18 +4485,18 @@
         856.49,
         877.55,
         903.7,
-        928.76,
-        972.86
+        928.76
       ],
-      "update_time": "2026-10-28"
+      "update_time": "2026-10-27"
     },
     {
       "id": "AMD",
       "name": "超微半導體 (AMD)",
-      "close": 566.26,
-      "change": 5.99,
-      "change_percent": 1.07,
+      "close": 560.26,
+      "change": 28.98,
+      "change_percent": 5.45,
       "history": [
+        512.5,
         545.09,
         559.82,
         615.52,
@@ -4524,18 +4525,18 @@
         507.93,
         516.79,
         531.28,
-        560.26,
-        566.26
+        560.26
       ],
-      "update_time": "2026-10-28"
+      "update_time": "2026-10-27"
     },
     {
       "id": "TSM",
       "name": "台積電",
-      "close": 437.98,
-      "change": 1.11,
-      "change_percent": 0.26,
+      "close": 436.87,
+      "change": 12.5,
+      "change_percent": 2.95,
       "history": [
+        417.72,
         430.26,
         434.67,
         445.14,
@@ -4564,18 +4565,18 @@
         412.35,
         418.51,
         424.37,
-        436.87,
-        437.98
+        436.87
       ],
-      "update_time": "2026-10-28"
+      "update_time": "2026-10-27"
     },
     {
       "id": "AAPL",
       "name": "蘋果",
-      "close": 345.41,
-      "change": -1.69,
-      "change_percent": -0.49,
+      "close": 347.1,
+      "change": 3.19,
+      "change_percent": 0.93,
       "history": [
+        332.41,
         337.0,
         336.13,
         338.98,
@@ -4604,10 +4605,9 @@
         348.22,
         347.73,
         343.91,
-        347.1,
-        345.41
+        347.1
       ],
-      "update_time": "2026-10-28"
+      "update_time": "2026-10-27"
     }
   ]
 }
