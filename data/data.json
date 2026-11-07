@@ -1820,7 +1820,7 @@
           "change": 0,
           "change_percent": 0,
           "volume": 570,
-          "industry": "其他",
+          "industry": "電子零組件業",
           "update_time": "2026-11-06"
         },
         {
@@ -3033,23 +3033,48 @@
   "ai_context": {
     "super_strong": [
       {
+        "id": "00885",
+        "name": "富邦越南",
+        "industry": "其他"
+      },
+      {
+        "id": "6505",
+        "name": "台塑化",
+        "industry": "上市其他"
+      },
+      {
+        "id": "3481",
+        "name": "群創",
+        "industry": "光電業"
+      },
+      {
+        "id": "2610",
+        "name": "華航",
+        "industry": "上市其他"
+      },
+      {
+        "id": "00988A",
+        "name": "主動統一全球創新",
+        "industry": "其他"
+      },
+      {
+        "id": "00753L",
+        "name": "中信中國50正2",
+        "industry": "其他"
+      },
+      {
+        "id": "00984D",
+        "name": "主動聯博全球非投",
+        "industry": "其他"
+      },
+      {
         "id": "1101",
         "name": "台泥",
         "industry": "水泥工業"
       },
       {
-        "id": "00985B",
-        "name": "群益ESG投等債0-5",
-        "industry": "其他"
-      },
-      {
-        "id": "00712",
-        "name": "復華富時不動產",
-        "industry": "其他"
-      },
-      {
-        "id": "00953B",
-        "name": "群益優選非投等債",
+        "id": "00409A",
+        "name": "主動復華全球50",
         "industry": "其他"
       },
       {
@@ -3063,18 +3088,13 @@
         "industry": "光電業"
       },
       {
+        "id": "00712",
+        "name": "復華富時不動產",
+        "industry": "其他"
+      },
+      {
         "id": "00990A",
         "name": "主動元大AI新經濟",
-        "industry": "其他"
-      },
-      {
-        "id": "00984D",
-        "name": "主動聯博全球非投",
-        "industry": "其他"
-      },
-      {
-        "id": "00885",
-        "name": "富邦越南",
         "industry": "其他"
       },
       {
@@ -3083,34 +3103,14 @@
         "industry": "其他"
       },
       {
-        "id": "00409A",
-        "name": "主動復華全球50",
+        "id": "00985B",
+        "name": "群益ESG投等債0-5",
         "industry": "其他"
       },
       {
-        "id": "00988A",
-        "name": "主動統一全球創新",
+        "id": "00953B",
+        "name": "群益優選非投等債",
         "industry": "其他"
-      },
-      {
-        "id": "2610",
-        "name": "華航",
-        "industry": "上市其他"
-      },
-      {
-        "id": "3481",
-        "name": "群創",
-        "industry": "光電業"
-      },
-      {
-        "id": "00753L",
-        "name": "中信中國50正2",
-        "industry": "其他"
-      },
-      {
-        "id": "6505",
-        "name": "台塑化",
-        "industry": "上市其他"
       }
     ],
     "top_industries": [
@@ -3131,15 +3131,15 @@
       "us_indices": [
         {
           "id": "^SPX",
-          "change": 0.97
+          "change": 0.31
         },
         {
           "id": "^NDX",
-          "change": 1.45
+          "change": 1.35
         },
         {
           "id": "SOXX",
-          "change": 2.4
+          "change": 3.51
         }
       ]
     }
@@ -3149,7 +3149,7 @@
       {
         "id": "00981D",
         "name": "Unknown(00981D)",
-        "days": 23,
+        "days": 22,
         "close": 0,
         "change": 0,
         "change_percent": 0,
@@ -3298,7 +3298,7 @@
         "change_percent": 0,
         "volume": 110,
         "amount": 0,
-        "industry": "其他"
+        "industry": "資訊服務業"
       },
       {
         "id": "1789",
@@ -3331,7 +3331,7 @@
         "change_percent": 0,
         "volume": 602,
         "amount": 0,
-        "industry": "其他"
+        "industry": "紡織纖維"
       },
       {
         "id": "5904",
@@ -3353,7 +3353,7 @@
         "change_percent": 0,
         "volume": 85,
         "amount": 0,
-        "industry": "其他"
+        "industry": "資訊服務業"
       },
       {
         "id": "00953B",
@@ -3699,17 +3699,6 @@
     ],
     "trust": [
       {
-        "id": "2330",
-        "name": "台積電",
-        "days": 23,
-        "close": 2135.0,
-        "change": -105.0,
-        "change_percent": -4.69,
-        "volume": 4669,
-        "amount": 9969348,
-        "industry": "半導體業"
-      },
-      {
         "id": "2368",
         "name": "金像電",
         "days": 22,
@@ -3719,6 +3708,17 @@
         "volume": 75,
         "amount": 61205,
         "industry": "電子零組件業"
+      },
+      {
+        "id": "2330",
+        "name": "台積電",
+        "days": 22,
+        "close": 2135.0,
+        "change": -105.0,
+        "change_percent": -4.69,
+        "volume": 4669,
+        "amount": 9969348,
+        "industry": "半導體業"
       },
       {
         "id": "4958",
@@ -3894,7 +3894,7 @@
         "change_percent": 0,
         "volume": 71,
         "amount": 0,
-        "industry": "其他"
+        "industry": "其他電子業"
       },
       {
         "id": "2451",
@@ -3927,7 +3927,7 @@
         "change_percent": 0,
         "volume": 8,
         "amount": 0,
-        "industry": "其他"
+        "industry": "電子零組件業"
       },
       {
         "id": "3045",
@@ -4048,7 +4048,7 @@
         "change_percent": 0,
         "volume": 1,
         "amount": 0,
-        "industry": "其他"
+        "industry": "其他電子業"
       },
       {
         "id": "6147",
@@ -4246,7 +4246,7 @@
         "change_percent": 0,
         "volume": 45,
         "amount": 0,
-        "industry": "其他"
+        "industry": "電子零組件業"
       }
     ]
   },
@@ -4292,9 +4292,9 @@
     {
       "id": "^SPX",
       "name": "標普500指數",
-      "close": 7425.2,
-      "change": 71.47,
-      "change_percent": 0.97,
+      "close": 7376.86,
+      "change": 23.13,
+      "change_percent": 0.31,
       "history": [
         7683.69,
         7670.84,
@@ -4325,16 +4325,16 @@
         7568.92,
         7688.62,
         7353.73,
-        7425.2
+        7376.86
       ],
       "update_time": "2026-11-06"
     },
     {
       "id": "^NDX",
       "name": "納斯達克100指數",
-      "close": 27015.31,
-      "change": 385.5,
-      "change_percent": 1.45,
+      "close": 26989.99,
+      "change": 360.18,
+      "change_percent": 1.35,
       "history": [
         30276.81,
         30339.33,
@@ -4365,16 +4365,16 @@
         28180.26,
         28437.17,
         26629.81,
-        27015.31
+        26989.99
       ],
       "update_time": "2026-11-06"
     },
     {
       "id": "SOXX",
       "name": "費城半導體 (SOXX)",
-      "close": 135.07,
-      "change": 3.17,
-      "change_percent": 2.4,
+      "close": 136.53,
+      "change": 4.63,
+      "change_percent": 3.51,
       "history": [
         186.93,
         189.15,
@@ -4405,16 +4405,16 @@
         155.0,
         150.14,
         131.9,
-        135.07
+        136.53
       ],
       "update_time": "2026-11-06"
     },
     {
       "id": "NVDA",
       "name": "英偉達",
-      "close": 187.73,
-      "change": 6.13,
-      "change_percent": 3.38,
+      "close": 186.64,
+      "change": 5.04,
+      "change_percent": 2.78,
       "history": [
         228.86,
         227.21,
@@ -4445,16 +4445,16 @@
         206.69,
         200.13,
         181.6,
-        187.73
+        186.64
       ],
       "update_time": "2026-11-06"
     },
     {
       "id": "MU",
       "name": "美光科技",
-      "close": 685.1,
-      "change": 28.71,
-      "change_percent": 4.37,
+      "close": 690.0,
+      "change": 33.61,
+      "change_percent": 5.12,
       "history": [
         1053.81,
         1064.91,
@@ -4485,16 +4485,16 @@
         855.1,
         795.23,
         656.39,
-        685.1
+        690.0
       ],
       "update_time": "2026-11-06"
     },
     {
       "id": "AMD",
       "name": "超微半導體 (AMD)",
-      "close": 439.29,
-      "change": 34.89,
-      "change_percent": 8.63,
+      "close": 449.04,
+      "change": 44.64,
+      "change_percent": 11.04,
       "history": [
         607.87,
         607.57,
@@ -4525,16 +4525,16 @@
         483.9,
         488.78,
         404.4,
-        439.29
+        449.04
       ],
       "update_time": "2026-11-06"
     },
     {
       "id": "TSM",
       "name": "台積電",
-      "close": 372.31,
-      "change": 19.21,
-      "change_percent": 5.44,
+      "close": 375.44,
+      "change": 22.34,
+      "change_percent": 6.33,
       "history": [
         452.88,
         456.94,
@@ -4565,16 +4565,16 @@
         404.8,
         395.75,
         353.1,
-        372.31
+        375.44
       ],
       "update_time": "2026-11-06"
     },
     {
       "id": "AAPL",
       "name": "蘋果",
-      "close": 344.79,
-      "change": 0.62,
-      "change_percent": 0.18,
+      "close": 342.37,
+      "change": -1.8,
+      "change_percent": -0.52,
       "history": [
         338.4,
         329.4,
@@ -4605,7 +4605,7 @@
         331.9,
         349.51,
         344.17,
-        344.79
+        342.37
       ],
       "update_time": "2026-11-06"
     }
