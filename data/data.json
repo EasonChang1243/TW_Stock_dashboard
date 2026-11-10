@@ -3033,9 +3033,9 @@
   "ai_context": {
     "super_strong": [
       {
-        "id": "1802",
-        "name": "台玻",
-        "industry": "生技醫療業"
+        "id": "00945B",
+        "name": "凱基美國非投等債",
+        "industry": "其他"
       },
       {
         "id": "00632R",
@@ -3043,24 +3043,14 @@
         "industry": "其他"
       },
       {
-        "id": "1216",
-        "name": "統一",
-        "industry": "食品工業"
-      },
-      {
-        "id": "2610",
-        "name": "華航",
-        "industry": "上市其他"
-      },
-      {
-        "id": "00945B",
-        "name": "凱基美國非投等債",
+        "id": "00712",
+        "name": "復華富時不動產",
         "industry": "其他"
       },
       {
-        "id": "00676R",
-        "name": "富邦臺灣加權反1",
-        "industry": "其他"
+        "id": "1802",
+        "name": "台玻",
+        "industry": "生技醫療業"
       },
       {
         "id": "2618",
@@ -3068,18 +3058,8 @@
         "industry": "上市其他"
       },
       {
-        "id": "00953B",
-        "name": "群益優選非投等債",
-        "industry": "其他"
-      },
-      {
-        "id": "2412",
-        "name": "中華電",
-        "industry": "通信網路業"
-      },
-      {
-        "id": "00712",
-        "name": "復華富時不動產",
+        "id": "00676R",
+        "name": "富邦臺灣加權反1",
         "industry": "其他"
       },
       {
@@ -3088,9 +3068,29 @@
         "industry": "其他"
       },
       {
+        "id": "1216",
+        "name": "統一",
+        "industry": "食品工業"
+      },
+      {
         "id": "2353",
         "name": "宏碁",
         "industry": "電腦及週邊設備業"
+      },
+      {
+        "id": "2412",
+        "name": "中華電",
+        "industry": "通信網路業"
+      },
+      {
+        "id": "00953B",
+        "name": "群益優選非投等債",
+        "industry": "其他"
+      },
+      {
+        "id": "2610",
+        "name": "華航",
+        "industry": "上市其他"
       }
     ],
     "top_industries": [
@@ -3111,15 +3111,15 @@
       "us_indices": [
         {
           "id": "^SPX",
-          "change": 2.41
+          "change": 2.35
         },
         {
           "id": "^NDX",
-          "change": 3.21
+          "change": 3.4
         },
         {
           "id": "SOXX",
-          "change": 6.76
+          "change": 7.49
         }
       ]
     }
@@ -3129,7 +3129,7 @@
       {
         "id": "00981D",
         "name": "Unknown(00981D)",
-        "days": 23,
+        "days": 22,
         "close": 0,
         "change": 0,
         "change_percent": 0,
@@ -3681,7 +3681,7 @@
       {
         "id": "2368",
         "name": "金像電",
-        "days": 23,
+        "days": 22,
         "close": 894.0,
         "change": 81.0,
         "change_percent": 9.96,
@@ -3692,7 +3692,7 @@
       {
         "id": "2330",
         "name": "台積電",
-        "days": 23,
+        "days": 22,
         "close": 2235.0,
         "change": 100.0,
         "change_percent": 4.68,
@@ -4272,9 +4272,9 @@
     {
       "id": "^SPX",
       "name": "標普500指數",
-      "close": 7554.7,
-      "change": 177.84,
-      "change_percent": 2.41,
+      "close": 7549.94,
+      "change": 173.08,
+      "change_percent": 2.35,
       "history": [
         7670.84,
         7651.54,
@@ -4305,16 +4305,16 @@
         7688.62,
         7353.73,
         7376.86,
-        7554.7
+        7549.94
       ],
       "update_time": "2026-11-09"
     },
     {
       "id": "^NDX",
       "name": "納斯達克100指數",
-      "close": 27856.47,
-      "change": 866.48,
-      "change_percent": 3.21,
+      "close": 27907.62,
+      "change": 917.63,
+      "change_percent": 3.4,
       "history": [
         30339.33,
         30408.5,
@@ -4345,16 +4345,16 @@
         28437.17,
         26629.81,
         26989.99,
-        27856.47
+        27907.62
       ],
       "update_time": "2026-11-09"
     },
     {
       "id": "SOXX",
       "name": "費城半導體 (SOXX)",
-      "close": 145.76,
-      "change": 9.24,
-      "change_percent": 6.76,
+      "close": 146.76,
+      "change": 10.23,
+      "change_percent": 7.49,
       "history": [
         189.15,
         189.55,
@@ -4385,16 +4385,16 @@
         150.14,
         131.9,
         136.53,
-        145.76
+        146.76
       ],
       "update_time": "2026-11-09"
     },
     {
       "id": "NVDA",
       "name": "英偉達",
-      "close": 176.55,
-      "change": -10.09,
-      "change_percent": -5.41,
+      "close": 178.67,
+      "change": -7.97,
+      "change_percent": -4.27,
       "history": [
         227.21,
         228.38,
@@ -4425,16 +4425,16 @@
         200.13,
         181.6,
         186.64,
-        176.55
+        178.67
       ],
       "update_time": "2026-11-09"
     },
     {
       "id": "MU",
       "name": "美光科技",
-      "close": 728.31,
-      "change": 38.31,
-      "change_percent": 5.55,
+      "close": 733.15,
+      "change": 43.15,
+      "change_percent": 6.25,
       "history": [
         1064.91,
         1064.94,
@@ -4465,16 +4465,16 @@
         795.23,
         656.39,
         690.0,
-        728.31
+        733.15
       ],
       "update_time": "2026-11-09"
     },
     {
       "id": "AMD",
       "name": "超微半導體 (AMD)",
-      "close": 506.72,
-      "change": 57.68,
-      "change_percent": 12.85,
+      "close": 508.58,
+      "change": 59.54,
+      "change_percent": 13.26,
       "history": [
         607.57,
         611.76,
@@ -4505,16 +4505,16 @@
         488.78,
         404.4,
         449.04,
-        506.72
+        508.58
       ],
       "update_time": "2026-11-09"
     },
     {
       "id": "TSM",
       "name": "台積電",
-      "close": 389.46,
-      "change": 14.02,
-      "change_percent": 3.73,
+      "close": 388.62,
+      "change": 13.18,
+      "change_percent": 3.51,
       "history": [
         456.94,
         456.19,
@@ -4545,16 +4545,16 @@
         395.75,
         353.1,
         375.44,
-        389.46
+        388.62
       ],
       "update_time": "2026-11-09"
     },
     {
       "id": "AAPL",
       "name": "蘋果",
-      "close": 351.22,
-      "change": 8.85,
-      "change_percent": 2.58,
+      "close": 350.69,
+      "change": 8.32,
+      "change_percent": 2.43,
       "history": [
         329.4,
         333.02,
@@ -4585,7 +4585,7 @@
         349.51,
         344.17,
         342.37,
-        351.22
+        350.69
       ],
       "update_time": "2026-11-09"
     }
