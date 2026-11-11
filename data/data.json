@@ -3033,9 +3033,64 @@
   "ai_context": {
     "super_strong": [
       {
+        "id": "2618",
+        "name": "長榮航",
+        "industry": "上市其他"
+      },
+      {
+        "id": "1802",
+        "name": "台玻",
+        "industry": "生技醫療業"
+      },
+      {
+        "id": "00991A",
+        "name": "主動復華未來50",
+        "industry": "其他"
+      },
+      {
+        "id": "00415A",
+        "name": "主動群益核心50",
+        "industry": "其他"
+      },
+      {
+        "id": "2892",
+        "name": "第一金",
+        "industry": "上市其他"
+      },
+      {
+        "id": "2610",
+        "name": "華航",
+        "industry": "上市其他"
+      },
+      {
+        "id": "00712",
+        "name": "復華富時不動產",
+        "industry": "其他"
+      },
+      {
         "id": "1101",
         "name": "台泥",
         "industry": "水泥工業"
+      },
+      {
+        "id": "2646",
+        "name": "星宇航空",
+        "industry": "上市其他"
+      },
+      {
+        "id": "6505",
+        "name": "台塑化",
+        "industry": "上市其他"
+      },
+      {
+        "id": "6269",
+        "name": "台郡",
+        "industry": "電子零組件業"
+      },
+      {
+        "id": "00407A",
+        "name": "主動凱基台灣",
+        "industry": "其他"
       },
       {
         "id": "00990A",
@@ -3048,9 +3103,9 @@
         "industry": "通信網路業"
       },
       {
-        "id": "2610",
-        "name": "華航",
-        "industry": "上市其他"
+        "id": "9904",
+        "name": "寶成",
+        "industry": "觀光餐旅"
       },
       {
         "id": "00403A",
@@ -3058,64 +3113,9 @@
         "industry": "其他"
       },
       {
-        "id": "00991A",
-        "name": "主動復華未來50",
-        "industry": "其他"
-      },
-      {
         "id": "2353",
         "name": "宏碁",
         "industry": "電腦及週邊設備業"
-      },
-      {
-        "id": "00407A",
-        "name": "主動凱基台灣",
-        "industry": "其他"
-      },
-      {
-        "id": "2892",
-        "name": "第一金",
-        "industry": "上市其他"
-      },
-      {
-        "id": "9904",
-        "name": "寶成",
-        "industry": "觀光餐旅"
-      },
-      {
-        "id": "00712",
-        "name": "復華富時不動產",
-        "industry": "其他"
-      },
-      {
-        "id": "6269",
-        "name": "台郡",
-        "industry": "電子零組件業"
-      },
-      {
-        "id": "2646",
-        "name": "星宇航空",
-        "industry": "上市其他"
-      },
-      {
-        "id": "00415A",
-        "name": "主動群益核心50",
-        "industry": "其他"
-      },
-      {
-        "id": "6505",
-        "name": "台塑化",
-        "industry": "上市其他"
-      },
-      {
-        "id": "2618",
-        "name": "長榮航",
-        "industry": "上市其他"
-      },
-      {
-        "id": "1802",
-        "name": "台玻",
-        "industry": "生技醫療業"
       }
     ],
     "top_industries": [
@@ -3136,32 +3136,21 @@
       "us_indices": [
         {
           "id": "^SPX",
-          "change": -0.72
+          "change": -0.38
         },
         {
           "id": "^NDX",
-          "change": -0.97
+          "change": -0.6
         },
         {
           "id": "SOXX",
-          "change": -0.9
+          "change": -0.12
         }
       ]
     }
   },
   "consecutive_buys": {
     "foreign": [
-      {
-        "id": "00986D",
-        "name": "Unknown(00986D)",
-        "days": 23,
-        "close": 0,
-        "change": 0,
-        "change_percent": 0,
-        "volume": 130,
-        "amount": 0,
-        "industry": "其他"
-      },
       {
         "id": "00695B",
         "name": "Unknown(00695B)",
@@ -3170,6 +3159,17 @@
         "change": 0,
         "change_percent": 0,
         "volume": 40,
+        "amount": 0,
+        "industry": "其他"
+      },
+      {
+        "id": "00986D",
+        "name": "Unknown(00986D)",
+        "days": 22,
+        "close": 0,
+        "change": 0,
+        "change_percent": 0,
+        "volume": 130,
         "amount": 0,
         "industry": "其他"
       },
@@ -3248,7 +3248,7 @@
         "change_percent": 0,
         "volume": 14,
         "amount": 0,
-        "industry": "資訊服務業"
+        "industry": "其他"
       },
       {
         "id": "1515",
@@ -3292,7 +3292,7 @@
         "change_percent": 0,
         "volume": 21,
         "amount": 0,
-        "industry": "資訊服務業"
+        "industry": "其他"
       },
       {
         "id": "00953B",
@@ -3545,7 +3545,7 @@
         "change_percent": 0,
         "volume": 248,
         "amount": 0,
-        "industry": "電腦及週邊設備業"
+        "industry": "其他"
       },
       {
         "id": "00652",
@@ -3655,7 +3655,7 @@
         "change_percent": 0,
         "volume": 207,
         "amount": 0,
-        "industry": "其他電子業"
+        "industry": "其他"
       },
       {
         "id": "6175",
@@ -3666,7 +3666,7 @@
         "change_percent": 0,
         "volume": 62,
         "amount": 0,
-        "industry": "光電業"
+        "industry": "其他"
       },
       {
         "id": "6291",
@@ -3677,7 +3677,7 @@
         "change_percent": 0,
         "volume": 63,
         "amount": 0,
-        "industry": "電子零組件業"
+        "industry": "其他"
       },
       {
         "id": "6590",
@@ -3688,7 +3688,7 @@
         "change_percent": 0,
         "volume": 14,
         "amount": 0,
-        "industry": "文化創意業"
+        "industry": "其他"
       },
       {
         "id": "8426",
@@ -3699,32 +3699,10 @@
         "change_percent": 0,
         "volume": 2,
         "amount": 0,
-        "industry": "上櫃其他"
+        "industry": "其他"
       }
     ],
     "trust": [
-      {
-        "id": "2368",
-        "name": "金像電",
-        "days": 23,
-        "close": 983.0,
-        "change": 89.0,
-        "change_percent": 9.96,
-        "volume": 874,
-        "amount": 859142,
-        "industry": "電子零組件業"
-      },
-      {
-        "id": "2330",
-        "name": "台積電",
-        "days": 23,
-        "close": 2285.0,
-        "change": 50.0,
-        "change_percent": 2.24,
-        "volume": 5634,
-        "amount": 12874455,
-        "industry": "半導體業"
-      },
       {
         "id": "4958",
         "name": "臻鼎-KY",
@@ -3735,6 +3713,28 @@
         "volume": 643,
         "amount": 276812,
         "industry": "電子零組件業"
+      },
+      {
+        "id": "2368",
+        "name": "金像電",
+        "days": 22,
+        "close": 983.0,
+        "change": 89.0,
+        "change_percent": 9.96,
+        "volume": 874,
+        "amount": 859142,
+        "industry": "電子零組件業"
+      },
+      {
+        "id": "2330",
+        "name": "台積電",
+        "days": 22,
+        "close": 2285.0,
+        "change": 50.0,
+        "change_percent": 2.24,
+        "volume": 5634,
+        "amount": 12874455,
+        "industry": "半導體業"
       },
       {
         "id": "2454",
@@ -3844,7 +3844,7 @@
         "change_percent": 0,
         "volume": 397,
         "amount": 0,
-        "industry": "其他電子業"
+        "industry": "其他"
       },
       {
         "id": "00935",
@@ -3954,7 +3954,7 @@
         "change_percent": 0,
         "volume": 205,
         "amount": 0,
-        "industry": "其他電子業"
+        "industry": "其他"
       },
       {
         "id": "3443",
@@ -4075,7 +4075,7 @@
         "change_percent": 0,
         "volume": 3,
         "amount": 0,
-        "industry": "電子零組件業"
+        "industry": "其他"
       },
       {
         "id": "3260",
@@ -4086,7 +4086,7 @@
         "change_percent": 0,
         "volume": 4,
         "amount": 0,
-        "industry": "電子零組件業"
+        "industry": "其他"
       },
       {
         "id": "6531",
@@ -4251,7 +4251,7 @@
         "change_percent": 0,
         "volume": 1,
         "amount": 0,
-        "industry": "電子零組件業"
+        "industry": "其他"
       }
     ]
   },
@@ -4297,9 +4297,9 @@
     {
       "id": "^SPX",
       "name": "標普500指數",
-      "close": 7495.31,
-      "change": -54.63,
-      "change_percent": -0.72,
+      "close": 7520.93,
+      "change": -29.01,
+      "change_percent": -0.38,
       "history": [
         7651.54,
         7666.45,
@@ -4330,16 +4330,16 @@
         7353.73,
         7376.86,
         7549.94,
-        7495.31
+        7520.93
       ],
       "update_time": "2026-11-10"
     },
     {
       "id": "^NDX",
       "name": "納斯達克100指數",
-      "close": 27638.1,
-      "change": -269.53,
-      "change_percent": -0.97,
+      "close": 27740.79,
+      "change": -166.84,
+      "change_percent": -0.6,
       "history": [
         30408.5,
         30501.56,
@@ -4370,16 +4370,16 @@
         26629.81,
         26989.99,
         27907.63,
-        27638.1
+        27740.79
       ],
       "update_time": "2026-11-10"
     },
     {
       "id": "SOXX",
       "name": "費城半導體 (SOXX)",
-      "close": 145.44,
-      "change": -1.32,
-      "change_percent": -0.9,
+      "close": 146.59,
+      "change": -0.17,
+      "change_percent": -0.12,
       "history": [
         189.55,
         192.11,
@@ -4410,16 +4410,16 @@
         131.9,
         136.53,
         146.76,
-        145.44
+        146.59
       ],
       "update_time": "2026-11-10"
     },
     {
       "id": "NVDA",
       "name": "英偉達",
-      "close": 168.49,
-      "change": -10.18,
-      "change_percent": -5.7,
+      "close": 168.89,
+      "change": -9.78,
+      "change_percent": -5.47,
       "history": [
         228.38,
         230.86,
@@ -4450,16 +4450,16 @@
         181.6,
         186.64,
         178.67,
-        168.49
+        168.89
       ],
       "update_time": "2026-11-10"
     },
     {
       "id": "MU",
       "name": "美光科技",
-      "close": 713.87,
-      "change": -19.28,
-      "change_percent": -2.63,
+      "close": 725.11,
+      "change": -8.04,
+      "change_percent": -1.1,
       "history": [
         1064.94,
         1097.22,
@@ -4490,16 +4490,16 @@
         656.39,
         690.0,
         733.15,
-        713.87
+        725.11
       ],
       "update_time": "2026-11-10"
     },
     {
       "id": "AMD",
       "name": "超微半導體 (AMD)",
-      "close": 519.65,
-      "change": 11.07,
-      "change_percent": 2.18,
+      "close": 515.21,
+      "change": 6.63,
+      "change_percent": 1.3,
       "history": [
         611.76,
         615.73,
@@ -4530,16 +4530,16 @@
         404.4,
         449.04,
         508.58,
-        519.65
+        515.21
       ],
       "update_time": "2026-11-10"
     },
     {
       "id": "TSM",
       "name": "台積電",
-      "close": 392.86,
-      "change": 4.24,
-      "change_percent": 1.09,
+      "close": 396.48,
+      "change": 7.86,
+      "change_percent": 2.02,
       "history": [
         456.19,
         459.2,
@@ -4570,16 +4570,16 @@
         353.1,
         375.44,
         388.62,
-        392.86
+        396.48
       ],
       "update_time": "2026-11-10"
     },
     {
       "id": "AAPL",
       "name": "蘋果",
-      "close": 347.46,
-      "change": -3.23,
-      "change_percent": -0.92,
+      "close": 348.51,
+      "change": -2.18,
+      "change_percent": -0.62,
       "history": [
         333.02,
         330.32,
@@ -4610,7 +4610,7 @@
         344.17,
         342.37,
         350.69,
-        347.46
+        348.51
       ],
       "update_time": "2026-11-10"
     }
